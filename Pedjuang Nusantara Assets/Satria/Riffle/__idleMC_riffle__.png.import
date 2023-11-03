@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0vs2dj421fcv"
-path="res://.godot/imported/__lookUp__.png-fe3ab44c29ce01e619b67d98ff635ff3.ctex"
+uid="uid://bpfca4t3neg47"
+path="res://.godot/imported/__idleMC_riffle__.png-18c31ab3faf98044ffc32a5d65757198.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/__lookUp__.png"
-dest_files=["res://.godot/imported/__lookUp__.png-fe3ab44c29ce01e619b67d98ff635ff3.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Satria/Riffle/__idleMC_riffle__.png"
+dest_files=["res://.godot/imported/__idleMC_riffle__.png-18c31ab3faf98044ffc32a5d65757198.ctex"]
 
 [params]
 

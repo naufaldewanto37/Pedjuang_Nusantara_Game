@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlmjeyykv6a44"
-path="res://.godot/imported/__attackUP__.png-05cffec1d9bc62c48af0e35a65a3d626.ctex"
+uid="uid://dcbbmxyy8htk"
+path="res://.godot/imported/_CrouchFullWeapon.png-d6826af850b59a7d84f3220201bddccf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/__attackUP__.png"
-dest_files=["res://.godot/imported/__attackUP__.png-05cffec1d9bc62c48af0e35a65a3d626.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Satria/Riffle/_CrouchFullWeapon.png"
+dest_files=["res://.godot/imported/_CrouchFullWeapon.png-d6826af850b59a7d84f3220201bddccf.ctex"]
 
 [params]
 

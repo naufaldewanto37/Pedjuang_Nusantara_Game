@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5byhn3lsv75a"
-path="res://.godot/imported/_CrouchAttack.png-bca398cf7b9089f91030063e40c7d5c2.ctex"
+uid="uid://cjmmvli2hunoa"
+path="res://.godot/imported/_Death.png-8fde8b7c059ee453d799aa883cec0d11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/_CrouchAttack.png"
-dest_files=["res://.godot/imported/_CrouchAttack.png-bca398cf7b9089f91030063e40c7d5c2.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Satria/Bambu/_Death.png"
+dest_files=["res://.godot/imported/_Death.png-8fde8b7c059ee453d799aa883cec0d11.ctex"]
 
 [params]
 
