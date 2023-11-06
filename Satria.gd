@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 200.0
 const CROUCH_SPEED = 150.0
 const JUMP_VELOCITY = -500.0
 const GRAVITY = 1000
@@ -10,8 +10,9 @@ var is_crouching = false
 var is_attacking = false
 var attack_timer = 0
 
-@onready var satria = $SatriaSprite
-@onready var collision_shape = $CollisionShape2D
+@onready var satria = $AnimationSatria
+@onready var satriaSprite = $SatriaSprite
+@onready var collision_shape = $SatriaShape2D
 
 func _physics_process(delta):
 	# Reset crouching state
@@ -32,7 +33,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching and not is_attacking:
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			satria.play("Jump")
+			satria.play("jump")
 	
 	# Determine movement speed based on crouching
 	var move_speed = SPEED
@@ -46,7 +47,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("attack") and attack_timer <= 0:
 		is_attacking = true
 		attack_timer = ATTACK_COOLDOWN
-		satria.play("Attack")
+		satria.play("attack")
 		# Optionally handle attack logic here (e.g., hit detection)
 		if not is_on_floor():
 			satria.play("JumpAttack")  # Assuming you have a different animation for jump attack
@@ -56,13 +57,16 @@ func _physics_process(delta):
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * move_speed
-			satria.flip_h = direction < 0
+			satriaSprite.flip_h = direction < 0
 			if is_crouching:
-				satria.play("CrouchWalk")
+				satria.play("crouchWalk")
 		else:
+			# Deselerasi karakter ketika tidak ada input movement
 			velocity.x = move_toward(velocity.x, 0, move_speed * delta)
 
+# Update the movement using move_and_slide
 	move_and_slide()
+
 	
 	# Handle lookup without moving
 	if Input.is_action_pressed("ui_up") and is_on_floor() and not is_crouching and velocity.x == 0:
@@ -73,7 +77,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		if is_crouching:
 			if velocity.x == 0:
-				satria.play("Crouch")  # Play crouch idle animation
+				satria.play("crouch")  # Play crouch idle animation
 		else:
 			if is_attacking == false:
 				if velocity.x != 0:
@@ -81,4 +85,12 @@ func _physics_process(delta):
 				elif not Input.is_action_pressed("ui_up"):
 					satria.play("idle")  # Play idle animation
 	elif not is_on_floor() and velocity.y > 0:
-		satria.play("Fall")  # Play falling animation
+		satria.play("fall")  # Play falling animation
+
+
+
+func _on_bambu_area_2d_body_entered(body):
+	print("Hit Object Body")
+	if body.is_in_group("Waluyo"):
+		queue_free()
+	pass

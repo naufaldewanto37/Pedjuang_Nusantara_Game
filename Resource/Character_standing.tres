@@ -1,0 +1,5 @@
+[gd_resource type="CapsuleShape2D" format=3 uid="uid://epib35230fay"]
+
+[resource]
+radius = 33.99
+height = 135.49
