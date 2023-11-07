@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
-const CROUCH_SPEED = 150.0
+const SPEED = 150.0
+const CROUCH_SPEED = 100.0
 const JUMP_VELOCITY = -500.0
 const GRAVITY = 1000
 const ATTACK_COOLDOWN = 0.5
@@ -9,10 +9,19 @@ const ATTACK_COOLDOWN = 0.5
 var is_crouching = false
 var is_attacking = false
 var attack_timer = 0
+var stuck_under_object = false
+var is_jump = false
 
 @onready var satria = $AnimationSatria
 @onready var satriaSprite = $SatriaSprite
+@onready var Waluyo = $Waluyo
 @onready var collision_shape = $SatriaShape2D
+@onready var cshape = $SatriaShape2D
+
+@onready var standing_cshape = $SatriaStandingShape2D
+@onready var crouch_cshape = $SatriaCrouchingShape2D2
+@onready var crouch_raycast1 = $CrouchRaycast1
+@onready var crouch_raycast2 = $CrouchRaycast2
 
 func _physics_process(delta):
 	# Reset crouching state
@@ -30,8 +39,11 @@ func _physics_process(delta):
 		velocity.y = 0
 	
 	# Handle Jump
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching and not is_attacking:
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching and not is_attacking and above_head_is_empty():
 		if is_on_floor():
+			crouch_cshape.disabled = true
+			standing_cshape.disabled = false
+			is_jump = true
 			velocity.y = JUMP_VELOCITY
 			satria.play("jump")
 	
@@ -40,8 +52,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down") and is_on_floor():
 		is_crouching = true
 		move_speed = CROUCH_SPEED  # Use the crouch speed if crouching
-		# Optionally adjust collision shape
-		# collision_shape.set_deferred("disabled", true)
 		
 	# Handle attack
 	if Input.is_action_just_pressed("attack") and attack_timer <= 0:
@@ -50,7 +60,9 @@ func _physics_process(delta):
 		satria.play("attack")
 		# Optionally handle attack logic here (e.g., hit detection)
 		if not is_on_floor():
-			satria.play("JumpAttack")  # Assuming you have a different animation for jump attack
+			is_attacking = true
+			attack_timer = ATTACK_COOLDOWN
+			satria.play("attack")  # Assuming you have a different animation for jump attack
 	
 	# Only handle other movements if not attacking
 	if not is_attacking:
@@ -58,8 +70,14 @@ func _physics_process(delta):
 		if direction:
 			velocity.x = direction * move_speed
 			satriaSprite.flip_h = direction < 0
-			if is_crouching:
+			if Input.is_action_pressed("ui_down") and !is_jump:
 				satria.play("crouchWalk")
+				crouch_cshape.disabled = false
+				standing_cshape.disabled = true
+			elif Input.is_action_just_released("ui_down"):
+				satria.play("crouch")
+				crouch_cshape.disabled = false
+				standing_cshape.disabled = true
 		else:
 			# Deselerasi karakter ketika tidak ada input movement
 			velocity.x = move_toward(velocity.x, 0, move_speed * delta)
@@ -69,28 +87,39 @@ func _physics_process(delta):
 
 	
 	# Handle lookup without moving
-	if Input.is_action_pressed("ui_up") and is_on_floor() and not is_crouching and velocity.x == 0:
+	if Input.is_action_pressed("ui_up") and is_on_floor() and not is_crouching and above_head_is_empty() and velocity.x == 0:
 		satria.play("lookup")
 		return # Exit early to avoid playing other animations
 
 	# Update animations based on movement
 	if is_on_floor():
 		if is_crouching:
+			crouch_cshape.disabled = false
+			standing_cshape.disabled = true
 			if velocity.x == 0:
 				satria.play("crouch")  # Play crouch idle animation
 		else:
-			if is_attacking == false:
-				if velocity.x != 0:
-					satria.play("run")  # Play running animation
-				elif not Input.is_action_pressed("ui_up"):
-					satria.play("idle")  # Play idle animation
+			if above_head_is_empty():
+				crouch_cshape.disabled = true
+				standing_cshape.disabled = false
+				if is_attacking == false:
+					if velocity.x != 0:
+						satria.play("run")  # Play running animation
+					elif not Input.is_action_pressed("ui_up"):
+						satria.play("idle")  # Play idle animation
 	elif not is_on_floor() and velocity.y > 0:
+		crouch_cshape.disabled = true
+		standing_cshape.disabled = false
 		satria.play("fall")  # Play falling animation
 
 
 
 func _on_bambu_area_2d_body_entered(body):
-	print("Hit Object Body")
 	if body.is_in_group("Waluyo"):
+		print("Hit Object Body")
 		queue_free()
 	pass
+	
+func above_head_is_empty() -> bool:
+	var result = !crouch_raycast1.is_colliding() && !crouch_raycast2.is_colliding()
+	return result
