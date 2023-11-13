@@ -14,11 +14,22 @@ config/name="PedjuangNusantara_IPSP"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 
+[autoload]
+
+GlobalWorldEnvironment="*res://world_environment.tscn"
+
 [display]
 
+<<<<<<< HEAD
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/scale=4.0
+=======
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
 
 [input]
 

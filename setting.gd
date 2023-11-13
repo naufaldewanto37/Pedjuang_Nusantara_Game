@@ -20,13 +20,25 @@ func _on_new_game_pressed():
 
 
 func _on_load_game_pressed():
-<<<<<<< HEAD
-	get_tree().change_scene_to_file("res://level2.tscn")
-=======
 	pass # Replace with function body.
 
 
 
 func _on_settings_pressed():
 	get_tree().change_scene_to_file("res://setting.tscn")
->>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
+
+
+func _on_credits_pressed():
+	pass # Replace with function body.
+
+
+func _on_fullscreen_toggled(button_pressed):
+	if button_pressed == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_brightness_slider_value_changed(value):
+	GlobalWorldEnvironment.environment.adjustment_brightness = value
+	print(value)

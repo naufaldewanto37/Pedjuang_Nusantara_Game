@@ -23,13 +23,22 @@ func _process(delta):
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_k7ain")
 
-[node name="BgPantai" type="Sprite2D" parent="."]
-position = Vector2(960.5, 539.77)
-scale = Vector2(0.999479, 1.00043)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgPantai" type="Sprite2D" parent="CanvasLayer/BoxContainer"]
+position = Vector2(640.5, 359.269)
+scale = Vector2(0.666146, 0.666169)
 texture = ExtResource("1_0ianw")
 metadata/c = Color(0.305882, 0.627451, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BoxContainer/BgPantai"]
 custom_minimum_size = Vector2(0, 20)
 offset_left = -959.0
 offset_top = -200.0
@@ -40,42 +49,50 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 alignment = 1
 
-[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
+[node name="NewGame" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 text = "New Game"
 flat = true
 script = SubResource("GDScript_pjj65")
 
-[node name="LoadGame" type="Button" parent="BgPantai/VBoxContainer"]
+[node name="LoadGame" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 text = "Load Game"
 flat = true
 metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
 
-[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
+[node name="Settings" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
 flat = true
 
-[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
+[node name="Credits" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
 flat = true
 
-[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
+[node name="ExitGame" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 text = "Exit Game"
 flat = true
 
-[node name="BgRiflebambu" type="Sprite2D" parent="."]
-position = Vector2(1645, 694)
-scale = Vector2(0.708437, 0.736641)
+[node name="BgRiflebambu" type="Sprite2D" parent="CanvasLayer/BoxContainer"]
+position = Vector2(1076, 435)
+scale = Vector2(0.502792, 0.542939)
 texture = ExtResource("3_isi2o")
 
-[node name="BgTitle" type="Sprite2D" parent="."]
-position = Vector2(285, 123)
+[node name="BgTitle" type="Sprite2D" parent="CanvasLayer/BoxContainer"]
+position = Vector2(197, 108)
+scale = Vector2(0.684932, 0.799252)
 texture = ExtResource("4_sfap7")
 
+<<<<<<< HEAD
 [connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+=======
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725

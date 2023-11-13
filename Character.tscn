@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 [gd_scene load_steps=104 format=3 uid="uid://mxcsag8n8ntp"]
+=======
+[gd_scene load_steps=120 format=3 uid="uid://mxcsag8n8ntp"]
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
 [ext_resource type="Script" path="res://Satria.gd" id="2_l0rww"]
-[ext_resource type="Shape2D" uid="uid://epib35230fay" path="res://Resource/Character_standing.tres" id="2_mika3"]
 [ext_resource type="Texture2D" uid="uid://il76i7vklkaf" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchWalk.png" id="3_83ibg"]
 [ext_resource type="Texture2D" uid="uid://s3qpsncq8rh1" path="res://Pedjuang Nusantara Assets/Satria/Pistol/_CrouchAttackPistol.png" id="4_jg03f"]
 [ext_resource type="Texture2D" uid="uid://d1um0ocgj6vje" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchAttack.png" id="5_1gikh"]
@@ -18,9 +21,17 @@
 [ext_resource type="Texture2D" uid="uid://bpfca4t3neg47" path="res://Pedjuang Nusantara Assets/Satria/Riffle/__idleMC_riffle__.png" id="12_qfern"]
 [ext_resource type="Texture2D" uid="uid://dy4178sy85no0" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__lookUpPistol__.png" id="14_j13sx"]
 [ext_resource type="Texture2D" uid="uid://dmpj2sheql1nw" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Run.png" id="15_ppmgt"]
+<<<<<<< HEAD
 [ext_resource type="Shape2D" uid="uid://c1rmeevgmkicx" path="res://Resource/Character_crouch.tres" id="19_f8aip"]
+=======
+[ext_resource type="Texture2D" uid="uid://dpaa7sm8555wk" path="res://Pedjuang Nusantara Assets/Waluyo/__idleWaluyo__.png" id="16_wa3j1"]
+[ext_resource type="Script" path="res://Waluyo.gd" id="18_l22k7"]
+[ext_resource type="Texture2D" uid="uid://b1fi1g52cbobf" path="res://Pedjuang Nusantara Assets/Waluyo/_RunWaluyo.png" id="19_cpcym"]
+[ext_resource type="Shape2D" uid="uid://cbar1vwcyc5yf" path="res://Resource/Character_crouch.tres" id="19_f8aip"]
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
 
-[sub_resource type="GDScript" id="GDScript_qaap5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
+size = Vector2(46, 90)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72i3l"]
 atlas = ExtResource("1_fbx35")
@@ -616,70 +627,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxwyn"]
-size = Vector2(44.5498, 9.27537)
-
-[sub_resource type="Animation" id="Animation_2i60h"]
-resource_name = "JumpAttack"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SatriaSprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("8_0e2lc")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SatriaSprite:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SatriaSprite:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SatriaSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("AnimationSatria:speed_scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.5]
-}
+size = Vector2(45.2405, 9.27537)
 
 [sub_resource type="Animation" id="Animation_r4120"]
 length = 0.001
@@ -803,30 +751,6 @@ tracks/9/keys = {
 "update": 1,
 "values": [SubResource("RectangleShape2D_yxwyn")]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:shape")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_mika3")]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("SatriaShape2D:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(14, 10)]
-}
 
 [sub_resource type="Animation" id="Animation_64i0g"]
 resource_name = "attack"
@@ -895,7 +819,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -907,7 +831,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -919,7 +843,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -931,7 +855,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -939,30 +863,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(45.2405, 9.27537), Vector2(39.5751, 34.8638), Vector2(28.0974, 35.2868), Vector2(39.5261, 5.58786)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(14, 10), Vector2(14, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_luux7"]
@@ -1019,7 +919,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/4/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1031,7 +931,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1043,7 +943,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1055,7 +955,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1063,30 +963,6 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-2.75064]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaShape2D:shape")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("19_f8aip"), ExtResource("19_f8aip")]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-4, 31), Vector2(1, 30)]
 }
 
 [sub_resource type="Animation" id="Animation_tiqld"]
@@ -1156,7 +1032,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1168,7 +1044,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1180,7 +1056,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1192,7 +1068,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1200,30 +1076,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-2.75064]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("19_f8aip"), ExtResource("19_f8aip")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 30), Vector2(1, 30)]
 }
 
 [sub_resource type="Animation" id="Animation_woidj"]
@@ -1293,7 +1145,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1305,7 +1157,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1317,7 +1169,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1329,7 +1181,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1337,30 +1189,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.20944, -0.20944]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-2, 9), Vector2(-2, 9)]
 }
 
 [sub_resource type="Animation" id="Animation_eoa27"]
@@ -1430,7 +1258,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1442,7 +1270,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1454,7 +1282,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1466,7 +1294,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1474,30 +1302,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-1.1973, -1.1973]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(6, 10), Vector2(6, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_te4tq"]
@@ -1567,7 +1371,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1579,7 +1383,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1591,7 +1395,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1603,7 +1407,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1611,30 +1415,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(45.2405, 9.27537)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-5, 8), Vector2(-5, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_nh11g"]
@@ -1703,7 +1483,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1715,7 +1495,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1727,7 +1507,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1739,7 +1519,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1747,30 +1527,6 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [SubResource("RectangleShape2D_yxwyn")]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 7), Vector2(0, 7)]
 }
 
 [sub_resource type="Animation" id="Animation_sgwoh"]
@@ -1840,7 +1596,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:disabled")
+tracks/5/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1852,7 +1608,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:shape:size")
+tracks/6/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:shape:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1864,7 +1620,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:position")
+tracks/7/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1876,7 +1632,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("SatriaSprite/BambuArea2D/CollisionShape2D:rotation")
+tracks/8/path = NodePath("SatriaSprite/BambuArea2D/BambuShape2D:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1885,34 +1641,9 @@ tracks/8/keys = {
 "update": 0,
 "values": [0.849975, 0.991347, 2.80649, 0.333358, 2.84838, 2.70177, 2.38586, 0.656244]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = false
-tracks/9/path = NodePath("SatriaShape2D:shape")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_mika3"), ExtResource("2_mika3")]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = false
-tracks/10/path = NodePath("SatriaShape2D:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(2, 6), Vector2(2, 6)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_launb"]
 _data = {
-"JumpAttack": SubResource("Animation_2i60h"),
 "RESET": SubResource("Animation_r4120"),
 "attack": SubResource("Animation_64i0g"),
 "crouch": SubResource("Animation_luux7"),
@@ -1924,16 +1655,132 @@ _data = {
 "run": SubResource("Animation_sgwoh")
 }
 
+<<<<<<< HEAD
+=======
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdtqa"]
+radius = 33.99
+height = 135.49
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e28wf"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(0, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7eai"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(120, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ryo"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(240, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5r8m"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(360, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7jci"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(480, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cskxs"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u212c"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj0c6"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5l76"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qoly"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g831b"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3dqm"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(720, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s8df"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(840, 0, 120, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gc87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e28wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7eai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ryo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5r8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7jci")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cskxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u212c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj0c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5l76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qoly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g831b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3dqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0s8df")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
 [node name="Character" type="Node2D"]
-script = SubResource("GDScript_qaap5")
+position = Vector2(-397, -323)
 
 [node name="Satria" type="CharacterBody2D" parent="."]
-position = Vector2(443, 960)
+position = Vector2(443, 990)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("2_l0rww")
 
-[node name="SatriaShape2D" type="CollisionShape2D" parent="Satria"]
-position = Vector2(14, 10)
-shape = ExtResource("2_mika3")
+[node name="SatriaStandingShape2D" type="CollisionShape2D" parent="Satria"]
+position = Vector2(0, 9)
+shape = ExtResource("19_f8aip")
+
+[node name="SatriaCrouchingShape2D2" type="CollisionShape2D" parent="Satria"]
+position = Vector2(1, 27)
+shape = SubResource("RectangleShape2D_m3iuc")
 
 [node name="SatriaSpriteAnimate" type="AnimatedSprite2D" parent="Satria"]
 visible = false
@@ -1947,24 +1794,56 @@ animation = &"Attack"
 texture_filter = 1
 position = Vector2(7, -56)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("2_jb3uh")
-hframes = 3
-frame = 1
+texture = ExtResource("15_ppmgt")
+hframes = 10
 
 [node name="BambuArea2D" type="Area2D" parent="Satria/SatriaSprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Satria/SatriaSprite/BambuArea2D"]
-position = Vector2(3.47418, 25.6287)
-rotation = -2.75064
+[node name="BambuShape2D" type="CollisionShape2D" parent="Satria/SatriaSprite/BambuArea2D"]
+position = Vector2(9.47079, 14.2528)
+rotation = 0.849975
 shape = SubResource("RectangleShape2D_yxwyn")
 disabled = true
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria"]
-speed_scale = 0.5
+speed_scale = 0.8
 libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
 
 [node name="Camera2D" type="Camera2D" parent="Satria"]
+position = Vector2(336, -134)
+zoom = Vector2(3, 3)
 
+[node name="CrouchRaycast1" type="RayCast2D" parent="Satria"]
+position = Vector2(-20, 62)
+target_position = Vector2(0, -85)
+
+[node name="CrouchRaycast2" type="RayCast2D" parent="Satria"]
+position = Vector2(22, 62)
+target_position = Vector2(0, -85)
+
+<<<<<<< HEAD
+=======
+[node name="Waluyo" type="CharacterBody2D" parent="."]
+position = Vector2(930, 1004)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("18_l22k7")
+
+[node name="WaluyoShape2D" type="CollisionShape2D" parent="Waluyo"]
+position = Vector2(260, 0)
+shape = SubResource("CapsuleShape2D_cdtqa")
+
+[node name="waluyoSprite" type="AnimatedSprite2D" parent="Waluyo/WaluyoShape2D"]
+texture_filter = 1
+position = Vector2(-18, -84)
+scale = Vector2(3.56771, 3.6978)
+sprite_frames = SubResource("SpriteFrames_3gc87")
+animation = &"run"
+frame = 1
+frame_progress = 0.14275
+flip_h = true
+
+>>>>>>> 0ea910ef875aa7b490ea58e7925628b21316d725
 [connection signal="body_entered" from="Satria/SatriaSprite/BambuArea2D" to="Satria" method="_on_bambu_area_2d_body_entered"]
+[connection signal="animation_finished" from="Satria/AnimationSatria" to="Satria" method="_on_animation_satria_animation_finished"]
