@@ -77,4 +77,5 @@ position = Vector2(285, 123)
 texture = ExtResource("4_sfap7")
 
 [connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
