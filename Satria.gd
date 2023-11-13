@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
+@export var speed : float = 200.0
+@export var crouch_speed : float = 150.0
+@export var JUMP_VELOCITY : float = -400.0
+@export var double_jump_velocity : float = -200
 const SPEED = 150.0
 const CROUCH_SPEED = 100.0
-const JUMP_VELOCITY = -500.0
 const GRAVITY = 1000
 const ATTACK_COOLDOWN = 0.5
+var has_double_jumped : bool = false
 
 var is_crouching = false
 var is_attacking = false
@@ -14,7 +18,6 @@ var is_jump = false
 
 @onready var satria = $AnimationSatria
 @onready var satriaSprite = $SatriaSprite
-@onready var Waluyo = $Waluyo
 @onready var collision_shape = $SatriaShape2D
 @onready var cshape = $SatriaShape2D
 
@@ -36,21 +39,31 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 	else:
-		velocity.y = 0
+		has_double_jumped = false
+			
+		
 	
 	# Handle Jump
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching and not is_attacking and above_head_is_empty():
-		if is_on_floor():
-			crouch_cshape.disabled = true
-			standing_cshape.disabled = false
-			is_jump = true
-			velocity.y = JUMP_VELOCITY
-			satria.play("jump")
+	if Input.is_action_just_pressed("ui_accept") 	and not is_crouching and not is_attacking:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching and not is_attacking and above_head_is_empty():
+			if is_on_floor():
+				crouch_cshape.disabled = true
+				standing_cshape.disabled = false
+				is_jump = true
+				velocity.y = JUMP_VELOCITY
+				satria.play("jump")
+			elif not has_double_jumped:
+				#double jump in the air
+				velocity.y += double_jump_velocity
+				has_double_jumped = true
 	
 	# Determine movement speed based on crouching
-	var move_speed = SPEED
+	var move_speed = speed
 	if Input.is_action_pressed("ui_down") and is_on_floor():
 		is_crouching = true
+		move_speed = crouch_speed  # Use the crouch speed if crouching
+		# Optionally adjust collision shape
+		# collision_shape.set_deferred("disabled", true)
 		move_speed = CROUCH_SPEED  # Use the crouch speed if crouching
 		
 	# Handle attack
