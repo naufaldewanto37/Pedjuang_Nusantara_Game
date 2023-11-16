@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_2jps0"]
 [ext_resource type="Texture2D" uid="uid://caapmew6eiixf" path="res://Pedjuang Nusantara Assets/tiles/tilemap.png" id="1_r3awd"]
-[ext_resource type="PackedScene" uid="uid://mxcsag8n8ntp" path="res://Character.tscn" id="2_l2jca"]
+[ext_resource type="PackedScene" uid="uid://c7a5qvfs35ffx" path="res://Character.tscn" id="3_tqw24"]
 [ext_resource type="PackedScene" uid="uid://ca7f6t5iympxb" path="res://enemy.tscn" id="4_47it4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a24f"]
@@ -2111,14 +2111,16 @@ sources/0 = SubResource("TileSetAtlasSource_5rdqh")
 [node name="World" type="Node2D"]
 
 [node name="BgPantai" type="Sprite2D" parent="."]
-position = Vector2(1976, 474)
-scale = Vector2(2.05781, 0.662252)
+position = Vector2(1825.25, 474)
+scale = Vector2(2.21484, 0.662252)
 texture = ExtResource("1_2jps0")
 metadata/c = Color(0.305882, 0.627451, 0, 1)
 
-[node name="Character" parent="." instance=ExtResource("2_l2jca")]
-position = Vector2(-125, 131)
-scale = Vector2(0.5, 0.5)
+[node name="Enemy" parent="." instance=ExtResource("4_47it4")]
+position = Vector2(385, 579)
+
+[node name="Character" parent="." instance=ExtResource("3_tqw24")]
+position = Vector2(100, 617)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(6, -364)
@@ -2126,9 +2128,6 @@ position = Vector2(6, -364)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(22, 918)
 shape = SubResource("RectangleShape2D_6a24f")
-
-[node name="Enemy" parent="." instance=ExtResource("4_47it4")]
-position = Vector2(382, 483)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(6, -361)

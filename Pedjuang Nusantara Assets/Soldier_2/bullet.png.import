@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy2w12bn4jh2n"
-path="res://.godot/imported/All_Fire_Bullet_Pixel_16x16_00.png-2e8d8e01bbd7e1610eae3cd7158e7076.ctex"
+uid="uid://dl4gerv5odc66"
+path="res://.godot/imported/bullet.png-820d12281d41d1e90b4ae37318c7bf99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Soldier_2/All_Fire_Bullet_Pixel_16x16_00.png"
-dest_files=["res://.godot/imported/All_Fire_Bullet_Pixel_16x16_00.png-2e8d8e01bbd7e1610eae3cd7158e7076.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Soldier_2/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-820d12281d41d1e90b4ae37318c7bf99.ctex"]
 
 [params]
 

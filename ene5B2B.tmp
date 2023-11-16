@@ -271,7 +271,7 @@ graph_offset = Vector2(12, 30)
 size = Vector2(126.25, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3345t"]
-size = Vector2(161, 56)
+size = Vector2(156, 56)
 
 [node name="Enemy" type="Node2D" groups=["Enemy"]]
 
@@ -313,7 +313,7 @@ target_position = Vector2(0, 17)
 [node name="VisionSoldier" type="Area2D" parent="Soldier"]
 
 [node name="CollisionVision2D" type="CollisionShape2D" parent="Soldier/VisionSoldier"]
-position = Vector2(-250.5, 36)
+position = Vector2(-122, 36)
 shape = SubResource("RectangleShape2D_3345t")
 
 [connection signal="animation_finished" from="Soldier/AnimationSoldier" to="Soldier" method="_on_animation_soldier_animation_finished"]

@@ -1,15 +1,17 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7a5qvfs35ffx"]
+[gd_scene load_steps=40 format=3 uid="uid://mxcsag8n8ntp"]
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
 [ext_resource type="Script" path="res://Satria.gd" id="2_l0rww"]
 [ext_resource type="Texture2D" uid="uid://il76i7vklkaf" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchWalk.png" id="3_83ibg"]
-[ext_resource type="Texture2D" uid="uid://cjmmvli2hunoa" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Death.png" id="3_xrykp"]
 [ext_resource type="Texture2D" uid="uid://ckm4fhlhlp0gd" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Fall.png" id="7_iof0u"]
 [ext_resource type="Texture2D" uid="uid://bejlgy78vc4av" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Jump.png" id="8_0e2lc"]
 [ext_resource type="Texture2D" uid="uid://dt7jlutrym7ns" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__lookUp__.png" id="9_hesb6"]
 [ext_resource type="Texture2D" uid="uid://cklswcgs0owvv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__idleMC__.png" id="11_jcbo0"]
 [ext_resource type="Texture2D" uid="uid://dmpj2sheql1nw" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Run.png" id="15_ppmgt"]
+[ext_resource type="Texture2D" uid="uid://dpaa7sm8555wk" path="res://Pedjuang Nusantara Assets/Waluyo/__idleWaluyo__.png" id="16_wa3j1"]
+[ext_resource type="Script" path="res://Waluyo.gd" id="18_l22k7"]
+[ext_resource type="Texture2D" uid="uid://b1fi1g52cbobf" path="res://Pedjuang Nusantara Assets/Waluyo/_RunWaluyo.png" id="19_cpcym"]
 [ext_resource type="Shape2D" uid="uid://cbar1vwcyc5yf" path="res://Resource/Character_crouch.tres" id="19_f8aip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
@@ -521,115 +523,11 @@ tracks/4/keys = {
 "values": [0.8]
 }
 
-[sub_resource type="Animation" id="Animation_bhplf"]
-resource_name = "death"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SatriaSprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_xrykp")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SatriaSprite:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SatriaSprite:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SatriaSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-}
-
-[sub_resource type="Animation" id="Animation_f63l6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SatriaSprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_xrykp")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SatriaSprite:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [10]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SatriaSprite:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SatriaSprite:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_launb"]
 _data = {
-"RESET": SubResource("Animation_f63l6"),
 "attack": SubResource("Animation_64i0g"),
 "crouch": SubResource("Animation_luux7"),
 "crouchWalk": SubResource("Animation_tiqld"),
-"death": SubResource("Animation_bhplf"),
 "fall": SubResource("Animation_woidj"),
 "idle": SubResource("Animation_eoa27"),
 "jump": SubResource("Animation_te4tq"),
@@ -640,11 +538,132 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5bgp"]
 size = Vector2(60, 138)
 
-[node name="Satria" type="Node2D" groups=["satria"]]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdtqa"]
+radius = 33.99
+height = 135.49
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e28wf"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(0, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7eai"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(120, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ryo"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(240, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5r8m"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(360, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7jci"]
+atlas = ExtResource("16_wa3j1")
+region = Rect2(480, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cskxs"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u212c"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj0c6"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5l76"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qoly"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g831b"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3dqm"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(720, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s8df"]
+atlas = ExtResource("19_cpcym")
+region = Rect2(840, 0, 120, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gc87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e28wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7eai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ryo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5r8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7jci")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cskxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u212c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj0c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5l76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qoly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g831b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3dqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0s8df")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Character" type="Node2D" groups=["satria"]]
+position = Vector2(-396, -323)
 
 [node name="Satria" type="CharacterBody2D" parent="." groups=["satria"]]
-scale = Vector2(0.310414, 0.292701)
+position = Vector2(443, 990)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("2_l0rww")
+
+[node name="HurtBox" type="Area2D" parent="Satria"]
+position = Vector2(-16, -42)
+
+[node name="SatriaStandingShape2D" type="CollisionShape2D" parent="Satria/HurtBox" groups=["satria"]]
+position = Vector2(16, 52)
+shape = ExtResource("19_f8aip")
+
+[node name="SatriaCrouchingShape2D2" type="CollisionShape2D" parent="Satria/HurtBox" groups=["satria"]]
+position = Vector2(16, 68)
+shape = SubResource("RectangleShape2D_m3iuc")
 
 [node name="SatriaStandingShape2D" type="CollisionShape2D" parent="Satria" groups=["satria"]]
 position = Vector2(0, 10)
@@ -658,11 +677,12 @@ shape = SubResource("RectangleShape2D_m3iuc")
 texture_filter = 1
 position = Vector2(7, -56)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("3_xrykp")
-hframes = 10
+texture = ExtResource("2_jb3uh")
+hframes = 3
+frame = 1
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
-speed_scale = 0.3
+speed_scale = 0.5
 libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
@@ -686,6 +706,25 @@ target_position = Vector2(0, -100)
 position = Vector2(76, 3)
 shape = SubResource("RectangleShape2D_d5bgp")
 disabled = true
+
+[node name="Waluyo" type="CharacterBody2D" parent="." groups=["satria"]]
+position = Vector2(1024, 431)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("18_l22k7")
+
+[node name="WaluyoShape2D" type="CollisionShape2D" parent="Waluyo" groups=["satria"]]
+position = Vector2(260, 0)
+shape = SubResource("CapsuleShape2D_cdtqa")
+
+[node name="waluyoSprite" type="AnimatedSprite2D" parent="Waluyo/WaluyoShape2D" groups=["satria"]]
+texture_filter = 1
+position = Vector2(-18, -84)
+scale = Vector2(3.56771, 3.6978)
+sprite_frames = SubResource("SpriteFrames_3gc87")
+animation = &"run"
+frame = 1
+frame_progress = 0.14275
+flip_h = true
 
 [connection signal="animation_finished" from="Satria/AnimationSatria" to="Satria" method="_on_animation_satria_animation_finished"]
 [connection signal="body_entered" from="Satria/Bambu" to="Satria" method="_on_bambu_body_entered"]

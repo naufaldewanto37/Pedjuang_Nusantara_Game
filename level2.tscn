@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbqhg6yf7xt4w"]
 
 [ext_resource type="Texture2D" uid="uid://x408veleic88" path="res://Pedjuang Nusantara Assets/background/jungle_background/bg_hutan.png" id="1_ctaqo"]
+[ext_resource type="PackedScene" uid="uid://cimba2por405c" path="res://Satria.tscn" id="2_2f5va"]
 [ext_resource type="Texture2D" uid="uid://o3mye8e04vn7" path="res://Pedjuang Nusantara Assets/background/jungle_background/jungle tileset/jungle tileset.png" id="2_il1da"]
-[ext_resource type="PackedScene" uid="uid://mxcsag8n8ntp" path="res://Character.tscn" id="3_54x7k"]
 [ext_resource type="Texture2D" uid="uid://dglomlu5awmsv" path="res://Pedjuang Nusantara Assets/sprite/Destructible Objects Sprite Sheet.png" id="3_iiv24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pmft"]
@@ -2158,8 +2158,8 @@ position = Vector2(2871.5, 540)
 scale = Vector2(1.1099, 1)
 texture = ExtResource("1_ctaqo")
 
-[node name="Character" parent="." instance=ExtResource("3_54x7k")]
-position = Vector2(-393, -310)
+[node name="Satria" parent="." instance=ExtResource("2_2f5va")]
+position = Vector2(58, 693)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
