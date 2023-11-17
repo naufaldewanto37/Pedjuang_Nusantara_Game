@@ -276,6 +276,7 @@ size = Vector2(161, 56)
 [node name="Enemy" type="Node2D" groups=["Enemy"]]
 
 [node name="Soldier" type="CharacterBody2D" parent="." groups=["Enemy"]]
+scale = Vector2(2, 2)
 script = ExtResource("1_n718e")
 
 [node name="SoldierSprite2D" type="Sprite2D" parent="Soldier" groups=["Enemy"]]
