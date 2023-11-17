@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://mxcsag8n8ntp"]
+[gd_scene load_steps=91 format=3 uid="uid://mxcsag8n8ntp"]
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cpluh3ykpxka3" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__attackUpPistol__.png" id="13_624x2"]
 [ext_resource type="Texture2D" uid="uid://dy4178sy85no0" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__lookUpPistol__.png" id="14_j13sx"]
 [ext_resource type="Texture2D" uid="uid://dmpj2sheql1nw" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Run.png" id="15_ppmgt"]
-[ext_resource type="Texture2D" uid="uid://dpaa7sm8555wk" path="res://Pedjuang Nusantara Assets/Waluyo/__idleWaluyo__.png" id="16_wa3j1"]
 
 [sub_resource type="GDScript" id="GDScript_qaap5"]
 
@@ -613,49 +612,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e28wf"]
-atlas = ExtResource("16_wa3j1")
-region = Rect2(0, 0, 120, 85)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7eai"]
-atlas = ExtResource("16_wa3j1")
-region = Rect2(120, 0, 120, 85)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_75ryo"]
-atlas = ExtResource("16_wa3j1")
-region = Rect2(240, 0, 120, 85)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5r8m"]
-atlas = ExtResource("16_wa3j1")
-region = Rect2(360, 0, 120, 85)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h7jci"]
-atlas = ExtResource("16_wa3j1")
-region = Rect2(480, 0, 120, 85)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3gc87"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e28wf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j7eai")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_75ryo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o5r8m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h7jci")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
-
 [node name="Character" type="Node2D"]
 script = SubResource("GDScript_qaap5")
 
@@ -668,23 +624,7 @@ shape = SubResource("CapsuleShape2D_5sb5w")
 
 [node name="SatriaSprite" type="AnimatedSprite2D" parent="Satria"]
 texture_filter = 1
-position = Vector2(11, -88)
-scale = Vector2(3.00833, 4.125)
+position = Vector2(-3, -50)
+scale = Vector2(2.28815, 3.1375)
 sprite_frames = SubResource("SpriteFrames_s41vd")
 animation = &"JumpAttack"
-
-[node name="WaluyoBody2D2" type="CharacterBody2D" parent="."]
-position = Vector2(1536, 1001)
-
-[node name="WaluyoShape2D" type="CollisionShape2D" parent="WaluyoBody2D2"]
-position = Vector2(260, 0)
-shape = SubResource("CapsuleShape2D_5sb5w")
-
-[node name="waluyoSprite" type="AnimatedSprite2D" parent="WaluyoBody2D2"]
-texture_filter = 1
-position = Vector2(242, -84)
-scale = Vector2(3.56771, 3.6978)
-sprite_frames = SubResource("SpriteFrames_3gc87")
-animation = &"idle"
-frame_progress = 0.191677
-flip_h = true

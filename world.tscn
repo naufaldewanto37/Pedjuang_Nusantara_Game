@@ -1,7 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://10hespmskmxe"]
+[gd_scene load_steps=23 format=3 uid="uid://10hespmskmxe"]
 
-[ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_2jps0"]
+[ext_resource type="Texture2D" uid="uid://di0q4f07b1yh7" path="res://Pedjuang Nusantara Assets/background/ocean.png" id="1_nxwda"]
 [ext_resource type="PackedScene" uid="uid://mxcsag8n8ntp" path="res://Character.tscn" id="2_l2jca"]
+[ext_resource type="Texture2D" uid="uid://byqqascsnueyw" path="res://Pedjuang Nusantara Assets/background/island.png" id="3_0yfpi"]
+[ext_resource type="Texture2D" uid="uid://dma1giuocgtpd" path="res://Pedjuang Nusantara Assets/background/langit.png" id="4_h4ed2"]
+[ext_resource type="Texture2D" uid="uid://dys847a8rk4au" path="res://Pedjuang Nusantara Assets/background/tile30.png" id="5_aa0d3"]
+[ext_resource type="Texture2D" uid="uid://dyrxq4dimenjf" path="res://Pedjuang Nusantara Assets/background/batu.png" id="5_svjlb"]
+[ext_resource type="Texture2D" uid="uid://yhpnjlcg56a5" path="res://Pedjuang Nusantara Assets/background/tile31.png" id="6_4oexr"]
+[ext_resource type="Texture2D" uid="uid://b1viog1tqokmu" path="res://Pedjuang Nusantara Assets/background/batu2.png" id="6_heac4"]
+[ext_resource type="Texture2D" uid="uid://dlw224negh7w2" path="res://Pedjuang Nusantara Assets/background/tile32.png" id="7_jsqey"]
+[ext_resource type="Texture2D" uid="uid://bb0s8c7gx8kcg" path="res://Pedjuang Nusantara Assets/background/tile28.png" id="8_6hyxb"]
+[ext_resource type="Texture2D" uid="uid://c0i0s2jyoplro" path="res://Pedjuang Nusantara Assets/background/pink_bush2.png" id="8_ykxg0"]
+[ext_resource type="Texture2D" uid="uid://rf58t0p2jx7x" path="res://Pedjuang Nusantara Assets/background/pointer.png" id="9_qlrgh"]
+[ext_resource type="Texture2D" uid="uid://h7mbfya7pov8" path="res://Pedjuang Nusantara Assets/background/tile51.png" id="11_khkbi"]
+[ext_resource type="Texture2D" uid="uid://bh7wdanh7yreo" path="res://Pedjuang Nusantara Assets/background/tile49.png" id="12_2225y"]
+[ext_resource type="Texture2D" uid="uid://bix4cg1vyedek" path="res://Pedjuang Nusantara Assets/background/tile50.png" id="13_0gokg"]
+[ext_resource type="Texture2D" uid="uid://clr0oxeo23yum" path="res://Pedjuang Nusantara Assets/background/tile47.png" id="14_pj7o8"]
+[ext_resource type="Texture2D" uid="uid://chd6blb0tiwdn" path="res://Pedjuang Nusantara Assets/background/tile48.png" id="15_xlyqx"]
+[ext_resource type="Texture2D" uid="uid://d2nsn0g1uvpdt" path="res://Pedjuang Nusantara Assets/background/tile45.png" id="16_q0u5s"]
+[ext_resource type="Texture2D" uid="uid://cmi0k3gwi2w6x" path="res://Pedjuang Nusantara Assets/background/tile46.png" id="17_ie181"]
+[ext_resource type="Texture2D" uid="uid://cbcoeqx5m0qmb" path="res://Pedjuang Nusantara Assets/background/fence.png" id="18_6gedj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lukgh"]
 size = Vector2(1917.5, 56)
@@ -11,23 +29,342 @@ size = Vector2(47, 321)
 
 [node name="World" type="Node2D"]
 
-[node name="BgPantai" type="Sprite2D" parent="."]
-position = Vector2(960.5, 539.77)
-scale = Vector2(0.999479, 1.00043)
-texture = ExtResource("1_2jps0")
+[node name="laut" type="Sprite2D" parent="."]
+position = Vector2(640, 339)
+scale = Vector2(2.26657, 2.26873)
+texture = ExtResource("1_nxwda")
 metadata/c = Color(0.305882, 0.627451, 0, 1)
 
+[node name="laut2" type="Sprite2D" parent="laut"]
+position = Vector2(574.804, -0.252312)
+texture = ExtResource("1_nxwda")
+metadata/c = Color(0.305882, 0.627451, 0, 1)
+
+[node name="langit" type="Sprite2D" parent="."]
+position = Vector2(567, 21)
+scale = Vector2(1.97901, 1.97901)
+texture = ExtResource("4_h4ed2")
+
+[node name="langit2" type="Sprite2D" parent="langit"]
+position = Vector2(570.439, 1.48245)
+texture = ExtResource("4_h4ed2")
+
+[node name="pulau" type="Sprite2D" parent="."]
+position = Vector2(74, 518)
+scale = Vector2(0.0872684, 0.0872684)
+texture = ExtResource("3_0yfpi")
+
+[node name="pulau2" type="Sprite2D" parent="pulau"]
+position = Vector2(893.794, 57.2944)
+scale = Vector2(0.988489, 0.988489)
+texture = ExtResource("3_0yfpi")
+
+[node name="pulau3" type="Sprite2D" parent="pulau"]
+position = Vector2(435.438, 171.883)
+scale = Vector2(1.2985, 1.2985)
+texture = ExtResource("3_0yfpi")
+
+[node name="batu" type="Sprite2D" parent="."]
+position = Vector2(1050, 541)
+scale = Vector2(0.781502, 0.781502)
+texture = ExtResource("5_svjlb")
+
+[node name="batu2" type="Sprite2D" parent="batu"]
+scale = Vector2(1, 1)
+texture = ExtResource("6_heac4")
+
+[node name="batu2" type="Sprite2D" parent="batu/batu2"]
+position = Vector2(154.617, 12.9387)
+scale = Vector2(1, 1)
+texture = ExtResource("5_svjlb")
+
+[node name="batu2" type="Sprite2D" parent="batu/batu2/batu2"]
+scale = Vector2(1, 1)
+texture = ExtResource("6_heac4")
+
+[node name="fence" type="Sprite2D" parent="."]
+position = Vector2(354, 228)
+scale = Vector2(1.75525, 1.75525)
+texture = ExtResource("18_6gedj")
+
+[node name="fence2" type="Sprite2D" parent="fence"]
+position = Vector2(43.1403, -2.28882e-05)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence3" type="Sprite2D" parent="fence"]
+position = Vector2(85.5033, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence22" type="Sprite2D" parent="fence"]
+position = Vector2(78.5076, 127.866)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence23" type="Sprite2D" parent="fence"]
+position = Vector2(121.648, 127.866)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence24" type="Sprite2D" parent="fence"]
+position = Vector2(164.011, 127.866)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence25" type="Sprite2D" parent="fence"]
+position = Vector2(240.964, 51.302)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence26" type="Sprite2D" parent="fence"]
+position = Vector2(284.104, 51.302)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence27" type="Sprite2D" parent="fence"]
+position = Vector2(326.467, 51.302)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence4" type="Sprite2D" parent="fence"]
+position = Vector2(-181.889, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence5" type="Sprite2D" parent="fence"]
+position = Vector2(-138.749, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence6" type="Sprite2D" parent="fence"]
+position = Vector2(-96.3855, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence7" type="Sprite2D" parent="fence"]
+position = Vector2(-54.0226, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence8" type="Sprite2D" parent="fence"]
+position = Vector2(-10.8823, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence9" type="Sprite2D" parent="fence"]
+position = Vector2(31.4808, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence10" type="Sprite2D" parent="fence"]
+position = Vector2(73.8438, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence11" type="Sprite2D" parent="fence"]
+position = Vector2(116.984, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence12" type="Sprite2D" parent="fence"]
+position = Vector2(159.347, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence13" type="Sprite2D" parent="fence"]
+position = Vector2(202.099, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence14" type="Sprite2D" parent="fence"]
+position = Vector2(245.239, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence15" type="Sprite2D" parent="fence"]
+position = Vector2(287.602, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence16" type="Sprite2D" parent="fence"]
+position = Vector2(330.354, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence17" type="Sprite2D" parent="fence"]
+position = Vector2(373.494, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence18" type="Sprite2D" parent="fence"]
+position = Vector2(415.857, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence19" type="Sprite2D" parent="fence"]
+position = Vector2(458.609, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence20" type="Sprite2D" parent="fence"]
+position = Vector2(501.749, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="fence21" type="Sprite2D" parent="fence"]
+position = Vector2(544.112, 226.972)
+scale = Vector2(1, 1)
+texture = ExtResource("18_6gedj")
+
+[node name="pinkbush" type="Sprite2D" parent="."]
+position = Vector2(30, 609)
+scale = Vector2(1.9115, 1.9115)
+texture = ExtResource("8_ykxg0")
+
+[node name="pointer" type="Sprite2D" parent="."]
+position = Vector2(1241, 597)
+scale = Vector2(1.474, 1.474)
+texture = ExtResource("9_qlrgh")
+
+[node name="tiletanah5" type="Sprite2D" parent="."]
+position = Vector2(487, 503)
+scale = Vector2(1.54167, 1.54167)
+texture = ExtResource("6_4oexr")
+
+[node name="tiletanah10" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(47.8261, 0)
+texture = ExtResource("7_jsqey")
+
+[node name="tiletanah4" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(95.6522, 0)
+texture = ExtResource("5_aa0d3")
+
+[node name="tiletanah6" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(181.739, -86.0869)
+texture = ExtResource("6_4oexr")
+
+[node name="tiletanah11" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(229.565, -86.0869)
+texture = ExtResource("7_jsqey")
+
+[node name="tiletanah7" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(277.391, -86.0869)
+texture = ExtResource("5_aa0d3")
+
+[node name="tiletanah8" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-86.0869, -143.478)
+texture = ExtResource("6_4oexr")
+
+[node name="tiletanah14" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-38.2608, -143.478)
+texture = ExtResource("7_jsqey")
+
+[node name="tiletanah9" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(9.56525, -143.478)
+texture = ExtResource("5_aa0d3")
+
+[node name="tiletanah17" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-289.217, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("11_khkbi")
+
+[node name="tiletanah18" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-235.739, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("12_2225y")
+
+[node name="tiletanah19" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-182.261, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("13_0gokg")
+
+[node name="tiletanah20" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-128.783, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("14_pj7o8")
+
+[node name="tiletanah21" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-76.1738, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("15_xlyqx")
+
+[node name="tiletanah22" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(-22.6956, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("16_q0u5s")
+
+[node name="tiletanah23" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(30.3479, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("17_ie181")
+
+[node name="tiletanah24" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(83.3914, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("17_ie181")
+
+[node name="tiletanah12" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(136.435, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("8_6hyxb")
+
+[node name="tiletanah13" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(189.478, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("8_6hyxb")
+
+[node name="tiletanah27" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(242.957, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("13_0gokg")
+
+[node name="tiletanah28" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(296, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("14_pj7o8")
+
+[node name="tiletanah29" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(349.478, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("15_xlyqx")
+
+[node name="tiletanah30" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(402.522, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("16_q0u5s")
+
+[node name="tiletanah31" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(456, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("17_ie181")
+
+[node name="tiletanah32" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(509.478, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("17_ie181")
+
+[node name="tiletanah33" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(562.957, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("8_6hyxb")
+
+[node name="tiletanah34" type="Sprite2D" parent="tiletanah5"]
+position = Vector2(616.435, 113.826)
+scale = Vector2(1.1187, 1.1187)
+texture = ExtResource("8_6hyxb")
+
 [node name="Character" parent="." instance=ExtResource("2_l2jca")]
-position = Vector2(-379, -8)
+position = Vector2(-376, -384)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(965.25, 1053)
+position = Vector2(882, 675)
 shape = SubResource("RectangleShape2D_lukgh")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(22, 918)
+position = Vector2(3, 482)
 shape = SubResource("RectangleShape2D_6a24f")
