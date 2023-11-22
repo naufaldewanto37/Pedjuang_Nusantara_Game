@@ -92,7 +92,7 @@ func _on_vision_soldier_body_exited(body):
 			SPEED = abs(initial_speed)
 		else:
 			SPEED = abs(initial_speed) * -1
-	elif seeing_satria and !Satria.is_crouching:
+	elif seeing_satria :
 		if body.is_in_group("satria"):
 			soldier.play("attack")
 			SPEED = 0  # Menghentikan prajurit ketika melihat Satria
@@ -131,8 +131,6 @@ func shoot_at_satria():
 	elif !facing_right:
 		bullet_instance.position.x = position.x + 20 * -1
 	
-
-
 
 func _on_hurtbox_body_entered(body):
 	if body.get_collision_layer() == 16:
