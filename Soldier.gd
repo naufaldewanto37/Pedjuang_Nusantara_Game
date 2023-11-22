@@ -12,7 +12,6 @@ var shooting_timer = 0.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@onready var state_machine = $AnimationTree.get('parameters/playback')
 @onready var soldier = $AnimationSoldier
 @onready var raycast1 = $RayCast2D
 @onready var SoldierSprite = $SoldierSprite2D
@@ -30,8 +29,9 @@ func _ready():
 	soldier.play("run")
 
 func _physics_process(delta):
+	print(facing_right)
 	if attacking and shooting_timer <= 0:
-		shoot_at_satria(Satria.position)
+		shoot_at_satria()
 		shooting_timer = shooting_interval
 	
 	if shooting_timer > 0:
@@ -49,7 +49,6 @@ func _physics_process(delta):
 			flip()
 			
 	velocity.x = SPEED
-	print(self.position)
 	move_and_slide()
 	
 func _on_attack_soldier_body_entered(body):
@@ -58,7 +57,7 @@ func _on_attack_soldier_body_entered(body):
 		SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 		seeing_satria = true
 		attacking = true
-		shoot_at_satria(Satria.position)
+		shoot_at_satria()
 
 
 func _on_attack_soldier_body_exited(body):
@@ -81,10 +80,8 @@ func _on_vision_soldier_body_entered(body):
 			soldier.play("run")
 			if !facing_right:
 				SPEED = -abs(initial_speed)  # Bergerak ke kiri
-				facing_right = false
 			else:
 				SPEED = abs(initial_speed)  # Bergerak ke kanan
-				facing_right = true
 			seeing_satria = true
 
 func _on_vision_soldier_body_exited(body):
@@ -101,7 +98,7 @@ func _on_vision_soldier_body_exited(body):
 			SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 			seeing_satria = true
 			attacking = true
-			shoot_at_satria(Satria.position)
+			shoot_at_satria()
 
 func flip():
 	move_timer = move_cd
@@ -124,14 +121,20 @@ func _on_animation_soldier_animation_finished(anim_name):
 	if anim_name == "death":
 		queue_free()
 
-func shoot_at_satria(target_position):
-	for i in range(3):
-		var bullet_instance = BulletScene.instantiate()
-		var bullet_position_offset = Vector2(0, 30)
-		if facing_right:
-			bullet_instance.position = position + bullet_position_offset + Vector2(i * 5, 0)
-			bullet_instance.set_target(target_position)  # Set tujuan peluru
-		else:
-			bullet_instance.position = position + bullet_position_offset + Vector2(i * 5, 0)
-			bullet_instance.set_target(target_position)  # Set tujuan peluru
-		add_child(bullet_instance)
+func shoot_at_satria():
+	var bullet_direction
+	var bullet_instance = BulletScene.instantiate()
+	get_parent().add_child(bullet_instance)
+	bullet_instance.position.y = position.y -5
+	if facing_right:
+		bullet_instance.position.x = position.x + 20 * 1
+	elif !facing_right:
+		bullet_instance.position.x = position.x + 20 * -1
+	
+
+
+
+func _on_hurtbox_body_entered(body):
+	if body.get_collision_layer() == 16:
+		body.queue_free()
+		take_damage(10)

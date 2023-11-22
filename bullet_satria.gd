@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Bullet
+class_name BulletSatria
 
 var bullet_velocity = Vector2()
 var direction = 1
@@ -10,4 +10,3 @@ func _ready():
 
 func _physics_process(delta):
 	move_and_slide()
-
