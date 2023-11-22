@@ -1,21 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://je8x6yyo24ef"]
+[gd_scene load_steps=4 format=3 uid="uid://wu3gn3qlrkl8"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_lib2q"]
 [ext_resource type="Texture2D" uid="uid://dl4gerv5odc66" path="res://Pedjuang Nusantara Assets/Soldier_2/bullet.png" id="1_xbptg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_scupk"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6n6kx"]
 radius = 8.544
 
-[node name="Bullet" type="Node2D" groups=["Bullet"]]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Bullet"]]
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_lib2q")
 
 [node name="BulletSprite2D" type="Sprite2D" parent="." groups=["Bullet"]]
-scale = Vector2(0.196876, 0.205962)
+scale = Vector2(0.197, 0.206)
 texture = ExtResource("1_xbptg")
 
-[node name="Bullet" type="Area2D" parent="BulletSprite2D" groups=["Bullet"]]
-
-[node name="BulletCollsion" type="CollisionShape2D" parent="BulletSprite2D/Bullet" groups=["Bullet"]]
-shape = SubResource("CircleShape2D_scupk")
-
-[connection signal="body_entered" from="BulletSprite2D/Bullet" to="." method="_on_bullet_body_entered"]
+[node name="BulletCollsion" type="CollisionShape2D" parent="." groups=["Bullet"]]
+scale = Vector2(0.197, 0.206)
+shape = SubResource("CircleShape2D_6n6kx")

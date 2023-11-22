@@ -93,19 +93,20 @@ position = Vector2(85.5033, 0)
 texture = ExtResource("18_6gedj")
 
 [node name="fence22" type="Sprite2D" parent="fence"]
-position = Vector2(78.5076, 127.866)
+position = Vector2(75.8684, 126.573)
 texture = ExtResource("18_6gedj")
 
 [node name="fence23" type="Sprite2D" parent="fence"]
-position = Vector2(121.648, 127.866)
+position = Vector2(119.009, 126.573)
 texture = ExtResource("18_6gedj")
 
 [node name="fence24" type="Sprite2D" parent="fence"]
-position = Vector2(164.011, 127.866)
+position = Vector2(161.372, 126.573)
 texture = ExtResource("18_6gedj")
 
 [node name="fence25" type="Sprite2D" parent="fence"]
-position = Vector2(240.964, 51.302)
+position = Vector2(208.464, 51.302)
+scale = Vector2(-0.015625, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence26" type="Sprite2D" parent="fence"]
