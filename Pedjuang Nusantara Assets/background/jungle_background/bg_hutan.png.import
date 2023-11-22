@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s3qpsncq8rh1"
-path="res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"
+uid="uid://x408veleic88"
+path="res://.godot/imported/bg_hutan.png-ce600634bb503c0a3819390f79524c83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/Pistol/_CrouchAttackPistol.png"
-dest_files=["res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"]
+source_file="res://Pedjuang Nusantara Assets/background/jungle_background/bg_hutan.png"
+dest_files=["res://.godot/imported/bg_hutan.png-ce600634bb503c0a3819390f79524c83.ctex"]
 
 [params]
 

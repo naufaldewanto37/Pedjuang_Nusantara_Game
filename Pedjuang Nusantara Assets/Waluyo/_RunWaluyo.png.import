@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s3qpsncq8rh1"
-path="res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"
+uid="uid://b1fi1g52cbobf"
+path="res://.godot/imported/_RunWaluyo.png-632c8eb61a36e42993792e9a0aa9227f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/Pistol/_CrouchAttackPistol.png"
-dest_files=["res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Waluyo/_RunWaluyo.png"
+dest_files=["res://.godot/imported/_RunWaluyo.png-632c8eb61a36e42993792e9a0aa9227f.ctex"]
 
 [params]
 

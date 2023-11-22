@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://10hespmskmxe"]
 
 [ext_resource type="Texture2D" uid="uid://di0q4f07b1yh7" path="res://Pedjuang Nusantara Assets/background/ocean.png" id="1_nxwda"]
-[ext_resource type="PackedScene" uid="uid://mxcsag8n8ntp" path="res://Character.tscn" id="2_l2jca"]
+[ext_resource type="PackedScene" uid="uid://c7a5qvfs35ffx" path="res://Character.tscn" id="2_l2jca"]
 [ext_resource type="Texture2D" uid="uid://byqqascsnueyw" path="res://Pedjuang Nusantara Assets/background/island.png" id="3_0yfpi"]
 [ext_resource type="Texture2D" uid="uid://dma1giuocgtpd" path="res://Pedjuang Nusantara Assets/background/langit.png" id="4_h4ed2"]
 [ext_resource type="Texture2D" uid="uid://dys847a8rk4au" path="res://Pedjuang Nusantara Assets/background/tile30.png" id="5_aa0d3"]
@@ -70,16 +70,13 @@ scale = Vector2(0.781502, 0.781502)
 texture = ExtResource("5_svjlb")
 
 [node name="batu2" type="Sprite2D" parent="batu"]
-scale = Vector2(1, 1)
 texture = ExtResource("6_heac4")
 
 [node name="batu2" type="Sprite2D" parent="batu/batu2"]
 position = Vector2(154.617, 12.9387)
-scale = Vector2(1, 1)
 texture = ExtResource("5_svjlb")
 
 [node name="batu2" type="Sprite2D" parent="batu/batu2/batu2"]
-scale = Vector2(1, 1)
 texture = ExtResource("6_heac4")
 
 [node name="fence" type="Sprite2D" parent="."]
@@ -89,132 +86,106 @@ texture = ExtResource("18_6gedj")
 
 [node name="fence2" type="Sprite2D" parent="fence"]
 position = Vector2(43.1403, -2.28882e-05)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence3" type="Sprite2D" parent="fence"]
 position = Vector2(85.5033, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence22" type="Sprite2D" parent="fence"]
 position = Vector2(78.5076, 127.866)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence23" type="Sprite2D" parent="fence"]
 position = Vector2(121.648, 127.866)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence24" type="Sprite2D" parent="fence"]
 position = Vector2(164.011, 127.866)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence25" type="Sprite2D" parent="fence"]
 position = Vector2(240.964, 51.302)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence26" type="Sprite2D" parent="fence"]
 position = Vector2(284.104, 51.302)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence27" type="Sprite2D" parent="fence"]
 position = Vector2(326.467, 51.302)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence4" type="Sprite2D" parent="fence"]
 position = Vector2(-181.889, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence5" type="Sprite2D" parent="fence"]
 position = Vector2(-138.749, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence6" type="Sprite2D" parent="fence"]
 position = Vector2(-96.3855, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence7" type="Sprite2D" parent="fence"]
 position = Vector2(-54.0226, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence8" type="Sprite2D" parent="fence"]
 position = Vector2(-10.8823, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence9" type="Sprite2D" parent="fence"]
 position = Vector2(31.4808, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence10" type="Sprite2D" parent="fence"]
 position = Vector2(73.8438, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence11" type="Sprite2D" parent="fence"]
 position = Vector2(116.984, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence12" type="Sprite2D" parent="fence"]
 position = Vector2(159.347, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence13" type="Sprite2D" parent="fence"]
 position = Vector2(202.099, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence14" type="Sprite2D" parent="fence"]
 position = Vector2(245.239, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence15" type="Sprite2D" parent="fence"]
 position = Vector2(287.602, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence16" type="Sprite2D" parent="fence"]
 position = Vector2(330.354, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence17" type="Sprite2D" parent="fence"]
 position = Vector2(373.494, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence18" type="Sprite2D" parent="fence"]
 position = Vector2(415.857, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence19" type="Sprite2D" parent="fence"]
 position = Vector2(458.609, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence20" type="Sprite2D" parent="fence"]
 position = Vector2(501.749, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="fence21" type="Sprite2D" parent="fence"]
 position = Vector2(544.112, 226.972)
-scale = Vector2(1, 1)
 texture = ExtResource("18_6gedj")
 
 [node name="pinkbush" type="Sprite2D" parent="."]
@@ -354,8 +325,8 @@ position = Vector2(616.435, 113.826)
 scale = Vector2(1.1187, 1.1187)
 texture = ExtResource("8_6hyxb")
 
-[node name="Character" parent="." instance=ExtResource("2_l2jca")]
-position = Vector2(-376, -384)
+[node name="Satria" parent="." instance=ExtResource("2_l2jca")]
+position = Vector2(52, 594)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

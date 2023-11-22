@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s3qpsncq8rh1"
-path="res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"
+uid="uid://ba8a1svuc2xx2"
+path="res://.godot/imported/Idle.png-1b2b969055926ade3a5c9d5cd7507b80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedjuang Nusantara Assets/Satria/Pistol/_CrouchAttackPistol.png"
-dest_files=["res://.godot/imported/_CrouchAttackPistol.png-6d5fc378ebc6c94117e4f05049b88d36.ctex"]
+source_file="res://Pedjuang Nusantara Assets/Soldier_2/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-1b2b969055926ade3a5c9d5cd7507b80.ctex"]
 
 [params]
 
