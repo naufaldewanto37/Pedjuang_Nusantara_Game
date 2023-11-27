@@ -92,7 +92,7 @@ func _on_vision_soldier_body_exited(body):
 			SPEED = abs(initial_speed)
 		else:
 			SPEED = abs(initial_speed) * -1
-	elif seeing_satria :
+	elif seeing_satria:
 		if body.is_in_group("satria"):
 			soldier.play("attack")
 			SPEED = 0  # Menghentikan prajurit ketika melihat Satria

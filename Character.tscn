@@ -1,14 +1,15 @@
-[gd_scene load_steps=41 format=3 uid="uid://c7a5qvfs35ffx"]
+[gd_scene load_steps=44 format=3 uid="uid://c7a5qvfs35ffx"]
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
 [ext_resource type="Script" path="res://Satria.gd" id="2_l0rww"]
 [ext_resource type="Texture2D" uid="uid://8ocwlvgiv7ax" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__attackUP__.png" id="3_2mev7"]
 [ext_resource type="Texture2D" uid="uid://il76i7vklkaf" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchWalk.png" id="3_83ibg"]
-[ext_resource type="Texture2D" uid="uid://yneie6vv6ny4" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_RunGun.png" id="3_etsx8"]
+[ext_resource type="Texture2D" uid="uid://byssufmmavv35" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_RunGunRiffle.png" id="3_fuht7"]
 [ext_resource type="Texture2D" uid="uid://diu03xpgd2j51" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_CrouchWalkGun.png" id="3_k1h20"]
 [ext_resource type="Texture2D" uid="uid://d1um0ocgj6vje" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchAttack.png" id="3_ku5ut"]
 [ext_resource type="Texture2D" uid="uid://bpfca4t3neg47" path="res://Pedjuang Nusantara Assets/Satria/Riffle/__idleMC_riffle__.png" id="3_pm3yi"]
+[ext_resource type="Texture2D" uid="uid://c6xyvgi5fxj66" path="res://Pedjuang Nusantara Assets/Satria/Riffle/__lookUpRiffle__.png" id="3_wbv18"]
 [ext_resource type="Texture2D" uid="uid://cjmmvli2hunoa" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Death.png" id="3_xrykp"]
 [ext_resource type="Texture2D" uid="uid://ckm4fhlhlp0gd" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Fall.png" id="7_iof0u"]
 [ext_resource type="Texture2D" uid="uid://bejlgy78vc4av" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Jump.png" id="8_0e2lc"]
@@ -22,21 +23,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
 size = Vector2(46, 90)
-
-[sub_resource type="Animation" id="Animation_kkck5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SatriaSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_64i0g"]
 resource_name = "attack"
@@ -911,7 +897,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_33ma1"]
 resource_name = "run_gun"
-length = 0.7
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -923,7 +909,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_etsx8")]
+"values": [ExtResource("3_fuht7")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -962,9 +948,10 @@ tracks/3/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_bh4ug"]
-resource_name = "up_attack"
-length = 0.3
+[sub_resource type="Animation" id="Animation_pgh4x"]
+resource_name = "lookup_attack"
+length = 0.5
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1008,15 +995,107 @@ tracks/3/path = NodePath("SatriaSprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [0, 1, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_d7buw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationSatria:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bvovf"]
+resource_name = "lookup_gun"
+length = 0.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_wbv18")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_launb"]
 _data = {
-"RESET": SubResource("Animation_kkck5"),
+"RESET": SubResource("Animation_d7buw"),
 "attack": SubResource("Animation_64i0g"),
 "crouch": SubResource("Animation_luux7"),
 "crouchWalk": SubResource("Animation_tiqld"),
@@ -1031,13 +1110,17 @@ _data = {
 "jump": SubResource("Animation_te4tq"),
 "jump_gun": SubResource("Animation_umy5s"),
 "lookup": SubResource("Animation_nh11g"),
+"lookup_attack": SubResource("Animation_pgh4x"),
+"lookup_gun": SubResource("Animation_bvovf"),
 "run": SubResource("Animation_sgwoh"),
-"run_gun": SubResource("Animation_33ma1"),
-"up_attack": SubResource("Animation_bh4ug")
+"run_gun": SubResource("Animation_33ma1")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5bgp"]
 size = Vector2(60, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in7lk"]
+size = Vector2(16.9553, 107.099)
 
 [node name="Satria" type="Node2D" groups=["satria"]]
 scale = Vector2(0.95, 0.95)
@@ -1045,10 +1128,6 @@ scale = Vector2(0.95, 0.95)
 [node name="Satria" type="CharacterBody2D" parent="." groups=["satria"]]
 scale = Vector2(0.310414, 0.292701)
 script = ExtResource("2_l0rww")
-speed = null
-JUMP_VELOCITY = null
-double_jump_velocity = null
-max_health = null
 
 [node name="SatriaStandingShape2D" type="CollisionShape2D" parent="Satria" groups=["satria"]]
 position = Vector2(-1.14532, -1.23793)
@@ -1062,12 +1141,11 @@ shape = SubResource("RectangleShape2D_m3iuc")
 texture_filter = 1
 position = Vector2(5.85467, -67.2379)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("11_jcbo0")
+texture = ExtResource("3_wbv18")
 hframes = 10
 frame = 1
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
-speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
@@ -1093,6 +1171,11 @@ collision_mask = 9
 [node name="BambuCollison" type="CollisionShape2D" parent="Satria/Bambu" groups=["satria"]]
 position = Vector2(76, 3)
 shape = SubResource("RectangleShape2D_d5bgp")
+disabled = true
+
+[node name="BambuCollisonAtas" type="CollisionShape2D" parent="Satria/Bambu"]
+position = Vector2(-0.550208, -104.237)
+shape = SubResource("RectangleShape2D_in7lk")
 disabled = true
 
 [node name="HurtboxStanding" type="Area2D" parent="Satria"]
