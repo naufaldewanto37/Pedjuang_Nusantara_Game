@@ -9,6 +9,7 @@ var move_timer = 4
 var move_cd = 4
 var shooting_interval = 3  # Interval penembakan dalam detik
 var shooting_timer = 0.0
+var bullet_direction = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -29,7 +30,6 @@ func _ready():
 	soldier.play("run")
 
 func _physics_process(delta):
-	print(facing_right)
 	if attacking and shooting_timer <= 0:
 		shoot_at_satria()
 		shooting_timer = shooting_interval
@@ -45,7 +45,7 @@ func _physics_process(delta):
 			move_timer -= delta
 			if !raycast1.is_colliding() && is_on_floor():
 				flip()
-		else:
+		elif move_timer <= 0:
 			flip()
 			
 	velocity.x = SPEED
@@ -57,6 +57,7 @@ func _on_attack_soldier_body_entered(body):
 		SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 		seeing_satria = true
 		attacking = true
+		update_bullet_direction()
 		shoot_at_satria()
 
 
@@ -67,8 +68,10 @@ func _on_attack_soldier_body_exited(body):
 		seeing_satria = false
 		if facing_right:
 			SPEED = abs(initial_speed)
+			update_bullet_direction()
 		else:
 			SPEED = abs(initial_speed) * -1
+			update_bullet_direction()
 			
 func _on_vision_soldier_body_entered(body):
 	if body.is_in_group("satria") or body.is_in_group("Satria"):
@@ -80,8 +83,10 @@ func _on_vision_soldier_body_entered(body):
 			soldier.play("run")
 			if !facing_right:
 				SPEED = -abs(initial_speed)  # Bergerak ke kiri
+				update_bullet_direction()
 			else:
 				SPEED = abs(initial_speed)  # Bergerak ke kanan
+				update_bullet_direction()
 			seeing_satria = true
 
 func _on_vision_soldier_body_exited(body):
@@ -90,20 +95,30 @@ func _on_vision_soldier_body_exited(body):
 		seeing_satria = false
 		if facing_right:
 			SPEED = abs(initial_speed)
+			bullet_direction = 1
 		else:
 			SPEED = abs(initial_speed) * -1
+			bullet_direction = -1
 	elif seeing_satria:
-		if body.is_in_group("satria"):
+		if body.is_in_group("satria") and body.is_on_floor():
 			soldier.play("attack")
 			SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 			seeing_satria = true
 			attacking = true
 			shoot_at_satria()
+			
+func update_bullet_direction():
+	if facing_right == true:
+		bullet_direction = 1
+	elif facing_right == false:
+		bullet_direction = -1
 
 func flip():
-	move_timer = move_cd
-	facing_right = !facing_right
-	scale.x = abs(scale.x) * -1
+	if move_timer <= 0:
+		move_timer = move_cd
+		facing_right = !facing_right
+		update_bullet_direction()
+		scale.x = abs(scale.x) * -1
 	if facing_right:
 		SPEED = abs(initial_speed)
 	else:
@@ -122,15 +137,11 @@ func _on_animation_soldier_animation_finished(anim_name):
 		queue_free()
 
 func shoot_at_satria():
-	var bullet_direction
 	var bullet_instance = BulletScene.instantiate()
+	bullet_instance.direction = bullet_direction  # Menetapkan arah gerak peluru
 	get_parent().add_child(bullet_instance)
-	bullet_instance.position.y = position.y -5
-	if facing_right:
-		bullet_instance.position.x = position.x + 20 * 1
-	elif !facing_right:
-		bullet_instance.position.x = position.x + 20 * -1
-	
+	bullet_instance.position.y = position.y -5	
+	bullet_instance.position.x = position.x + 20 * bullet_direction	
 
 func _on_hurtbox_body_entered(body):
 	if body.get_collision_layer() == 16:

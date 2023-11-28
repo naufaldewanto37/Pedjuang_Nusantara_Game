@@ -241,7 +241,7 @@ size = Vector2(18, 27)
 
 [node name="Soldier" type="CharacterBody2D" parent="." groups=["Enemy"]]
 collision_layer = 8
-collision_mask = 10
+collision_mask = 2
 script = ExtResource("1_n718e")
 
 [node name="SoldierSprite2D" type="Sprite2D" parent="Soldier" groups=["Enemy"]]
@@ -277,7 +277,7 @@ shape = SubResource("RectangleShape2D_3345t")
 
 [node name="Hurtbox" type="Area2D" parent="Soldier"]
 collision_layer = 0
-collision_mask = 17
+collision_mask = 145
 
 [node name="HurtboxShape" type="CollisionShape2D" parent="Soldier/Hurtbox"]
 position = Vector2(4, 2.5)

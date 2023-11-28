@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1nmoswgtsqob"]
+
+[ext_resource type="Texture2D" uid="uid://ctmu6ni0gnw1j" path="res://Pedjuang Nusantara Assets/Satria/Pistol/pistol.png" id="1_fdapv"]
+[ext_resource type="Script" path="res://pistol.gd" id="1_xdrsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibf3m"]
+size = Vector2(13.3508, 9.3185)
+
+[node name="Pistol" type="Node2D"]
+script = ExtResource("1_xdrsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.43874, 0.472933)
+texture = ExtResource("1_fdapv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.348225, 1.37225)
+shape = SubResource("RectangleShape2D_ibf3m")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
