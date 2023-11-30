@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://beaad0i4tphtk"]
+
+[ext_resource type="Texture2D" uid="uid://b11ki8wautpe7" path="res://Pedjuang Nusantara Assets/GUI/UI_Flat_Frame_01_Horizontal.png" id="1_rt727"]
+[ext_resource type="Texture2D" uid="uid://dmon2ugfqnipp" path="res://Pedjuang Nusantara Assets/GUI/UI_Flat_Frame_02_Horizontal.png" id="2_8wfkv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2rkbf"]
+texture = ExtResource("1_rt727")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1wlm"]
+texture = ExtResource("2_8wfkv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_perff"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_2rkbf")
+Button/styles/normal = SubResource("StyleBoxTexture_b1wlm")
+Button/styles/pressed = SubResource("StyleBoxFlat_perff")

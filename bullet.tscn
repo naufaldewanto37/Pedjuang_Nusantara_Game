@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://wu3gn3qlrkl8"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_lib2q"]
+[ext_resource type="Texture2D" uid="uid://dl4gerv5odc66" path="res://Pedjuang Nusantara Assets/Soldier_2/bullet.png" id="1_xbptg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6n6kx"]
+radius = 8.544
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Bullet"]]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_lib2q")
+
+[node name="BulletSprite2D" type="Sprite2D" parent="." groups=["Bullet"]]
+scale = Vector2(0.197, 0.206)
+texture = ExtResource("1_xbptg")
+
+[node name="BulletCollsion" type="CollisionShape2D" parent="." groups=["Bullet"]]
+scale = Vector2(0.197, 0.206)
+shape = SubResource("CircleShape2D_6n6kx")

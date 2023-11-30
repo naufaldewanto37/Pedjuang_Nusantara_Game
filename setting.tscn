@@ -1,0 +1,183 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqj60nc3kdujj"]
+
+[ext_resource type="Script" path="res://setting.gd" id="1_hrhtn"]
+[ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_yibc4"]
+[ext_resource type="Texture2D" uid="uid://gss6snhbxnq" path="res://Pedjuang Nusantara Assets/background/bg_riflebambu.png" id="2_ei71l"]
+[ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="3_rcgc2"]
+
+[sub_resource type="GDScript" id="GDScript_u5fpl"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+"
+
+[node name="Setting" type="Node2D"]
+script = ExtResource("1_hrhtn")
+
+[node name="BgPantai" type="Sprite2D" parent="."]
+position = Vector2(640, 359.769)
+scale = Vector2(0.665625, 0.667095)
+texture = ExtResource("1_yibc4")
+metadata/c = Color(0.305882, 0.627451, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
+custom_minimum_size = Vector2(0, 20)
+offset_left = -959.0
+offset_top = -200.0
+offset_right = -863.0
+offset_bottom = -29.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+flat = true
+script = SubResource("GDScript_u5fpl")
+
+[node name="LoadGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Load Game"
+flat = true
+metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
+
+[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
+self_modulate = Color(1, 0.458824, 0.152941, 1)
+layout_mode = 2
+text = "Settings"
+flat = true
+
+[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+flat = true
+
+[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Exit Game"
+flat = true
+
+[node name="PanelSetting" type="Panel" parent="BgPantai"]
+offset_left = -447.733
+offset_top = -287.646
+offset_right = 769.267
+offset_bottom = 384.354
+
+[node name="General" type="Button" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 82.6626
+offset_top = 61.6381
+offset_right = 268.663
+offset_bottom = 124.638
+theme_override_colors/font_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_focus_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_outline_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_focus_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "GENERAL"
+flat = true
+
+[node name="Audio" type="Button" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 975.057
+offset_top = 63.1371
+offset_right = 1111.06
+offset_bottom = 126.137
+theme_override_font_sizes/font_size = 40
+text = "AUDIO"
+flat = true
+
+[node name="Control" type="Button" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 60.0
+offset_right = 715.0
+offset_bottom = 123.0
+theme_override_colors/font_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "CONTROL"
+flat = true
+
+[node name="FullScreenLabel" type="Label" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 67.6392
+offset_top = 211.542
+offset_right = 280.639
+offset_bottom = 263.542
+theme_override_font_sizes/font_size = 35
+text = "FULLSCREEN"
+
+[node name="Fullscreen" type="CheckButton" parent="BgPantai/PanelSetting/FullScreenLabel"]
+layout_mode = 2
+anchor_left = 0.0336894
+anchor_top = 0.419643
+anchor_right = 0.940016
+anchor_bottom = 0.513393
+offset_left = 864.186
+offset_top = -50.3032
+offset_right = 715.138
+offset_bottom = -22.1782
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+flat = true
+
+[node name="BrightnessLabel" type="Label" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 59.7242
+offset_top = 444.024
+offset_right = 280.724
+offset_bottom = 502.024
+theme_override_font_sizes/font_size = 40
+text = "BRIGHTNESS"
+
+[node name="BrightnessSlider" type="HSlider" parent="BgPantai/PanelSetting/BrightnessLabel"]
+layout_mode = 0
+offset_left = 509.296
+offset_top = -77.95
+offset_right = 1080.3
+offset_bottom = 144.05
+max_value = 3.0
+step = 0.01
+value = 2.0
+
+[node name="BgRiflebambu" type="Sprite2D" parent="."]
+position = Vector2(1076, 435)
+scale = Vector2(0.502792, 0.542939)
+texture = ExtResource("2_ei71l")
+
+[node name="BgTitle" type="Sprite2D" parent="."]
+position = Vector2(197, 108)
+scale = Vector2(0.684932, 0.799252)
+texture = ExtResource("3_rcgc2")
+
+[connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="toggled" from="BgPantai/PanelSetting/FullScreenLabel/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="value_changed" from="BgPantai/PanelSetting/BrightnessLabel/BrightnessSlider" to="." method="_on_brightness_slider_value_changed"]

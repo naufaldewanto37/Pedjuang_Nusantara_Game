@@ -1,0 +1,291 @@
+[gd_scene load_steps=15 format=3 uid="uid://ca7f6t5iympxb"]
+
+[ext_resource type="Script" path="res://Soldier.gd" id="1_n718e"]
+[ext_resource type="Texture2D" uid="uid://ba8a1svuc2xx2" path="res://Pedjuang Nusantara Assets/Soldier_2/Idle.png" id="1_nxcow"]
+[ext_resource type="Texture2D" uid="uid://bnlykudxln5tu" path="res://Pedjuang Nusantara Assets/Soldier_2/Shot_1.png" id="2_pogi5"]
+[ext_resource type="Texture2D" uid="uid://ck7pb82no3g05" path="res://Pedjuang Nusantara Assets/Soldier_2/Run.png" id="3_ev4wi"]
+[ext_resource type="Texture2D" uid="uid://cnudqnoguc4q0" path="res://Pedjuang Nusantara Assets/Soldier_2/Dead.png" id="4_uvjca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j3i4"]
+size = Vector2(26, 32)
+
+[sub_resource type="Animation" id="Animation_lwngs"]
+resource_name = "attack"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoldierSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_pogi5")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoldierSprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoldierSprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoldierSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_yh3bo"]
+resource_name = "death"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoldierSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_uvjca")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoldierSprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoldierSprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoldierSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_30giw"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoldierSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_nxcow")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoldierSprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoldierSprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoldierSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_21jnm"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoldierSprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ev4wi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoldierSprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoldierSprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoldierSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5nlpf"]
+_data = {
+"attack": SubResource("Animation_lwngs"),
+"death": SubResource("Animation_yh3bo"),
+"idle": SubResource("Animation_30giw"),
+"run": SubResource("Animation_21jnm")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_loxw8"]
+size = Vector2(139.75, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3345t"]
+size = Vector2(161, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkaqq"]
+size = Vector2(18, 27)
+
+[node name="Enemy" type="Node2D" groups=["Enemy"]]
+
+[node name="Soldier" type="CharacterBody2D" parent="." groups=["Enemy"]]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_n718e")
+
+[node name="SoldierSprite2D" type="Sprite2D" parent="Soldier" groups=["Enemy"]]
+position = Vector2(1.5, -11.5)
+scale = Vector2(0.554688, 0.429688)
+texture = ExtResource("2_pogi5")
+flip_h = true
+hframes = 4
+
+[node name="SoldierShape2D" type="CollisionShape2D" parent="Soldier" groups=["Enemy"]]
+shape = SubResource("RectangleShape2D_5j3i4")
+
+[node name="AnimationSoldier" type="AnimationPlayer" parent="Soldier" groups=["Enemy"]]
+libraries = {
+"": SubResource("AnimationLibrary_5nlpf")
+}
+
+[node name="AttackSoldier" type="Area2D" parent="Soldier" groups=["Enemy"]]
+
+[node name="CollisionAttack2D" type="CollisionShape2D" parent="Soldier/AttackSoldier" groups=["Enemy"]]
+position = Vector2(-83.125, -11.5)
+shape = SubResource("RectangleShape2D_loxw8")
+
+[node name="RayCast2D" type="RayCast2D" parent="Soldier"]
+position = Vector2(-11.5, 2.50003)
+target_position = Vector2(0, 17)
+
+[node name="VisionSoldier" type="Area2D" parent="Soldier"]
+
+[node name="CollisionVision2D" type="CollisionShape2D" parent="Soldier/VisionSoldier"]
+position = Vector2(-220, -11.5)
+shape = SubResource("RectangleShape2D_3345t")
+
+[node name="Hurtbox" type="Area2D" parent="Soldier"]
+collision_layer = 0
+collision_mask = 145
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="Soldier/Hurtbox"]
+position = Vector2(4, 2.5)
+shape = SubResource("RectangleShape2D_vkaqq")
+
+[connection signal="animation_finished" from="Soldier/AnimationSoldier" to="Soldier" method="_on_animation_soldier_animation_finished"]
+[connection signal="body_entered" from="Soldier/AttackSoldier" to="Soldier" method="_on_attack_soldier_body_entered"]
+[connection signal="body_exited" from="Soldier/AttackSoldier" to="Soldier" method="_on_attack_soldier_body_exited"]
+[connection signal="body_entered" from="Soldier/VisionSoldier" to="Soldier" method="_on_vision_soldier_body_entered"]
+[connection signal="body_exited" from="Soldier/VisionSoldier" to="Soldier" method="_on_vision_soldier_body_exited"]
+[connection signal="body_entered" from="Soldier/Hurtbox" to="Soldier" method="_on_hurtbox_body_entered"]
