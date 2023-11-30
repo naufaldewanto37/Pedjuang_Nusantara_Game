@@ -3,7 +3,7 @@ class_name satria
 
 @export var speed : float = 100
 @export var JUMP_VELOCITY : float = -500.0
-@export var double_jump_velocity : float = -500
+@export var double_jump_velocity : float = -300
 @export var max_health : float = 50
 const CROUCH_SPEED = 100.0
 const GRAVITY = 1000

@@ -229,7 +229,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loxw8"]
-size = Vector2(126.25, 56)
+size = Vector2(139.75, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3345t"]
 size = Vector2(161, 56)
@@ -262,7 +262,7 @@ libraries = {
 [node name="AttackSoldier" type="Area2D" parent="Soldier" groups=["Enemy"]]
 
 [node name="CollisionAttack2D" type="CollisionShape2D" parent="Soldier/AttackSoldier" groups=["Enemy"]]
-position = Vector2(-76.375, -11.5)
+position = Vector2(-83.125, -11.5)
 shape = SubResource("RectangleShape2D_loxw8")
 
 [node name="RayCast2D" type="RayCast2D" parent="Soldier"]

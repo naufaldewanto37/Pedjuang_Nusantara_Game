@@ -30,7 +30,7 @@ func _ready():
 	soldier.play("run")
 
 func _physics_process(delta):
-	if attacking and shooting_timer <= 0:
+	if attacking and shooting_timer <= 0 and seeing_satria:
 		shoot_at_satria()
 		shooting_timer = shooting_interval
 	
@@ -104,8 +104,6 @@ func _on_vision_soldier_body_exited(body):
 			soldier.play("attack")
 			SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 			seeing_satria = true
-			attacking = true
-			shoot_at_satria()
 			
 func update_bullet_direction():
 	if facing_right == true:

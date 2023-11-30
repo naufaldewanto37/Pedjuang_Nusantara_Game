@@ -2151,40 +2151,35 @@ sources/1 = SubResource("TileSetAtlasSource_itjus")
 [node name="level2" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
-[node name="Background" type="CanvasLayer" parent="."]
-layer = 0
-
-[node name="BgHutan" type="Sprite2D" parent="Background"]
+[node name="BgHutan" type="Sprite2D" parent="."]
 position = Vector2(960, 542)
 texture = ExtResource("1_ctaqo")
 metadata/_edit_lock_ = true
 
-[node name="BgHutan2" type="Sprite2D" parent="Background"]
+[node name="BgHutan2" type="Sprite2D" parent="."]
 position = Vector2(2871.5, 540)
 scale = Vector2(1.1099, 1)
 texture = ExtResource("1_ctaqo")
 
-[node name="Game" type="CanvasLayer" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Game"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-11.625, 437)
 shape = SubResource("RectangleShape2D_7pmft")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Game"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(3727, 514)
 shape = SubResource("RectangleShape2D_7pmft")
 
-[node name="Satria" parent="Game" instance=ExtResource("3_54x7k")]
+[node name="Satria" parent="." instance=ExtResource("3_54x7k")]
 position = Vector2(65, 696)
 
-[node name="Enemy" parent="Game" instance=ExtResource("3_l2wxl")]
+[node name="Enemy" parent="." instance=ExtResource("3_l2wxl")]
 position = Vector2(500, 697)
 
-[node name="TileMap" type="TileMap" parent="Game"]
+[node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_hpos2")
 format = 2

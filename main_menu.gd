@@ -16,11 +16,11 @@ func _on_exit_game_pressed():
 
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().change_scene_to_file("res://level_4.tscn")
 
 
 func _on_load_game_pressed():
-	get_tree().change_scene_to_file("res://level2.tscn")
+	get_tree().change_scene_to_file("res://world.tscn")
 	pass # Replace with function body.
 
 

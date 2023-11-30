@@ -17,7 +17,12 @@ func take_damage(damage):
 	
 func _on_animation_player_animation_finished(anim_name):
 		if anim_name == "destroy_box":
-			var drop_instance = pistol.instantiate()
+			var drop_instance
+			if randf() > 0.5:  # 50% kemungkinan untuk masing-masing senjata
+				drop_instance = riffle.instantiate()
+			else:
+				drop_instance = pistol.instantiate()
+
 			get_parent().add_child(drop_instance)
 			queue_free()
 
