@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://c7a5qvfs35ffx"]
+[gd_scene load_steps=53 format=3 uid="uid://c7a5qvfs35ffx"]
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://cyyp55m16whh8" path="res://Pedjuang Nusantara Assets/Satria/Pistol/_RunPistol.png" id="22_kjbcc"]
 [ext_resource type="Texture2D" uid="uid://dy4178sy85no0" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__lookUpPistol__.png" id="23_nwfh4"]
 [ext_resource type="Texture2D" uid="uid://dod1wi18i3dta" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__idleMC_pistol__.png" id="24_swpra"]
+[ext_resource type="Texture2D" uid="uid://b24fpmunjgdmp" path="res://Pedjuang Nusantara Assets/GUI/greenbar (3).png" id="25_f3e2v"]
+[ext_resource type="Texture2D" uid="uid://bs51b6hxgwd5h" path="res://Pedjuang Nusantara Assets/GUI/greenbar (2).png" id="26_wup6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
 size = Vector2(46, 90)
@@ -1333,11 +1335,11 @@ shape = SubResource("RectangleShape2D_m3iuc")
 texture_filter = 1
 position = Vector2(5.85467, -67.2379)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("11_jcbo0")
-hframes = 10
+texture = ExtResource("1_fbx35")
+hframes = 4
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
-speed_scale = 0.3
+speed_scale = 0.5
 libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
@@ -1384,6 +1386,19 @@ collision_mask = 32
 [node name="SatriaCrouchingShape2D2" type="CollisionShape2D" parent="Satria/HurtboxCrouching" groups=["satria"]]
 position = Vector2(-1.14532, 14.7621)
 shape = SubResource("RectangleShape2D_m3iuc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Satria"]
+
+[node name="HealthBar" type="TextureProgressBar" parent="Satria/CanvasLayer"]
+offset_left = 772.0
+offset_top = -184.0
+offset_right = 917.0
+offset_bottom = -39.0
+scale = Vector2(4, 4)
+value = 100.0
+texture_under = ExtResource("25_f3e2v")
+texture_progress = ExtResource("26_wup6b")
+texture_progress_offset = Vector2(0, 15)
 
 [connection signal="animation_finished" from="Satria/AnimationSatria" to="Satria" method="_on_animation_satria_animation_finished"]
 [connection signal="body_entered" from="Satria/Bambu" to="Satria" method="_on_bambu_body_entered"]

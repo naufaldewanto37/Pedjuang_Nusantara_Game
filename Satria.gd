@@ -1,10 +1,12 @@
 extends CharacterBody2D
 class_name satria
 
+
 @export var speed : float = 100
 @export var JUMP_VELOCITY : float = -500.0
 @export var double_jump_velocity : float = -300
-@export var max_health : float = 50
+@export var max_health : int = 100
+@onready var current_health: int = max_health
 const CROUCH_SPEED = 100.0
 const GRAVITY = 1000
 const ATTACK_COOLDOWN = 0.5
@@ -12,6 +14,7 @@ var has_double_jumped : bool = false
 var has_gun = false
 var death = false
 var has_pistol = false
+var heart_value : int = 100
 
 var is_lookup = false
 var is_crouching = false
@@ -408,13 +411,21 @@ func _on_bambu_body_entered(body):
 	if body.is_in_group("Box"):
 		body.take_damage(attack_damage)
 
+func on_heart_collected():
+	current_health = min(current_health + 100, max_health)
+	$CanvasLayer/HealthBar.value = current_health
+
 func take_damage(damage):
-	max_health -= damage
-	if max_health <= 0 and !death:
+	current_health -= damage
+	$CanvasLayer/HealthBar.value -= damage
+	if current_health <= 0 and !death:
+		
 		die()
+
 
 func die():
 	death = true
+
 	velocity.x = 0
 	velocity.y = 0
 	Satria.play("death")
