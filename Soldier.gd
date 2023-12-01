@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name enemy
 
-var health = 20
+var health = 30
 var initial_speed = -15  # Menyimpan kecepatan awal
 var SPEED = -15
 const JUMP_VELOCITY = -400.0

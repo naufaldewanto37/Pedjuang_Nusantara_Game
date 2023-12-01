@@ -401,6 +401,9 @@ func above_head_is_empty() -> bool:
 func _on_bambu_body_entered(body):
 	if body.is_in_group("Enemy"):
 		body.take_damage(attack_damage)
+		
+	if body.is_in_group("Boss"):
+		body.take_damage(attack_damage)
 	
 	if body.is_in_group("Box"):
 		body.take_damage(attack_damage)

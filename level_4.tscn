@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://bs4twu4wpmg1v"]
+[gd_scene load_steps=21 format=3 uid="uid://bs4twu4wpmg1v"]
 
 [ext_resource type="Texture2D" uid="uid://dix70e8ww88h3" path="res://Pedjuang Nusantara Assets/background/BG-sky.png" id="1_tekj4"]
+[ext_resource type="Script" path="res://level_4.gd" id="1_w1f7h"]
 [ext_resource type="Texture2D" uid="uid://xx4kjxit2iva" path="res://Pedjuang Nusantara Assets/background/BG-mountains.png" id="2_qineg"]
 [ext_resource type="Texture2D" uid="uid://7334v87o77l5" path="res://Pedjuang Nusantara Assets/background/bg_basecamp.png" id="3_fvtmh"]
 [ext_resource type="Texture2D" uid="uid://dds0ldwi1okms" path="res://Pedjuang Nusantara Assets/background/fence (1).png" id="4_8xhr8"]
@@ -388,7 +389,11 @@ sources/0 = SubResource("TileSetAtlasSource_o3vr2")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ng8k1"]
 size = Vector2(20, 319.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nqc7"]
+size = Vector2(77, 67)
+
 [node name="Level4" type="Node2D"]
+script = ExtResource("1_w1f7h")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -453,14 +458,52 @@ scale = Vector2(1.01811, 1.00956)
 [node name="Enemy" parent="." instance=ExtResource("9_ar2g1")]
 position = Vector2(678, 584)
 
+[node name="Enemy3" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(1024, 704)
+
+[node name="Enemy4" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(1482, 701)
+
+[node name="Enemy5" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(1814, 655)
+
+[node name="Enemy6" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(1945, 566)
+
+[node name="Enemy7" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(2279, 704)
+
+[node name="Enemy8" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(2578, 704)
+
+[node name="Enemy9" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(2799, 510)
+
+[node name="Enemy10" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(3028, 433)
+
+[node name="Enemy11" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(2943, 706)
+
+[node name="Enemy12" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(3178, 328)
+
+[node name="Enemy13" parent="." instance=ExtResource("9_ar2g1")]
+position = Vector2(3502, 703)
+
 [node name="Enemy2" parent="." instance=ExtResource("9_ar2g1")]
 position = Vector2(581, 704)
 
 [node name="box" parent="." instance=ExtResource("11_hneuo")]
-position = Vector2(102, 712)
-
-[node name="box2" parent="." instance=ExtResource("11_hneuo")]
-position = Vector2(148, 711)
+position = Vector2(1249, 822)
 
 [node name="box3" parent="." instance=ExtResource("11_hneuo")]
-position = Vector2(197, 711)
+position = Vector2(1876, 664)
+
+[node name="Finish" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+position = Vector2(3550, 686)
+shape = SubResource("RectangleShape2D_2nqc7")
+
+[connection signal="body_entered" from="Finish" to="." method="_on_area_2d_body_entered"]
