@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c5u383rh7v7nd"]
+[gd_scene load_steps=20 format=3 uid="uid://c5u383rh7v7nd"]
 
 [ext_resource type="Texture2D" uid="uid://dix70e8ww88h3" path="res://Pedjuang Nusantara Assets/background/BG-sky.png" id="1_tekj4"]
 [ext_resource type="Texture2D" uid="uid://xx4kjxit2iva" path="res://Pedjuang Nusantara Assets/background/BG-mountains.png" id="2_qineg"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://h3h6l6pfma6q" path="res://Pedjuang Nusantara Assets/tiles/Platformer - desert/props/c16a9e61-f2b7-4cd9-bf53-aeae11a531bf (2).png" id="7_tpo65"]
 [ext_resource type="PackedScene" uid="uid://ca7f6t5iympxb" path="res://enemy.tscn" id="9_ar2g1"]
 [ext_resource type="PackedScene" uid="uid://cx8hvieenkm4i" path="res://loot_box.tscn" id="11_hneuo"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="12_52p3v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o3vr2"]
 texture = ExtResource("5_6rrmx")
@@ -450,6 +451,16 @@ shape = SubResource("RectangleShape2D_ng8k1")
 position = Vector2(25, 698)
 scale = Vector2(1.01811, 1.00956)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Satria"]
+
+[node name="HealthBar" type="ProgressBar" parent="Satria/CanvasLayer"]
+offset_left = 391.0
+offset_top = 510.0
+offset_right = 448.0
+offset_bottom = 537.0
+value = 100.0
+script = ExtResource("12_52p3v")
+
 [node name="Enemy" parent="." instance=ExtResource("9_ar2g1")]
 position = Vector2(678, 584)
 
@@ -464,3 +475,5 @@ position = Vector2(148, 711)
 
 [node name="box3" parent="." instance=ExtResource("11_hneuo")]
 position = Vector2(197, 711)
+
+[connection signal="changed" from="Satria/CanvasLayer/HealthBar" to="Satria/CanvasLayer/HealthBar" method="healthChanged"]
