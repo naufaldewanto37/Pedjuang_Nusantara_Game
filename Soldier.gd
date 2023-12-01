@@ -10,6 +10,7 @@ var move_cd = 4
 var shooting_interval = 3  # Interval penembakan dalam detik
 var shooting_timer = 0.0
 var bullet_direction = 1
+var is_death = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -30,29 +31,30 @@ func _ready():
 	soldier.play("run")
 
 func _physics_process(delta):
-	if attacking and shooting_timer <= 0 and seeing_satria:
-		shoot_at_satria()
-		shooting_timer = shooting_interval
-	
-	if shooting_timer > 0:
-		shooting_timer -= delta
-	
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	
-	if !seeing_satria and !attacking:
-		if move_timer > 0:
-			move_timer -= delta
-			if !raycast1.is_colliding() && is_on_floor():
+	if !is_death:
+		if attacking and shooting_timer <= 0 and seeing_satria:
+			shoot_at_satria()
+			shooting_timer = shooting_interval
+		
+		if shooting_timer > 0:
+			shooting_timer -= delta
+		
+		if not is_on_floor():
+			velocity.y += gravity * delta
+		
+		if !seeing_satria and !attacking:
+			if move_timer > 0:
+				move_timer -= delta
+				if !raycast1.is_colliding() && is_on_floor():
+					flip()
+			elif move_timer <= 0:
 				flip()
-		elif move_timer <= 0:
-			flip()
-			
-	velocity.x = SPEED
-	move_and_slide()
+				
+		velocity.x = SPEED
+		move_and_slide()
 	
 func _on_attack_soldier_body_entered(body):
-	if body.is_in_group("satria"):
+	if body.is_in_group("satria") and !is_death:
 		soldier.play("attack")
 		SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 		seeing_satria = true
@@ -62,7 +64,7 @@ func _on_attack_soldier_body_entered(body):
 
 
 func _on_attack_soldier_body_exited(body):
-	if body.is_in_group("satria"):
+	if body.is_in_group("satria") and !is_death:
 		soldier.play("run")
 		attacking = false
 		seeing_satria = false
@@ -74,7 +76,7 @@ func _on_attack_soldier_body_exited(body):
 			update_bullet_direction()
 			
 func _on_vision_soldier_body_entered(body):
-	if body.is_in_group("satria") or body.is_in_group("Satria"):
+	if body.is_in_group("satria") or body.is_in_group("Satria") and !is_death:
 		if body.is_crouching:
 			soldier.play("idle")
 			SPEED = 0
@@ -90,20 +92,21 @@ func _on_vision_soldier_body_entered(body):
 			seeing_satria = true
 
 func _on_vision_soldier_body_exited(body):
-	soldier.play("run")
-	if !seeing_satria:
-		seeing_satria = false
-		if facing_right:
-			SPEED = abs(initial_speed)
-			bullet_direction = 1
-		else:
-			SPEED = abs(initial_speed) * -1
-			bullet_direction = -1
-	elif seeing_satria:
-		if body.is_in_group("satria") and body.is_on_floor():
-			soldier.play("attack")
-			SPEED = 0  # Menghentikan prajurit ketika melihat Satria
-			seeing_satria = true
+	if !is_death:
+		soldier.play("run")
+		if !seeing_satria:
+			seeing_satria = false
+			if facing_right:
+				SPEED = abs(initial_speed)
+				bullet_direction = 1
+			else:
+				SPEED = abs(initial_speed) * -1
+				bullet_direction = -1
+		elif seeing_satria:
+			if body.is_in_group("satria") and body.is_on_floor():
+				soldier.play("attack")
+				SPEED = 0  # Menghentikan prajurit ketika melihat Satria
+				seeing_satria = true
 			
 func update_bullet_direction():
 	if facing_right == true:
@@ -132,6 +135,7 @@ func die():
 
 func _on_animation_soldier_animation_finished(anim_name):
 	if anim_name == "death":
+		is_death = true
 		queue_free()
 
 func shoot_at_satria():
@@ -144,4 +148,4 @@ func shoot_at_satria():
 func _on_hurtbox_body_entered(body):
 	if body.get_collision_layer() == 16:
 		body.queue_free()
-		take_damage(10)
+		take_damage(20)
