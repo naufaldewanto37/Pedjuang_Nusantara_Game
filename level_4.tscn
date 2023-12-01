@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=21 format=3 uid="uid://bs4twu4wpmg1v"]
-=======
-[gd_scene load_steps=19 format=3 uid="uid://c5u383rh7v7nd"]
->>>>>>> f7cb0a17e48a52f2a8742cc506d159febd7edc65
+[gd_scene load_steps=22 format=3 uid="uid://i8mmbi6ne8v2"]
 
 [ext_resource type="Texture2D" uid="uid://dix70e8ww88h3" path="res://Pedjuang Nusantara Assets/background/BG-sky.png" id="1_tekj4"]
 [ext_resource type="Script" path="res://level_4.gd" id="1_w1f7h"]
@@ -16,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://h3h6l6pfma6q" path="res://Pedjuang Nusantara Assets/tiles/Platformer - desert/props/c16a9e61-f2b7-4cd9-bf53-aeae11a531bf (2).png" id="7_tpo65"]
 [ext_resource type="PackedScene" uid="uid://ca7f6t5iympxb" path="res://enemy.tscn" id="9_ar2g1"]
 [ext_resource type="PackedScene" uid="uid://cx8hvieenkm4i" path="res://loot_box.tscn" id="11_hneuo"]
+[ext_resource type="PackedScene" uid="uid://bey7hi46urx13" path="res://pause.tscn" id="13_r5kuv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o3vr2"]
 texture = ExtResource("5_6rrmx")
@@ -398,6 +395,8 @@ size = Vector2(77, 67)
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_w1f7h")
+
+[node name="Pause" parent="." instance=ExtResource("13_r5kuv")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

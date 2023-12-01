@@ -4,7 +4,7 @@ var BulletScene = preload("res://bullet_boss.tscn")
 var boss_death = false
 @onready var animBoss = $AnimationPlayer
 
-var health = 50
+var health = 200
 var initial_speed = -8  # Menyimpan kecepatan awal
 var SPEED = -8
 var move_timer = 4
