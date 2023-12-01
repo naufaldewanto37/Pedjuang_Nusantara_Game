@@ -19,15 +19,15 @@ var attacking = false
 	
 func _physics_process(delta):
 	if !boss_death:
-		if attacking and shooting_timer <= 0 and seeing_satria and !boss_death:
+		if attacking and shooting_timer <= 0 and seeing_satria:
 			shoot_at_satria()
 			shooting_timer = shooting_interval
 		
-		if shooting_timer > 0 and !boss_death:
+		if shooting_timer > 0:
 			shooting_timer -= delta
 		
 		
-		if !seeing_satria and !attacking and !boss_death:
+		if !seeing_satria and !attacking:
 			if move_timer > 0:
 				move_timer -= delta
 			elif move_timer <= 0:
@@ -35,7 +35,6 @@ func _physics_process(delta):
 				
 		velocity.x = SPEED
 		move_and_slide()
-	
 
 	
 func update_bullet_direction():
@@ -82,7 +81,7 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_area_boss_body_entered(body):
-	if !boss_death:
+	if body.is_in_group("satria") and !boss_death:
 		if body.position.x > self.position.x:
 			flip()
 		elif body.position.x < position.x:
@@ -99,14 +98,14 @@ func _on_area_boss_body_entered(body):
 func _on_area_boss_body_exited(body):
 	if body.is_in_group("satria") and !boss_death:
 		animBoss.play("Run")
+		attacking = false
+		seeing_satria = false
 		if !facing_right:
 			SPEED = -abs(initial_speed)  # Bergerak ke kiri
 			update_bullet_direction()
 		else:
 			SPEED = abs(initial_speed)  # Bergerak ke kanan
 			update_bullet_direction()
-		attacking = false
-		seeing_satria = false
 		
 func _on_hurtbox_body_entered(body):
 	if body.get_collision_layer() == 16 and !boss_death:
