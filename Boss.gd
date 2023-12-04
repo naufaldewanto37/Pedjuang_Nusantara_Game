@@ -65,7 +65,7 @@ func shoot_at_satria():
 
 func take_damage(damage):
 	health -= damage
-	print(health)
+	$CanvasLayer/HealthBar.value -= damage
 	if health <= 0:
 		die()
 		
@@ -82,7 +82,7 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_area_boss_body_entered(body):
-	if body.is_in_group("satria") and !boss_death:
+	if body.is_in_group("satria") and !boss_death and !body.just_stood_up:
 		if body.position.x > self.position.x:
 			flip()
 		elif body.position.x < position.x:

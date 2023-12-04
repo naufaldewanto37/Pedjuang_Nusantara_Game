@@ -493,4 +493,12 @@ autoplay = true
 
 [node name="Pause" parent="." instance=ExtResource("14_817xq")]
 
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 364.0
+offset_top = 583.0
+offset_right = 531.0
+offset_bottom = 609.0
+text = "PERGI KE KANAN ->>>"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

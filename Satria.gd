@@ -14,6 +14,7 @@ var has_double_jumped : bool = false
 var has_gun = false
 var death = false
 var has_pistol = false
+var just_stood_up = false
 var heart_value : int = 100
 
 var is_lookup = false
@@ -110,6 +111,12 @@ func _physics_process(delta):
 		area_standing.disabled = true
 		area_crouching.disabled = false
 		move_speed = CROUCH_SPEED  # Use the crouch speed if crouching
+		
+	if Input.is_action_just_released("ui_down"):
+		is_crouching = false
+		just_stood_up = true
+		await get_tree().create_timer(1).timeout
+		just_stood_up = false
 		
 	# Handle lookup without moving
 	if Input.is_action_pressed("ui_up") and is_on_floor() and not is_crouching and above_head_is_empty() and velocity.x == 0:

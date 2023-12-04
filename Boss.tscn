@@ -1,9 +1,11 @@
-[gd_scene load_steps=56 format=3 uid="uid://cd27bp5e4qwfk"]
+[gd_scene load_steps=58 format=3 uid="uid://cd27bp5e4qwfk"]
 
 [ext_resource type="Script" path="res://Boss.gd" id="1_a76ck"]
 [ext_resource type="Texture2D" uid="uid://fmkpln5w1pvf" path="res://Pedjuang Nusantara Assets/Boss/736b1309-1cbe-49f8-a6df-2c9a48eb54b9.png" id="1_i8f88"]
 [ext_resource type="AudioStream" uid="uid://c7ly0j2jggvw4" path="res://Pedjuang Nusantara Assets/sfx/mixkit-fire-explosion-1343.mp3" id="3_7sv3u"]
 [ext_resource type="AudioStream" uid="uid://b2tci86gp75la" path="res://Pedjuang Nusantara Assets/sfx/tank firing.mp3" id="3_a6dt2"]
+[ext_resource type="Texture2D" uid="uid://b24fpmunjgdmp" path="res://Pedjuang Nusantara Assets/GUI/greenbar (3).png" id="5_cguxd"]
+[ext_resource type="Texture2D" uid="uid://b1kxld73ygucf" path="res://Pedjuang Nusantara Assets/GUI/redbar.png" id="6_kn6k8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfct8"]
 size = Vector2(71.9684, 57.258)
@@ -597,6 +599,20 @@ collision_mask = 145
 [node name="Hurtbox" type="CollisionShape2D" parent="Boss/Hurtbox" groups=["Boss"]]
 position = Vector2(-0.269544, 0.514293)
 shape = SubResource("RectangleShape2D_rfct8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Boss"]
+
+[node name="HealthBar" type="TextureProgressBar" parent="Boss/CanvasLayer"]
+offset_left = 315.0
+offset_top = 453.0
+offset_right = 460.0
+offset_bottom = 598.0
+scale = Vector2(4, 4)
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource("5_cguxd")
+texture_progress = ExtResource("6_kn6k8")
+texture_progress_offset = Vector2(0, 15)
 
 [connection signal="animation_finished" from="Boss/AnimationPlayer" to="Boss" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="Boss/AreaBoss" to="Boss" method="_on_area_boss_body_entered"]

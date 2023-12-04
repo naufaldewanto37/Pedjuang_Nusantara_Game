@@ -9,6 +9,8 @@ func _ready():
 func _physics_process(delta):
 	if Boss.boss_death == true and batas != null:
 		batas.queue_free()
+		while Boss.boss_death == true:
+			$Label.visible = true
 
 
 func _on_area_2d_body_entered(body):
