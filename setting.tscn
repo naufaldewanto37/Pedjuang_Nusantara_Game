@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqj60nc3kdujj"]
+[gd_scene load_steps=8 format=3 uid="uid://dqj60nc3kdujj"]
 
 [ext_resource type="Script" path="res://setting.gd" id="1_hrhtn"]
 [ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_yibc4"]
 [ext_resource type="Texture2D" uid="uid://gss6snhbxnq" path="res://Pedjuang Nusantara Assets/background/bg_riflebambu.png" id="2_ei71l"]
+[ext_resource type="Theme" uid="uid://beaad0i4tphtk" path="res://main_menu.tres" id="3_fm4fg"]
 [ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="3_rcgc2"]
 [ext_resource type="AudioStream" uid="uid://bealr3ah8kvyo" path="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3" id="5_klql5"]
 
-[sub_resource type="GDScript" id="GDScript_u5fpl"]
+[sub_resource type="GDScript" id="GDScript_xru5r"]
 script/source = "extends Button
 
 
@@ -29,45 +30,6 @@ position = Vector2(640, 359.769)
 scale = Vector2(0.665625, 0.667095)
 texture = ExtResource("1_yibc4")
 metadata/c = Color(0.305882, 0.627451, 0, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
-custom_minimum_size = Vector2(0, 20)
-offset_left = -959.0
-offset_top = -200.0
-offset_right = -863.0
-offset_bottom = -29.0
-scale = Vector2(4, 4)
-size_flags_horizontal = 0
-size_flags_vertical = 8
-alignment = 1
-
-[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
-layout_mode = 2
-text = "New Game"
-flat = true
-script = SubResource("GDScript_u5fpl")
-
-[node name="LoadGame" type="Button" parent="BgPantai/VBoxContainer"]
-layout_mode = 2
-text = "Load Game"
-flat = true
-metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
-
-[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
-self_modulate = Color(1, 0.458824, 0.152941, 1)
-layout_mode = 2
-text = "Settings"
-flat = true
-
-[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
-layout_mode = 2
-text = "Credits"
-flat = true
-
-[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
-layout_mode = 2
-text = "Exit Game"
-flat = true
 
 [node name="PanelSetting" type="Panel" parent="BgPantai"]
 offset_left = -447.733
@@ -151,6 +113,57 @@ max_value = 3.0
 step = 0.01
 value = 2.0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
+custom_minimum_size = Vector2(0, 20)
+offset_left = -940.469
+offset_top = -296.463
+offset_right = -836.469
+offset_bottom = -125.463
+scale = Vector2(4, 4)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fm4fg")
+text = "New Game"
+script = SubResource("GDScript_xru5r")
+
+[node name="Choose Stage" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fm4fg")
+text = "Choose Stage"
+metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
+
+[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fm4fg")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+text = "Settings"
+
+[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fm4fg")
+text = "Credits"
+
+[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fm4fg")
+text = "Exit Game"
+
 [node name="BgRiflebambu" type="Sprite2D" parent="."]
 position = Vector2(1076, 435)
 scale = Vector2(0.502792, 0.542939)
@@ -166,11 +179,11 @@ stream = ExtResource("5_klql5")
 autoplay = true
 bus = &"Backsound"
 
-[connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/General" to="." method="_on_general_pressed"]
 [connection signal="pressed" from="BgPantai/PanelSetting/Audio" to="." method="_on_audio_pressed"]
 [connection signal="toggled" from="BgPantai/PanelSetting/FullScreenLabel/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="value_changed" from="BgPantai/PanelSetting/BrightnessLabel/BrightnessSlider" to="." method="_on_brightness_slider_value_changed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Choose Stage" to="." method="_on_choose_stage_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

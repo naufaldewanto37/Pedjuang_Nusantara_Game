@@ -1314,6 +1314,9 @@ size = Vector2(20, 319.5)
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_jto3p")
 
+[node name="Satria" parent="." instance=ExtResource("9_t5c25")]
+position = Vector2(32, 689)
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1359,10 +1362,6 @@ texture = ExtResource("8_d2d64")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-11, 560.75)
 shape = SubResource("RectangleShape2D_ephx6")
-
-[node name="Satria" parent="." instance=ExtResource("9_t5c25")]
-position = Vector2(34, 686)
-scale = Vector2(1.01811, 1.00956)
 
 [node name="box2" parent="." instance=ExtResource("7_7fy8v")]
 position = Vector2(102, 697)

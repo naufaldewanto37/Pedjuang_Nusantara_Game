@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://caapmew6eiixf" path="res://Pedjuang Nusantara Assets/tiles/tilemap.png" id="1_8de6g"]
 [ext_resource type="Texture2D" uid="uid://5tv8yy4evoih" path="res://Pedjuang Nusantara Assets/background/beach_bg/lvl1.png" id="1_835em"]
-[ext_resource type="Script" path="res://cutsene_1.gd" id="1_afiny"]
+[ext_resource type="Script" path="res://cutscene_1.gd" id="1_afiny"]
 [ext_resource type="Texture2D" uid="uid://de4piqo4yl323" path="res://Pedjuang Nusantara Assets/background/beach_bg/pagar.png" id="2_puhxt"]
 [ext_resource type="Script" path="res://CutsceneCharacter.gd" id="5_dp430"]
 [ext_resource type="Shape2D" uid="uid://cbar1vwcyc5yf" path="res://Resource/Character_crouch.tres" id="5_eslmm"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s0kdonfloem4"]
+[gd_scene load_steps=8 format=3 uid="uid://s0kdonfloem4"]
 
 [ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_0ianw"]
 [ext_resource type="Script" path="res://main_menu.gd" id="1_k7ain"]
@@ -6,6 +6,21 @@
 [ext_resource type="Theme" uid="uid://beaad0i4tphtk" path="res://main_menu.tres" id="3_k3ink"]
 [ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="4_sfap7"]
 [ext_resource type="AudioStream" uid="uid://bealr3ah8kvyo" path="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3" id="6_o0p1i"]
+
+[sub_resource type="GDScript" id="GDScript_pjj65"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+"
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_k7ain")
@@ -27,10 +42,10 @@ metadata/c = Color(0.305882, 0.627451, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BoxContainer/BgPantai"]
 custom_minimum_size = Vector2(0, 20)
-offset_left = -940.469
-offset_top = -296.463
-offset_right = -836.469
-offset_bottom = -125.463
+offset_left = -959.0
+offset_top = -200.0
+offset_right = -863.0
+offset_bottom = -29.0
 scale = Vector2(4, 4)
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -40,11 +55,12 @@ alignment = 1
 layout_mode = 2
 theme = ExtResource("3_k3ink")
 text = "New Game"
+script = SubResource("GDScript_pjj65")
 
-[node name="Choose Stage" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
+[node name="LoadGame" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_k3ink")
-text = "Choose Stage"
+text = "Load Game"
 metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
 
 [node name="Settings" type="Button" parent="CanvasLayer/BoxContainer/BgPantai/VBoxContainer"]
@@ -78,6 +94,6 @@ autoplay = true
 bus = &"Backsound"
 
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Choose Stage" to="." method="_on_choose_stage_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

@@ -1,0 +1,201 @@
+[gd_scene load_steps=11 format=3 uid="uid://4uhjbsevuoet"]
+
+[ext_resource type="Script" path="res://Choose Stage.gd" id="1_3m4ch"]
+[ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="2_j2l7h"]
+[ext_resource type="Texture2D" uid="uid://cpssiejmdfavl" path="res://Pedjuang Nusantara Assets/GUI/level1.png" id="3_g7ub6"]
+[ext_resource type="Texture2D" uid="uid://gss6snhbxnq" path="res://Pedjuang Nusantara Assets/background/bg_riflebambu.png" id="3_ic6u0"]
+[ext_resource type="Theme" uid="uid://beaad0i4tphtk" path="res://main_menu.tres" id="3_w27vb"]
+[ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="4_tvb7h"]
+[ext_resource type="Texture2D" uid="uid://byteiv1cxkx88" path="res://Pedjuang Nusantara Assets/GUI/level2.png" id="5_7vpv4"]
+[ext_resource type="AudioStream" uid="uid://bealr3ah8kvyo" path="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3" id="5_k4k5j"]
+[ext_resource type="Texture2D" uid="uid://b5e4apqx62yox" path="res://Pedjuang Nusantara Assets/GUI/level3.png" id="6_mlra5"]
+[ext_resource type="Texture2D" uid="uid://0ssptyh4myk" path="res://Pedjuang Nusantara Assets/GUI/level4.png" id="7_wfeth"]
+
+[node name="Choose Stage" type="Node2D"]
+script = ExtResource("1_3m4ch")
+
+[node name="BgPantai" type="Sprite2D" parent="."]
+position = Vector2(640, 359.769)
+scale = Vector2(0.665625, 0.667095)
+texture = ExtResource("2_j2l7h")
+metadata/c = Color(0.305882, 0.627451, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
+custom_minimum_size = Vector2(0, 20)
+offset_left = -940.469
+offset_top = -296.463
+offset_right = -836.469
+offset_bottom = -125.463
+scale = Vector2(4, 4)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_w27vb")
+text = "New Game"
+
+[node name="Choose Stage" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_w27vb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+text = "Choose Stage"
+metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
+
+[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_w27vb")
+text = "Settings"
+
+[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_w27vb")
+text = "Credits"
+
+[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_w27vb")
+text = "Exit Game"
+
+[node name="PanelSetting" type="Panel" parent="BgPantai"]
+offset_left = -447.733
+offset_top = -287.646
+offset_right = 769.267
+offset_bottom = 384.354
+
+[node name="Level1" type="Node" parent="BgPantai/PanelSetting"]
+
+[node name="Level 1" type="Label" parent="BgPantai/PanelSetting/Level1"]
+offset_left = 458.0
+offset_top = 206.0
+offset_right = 557.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 30
+text = "Level 1
+"
+
+[node name="TextureRect" type="TextureRect" parent="BgPantai/PanelSetting/Level1"]
+offset_left = 413.0
+offset_top = 252.0
+offset_right = 618.0
+offset_bottom = 377.0
+texture = ExtResource("3_g7ub6")
+expand_mode = 1
+
+[node name="BtnLvl1" type="Button" parent="BgPantai/PanelSetting/Level1"]
+offset_left = 413.0
+offset_top = 252.0
+offset_right = 618.0
+offset_bottom = 376.0
+
+[node name="Level2" type="Node" parent="BgPantai/PanelSetting"]
+
+[node name="Level 2" type="Label" parent="BgPantai/PanelSetting/Level2"]
+offset_left = 885.0
+offset_top = 206.0
+offset_right = 984.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 30
+text = "Level 2
+"
+
+[node name="TextureRect" type="TextureRect" parent="BgPantai/PanelSetting/Level2"]
+offset_left = 840.0
+offset_top = 252.0
+offset_right = 1045.0
+offset_bottom = 377.0
+texture = ExtResource("5_7vpv4")
+expand_mode = 1
+
+[node name="BtnLvl2" type="Button" parent="BgPantai/PanelSetting/Level2"]
+offset_left = 840.0
+offset_top = 252.0
+offset_right = 1045.0
+offset_bottom = 379.0
+
+[node name="Level3" type="Node" parent="BgPantai/PanelSetting"]
+
+[node name="Level 3" type="Label" parent="BgPantai/PanelSetting/Level3"]
+offset_left = 457.0
+offset_top = 400.0
+offset_right = 556.0
+offset_bottom = 445.0
+theme_override_font_sizes/font_size = 30
+text = "Level 3
+"
+
+[node name="TextureRect" type="TextureRect" parent="BgPantai/PanelSetting/Level3"]
+offset_left = 412.0
+offset_top = 446.0
+offset_right = 617.0
+offset_bottom = 571.0
+texture = ExtResource("6_mlra5")
+expand_mode = 1
+
+[node name="BtnLvl3" type="Button" parent="BgPantai/PanelSetting/Level3"]
+offset_left = 412.0
+offset_top = 446.0
+offset_right = 617.0
+offset_bottom = 573.0
+
+[node name="Level4" type="Node" parent="BgPantai/PanelSetting"]
+
+[node name="Level 4" type="Label" parent="BgPantai/PanelSetting/Level4"]
+offset_left = 884.0
+offset_top = 400.0
+offset_right = 983.0
+offset_bottom = 445.0
+theme_override_font_sizes/font_size = 30
+text = "Level 4
+"
+
+[node name="TextureRect" type="TextureRect" parent="BgPantai/PanelSetting/Level4"]
+offset_left = 839.0
+offset_top = 446.0
+offset_right = 1044.0
+offset_bottom = 571.0
+texture = ExtResource("7_wfeth")
+expand_mode = 1
+
+[node name="BtnLvl4" type="Button" parent="BgPantai/PanelSetting/Level4"]
+offset_left = 839.0
+offset_top = 446.0
+offset_right = 1044.0
+offset_bottom = 573.0
+
+[node name="BgRiflebambu" type="Sprite2D" parent="."]
+position = Vector2(1076, 435)
+scale = Vector2(0.502792, 0.542939)
+texture = ExtResource("3_ic6u0")
+
+[node name="BgTitle" type="Sprite2D" parent="."]
+position = Vector2(197, 108)
+scale = Vector2(0.684932, 0.799252)
+texture = ExtResource("4_tvb7h")
+
+[node name="Backsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_k4k5j")
+autoplay = true
+bus = &"Backsound"
+
+[connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Choose Stage" to="." method="_on_choose_stage_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/Level1/BtnLvl1" to="." method="_on_btn_lvl_1_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/Level2/BtnLvl2" to="." method="_on_btn_lvl_2_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/Level3/BtnLvl3" to="." method="_on_btn_lvl_3_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/Level4/BtnLvl4" to="." method="_on_btn_lvl_4_pressed"]

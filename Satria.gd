@@ -21,7 +21,7 @@ var is_crouching = false
 var is_attacking = false
 var attack_timer = 0
 var is_jump = false
-var attack_damage = 10
+var attack_damage = 15
 var is_move = false
 var ammo = 0
 
