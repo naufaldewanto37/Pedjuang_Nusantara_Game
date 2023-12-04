@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqj60nc3kdujj"]
+[gd_scene load_steps=7 format=3 uid="uid://dqj60nc3kdujj"]
 
 [ext_resource type="Script" path="res://setting.gd" id="1_hrhtn"]
 [ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="1_yibc4"]
 [ext_resource type="Texture2D" uid="uid://gss6snhbxnq" path="res://Pedjuang Nusantara Assets/background/bg_riflebambu.png" id="2_ei71l"]
 [ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="3_rcgc2"]
+[ext_resource type="AudioStream" uid="uid://bealr3ah8kvyo" path="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3" id="5_klql5"]
 
 [sub_resource type="GDScript" id="GDScript_u5fpl"]
 script/source = "extends Button
@@ -107,20 +108,6 @@ theme_override_font_sizes/font_size = 40
 text = "AUDIO"
 flat = true
 
-[node name="Control" type="Button" parent="BgPantai/PanelSetting"]
-layout_mode = 0
-offset_left = 518.0
-offset_top = 60.0
-offset_right = 715.0
-offset_bottom = 123.0
-theme_override_colors/font_hover_color = Color(0.027451, 0.533333, 1, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
-theme_override_colors/icon_hover_color = Color(0.027451, 0.533333, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
-theme_override_font_sizes/font_size = 40
-text = "CONTROL"
-flat = true
-
 [node name="FullScreenLabel" type="Label" parent="BgPantai/PanelSetting"]
 layout_mode = 0
 offset_left = 67.6392
@@ -174,10 +161,16 @@ position = Vector2(197, 108)
 scale = Vector2(0.684932, 0.799252)
 texture = ExtResource("3_rcgc2")
 
+[node name="Backsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_klql5")
+autoplay = true
+bus = &"Backsound"
+
 [connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="BgPantai/PanelSetting/Audio" to="." method="_on_audio_pressed"]
 [connection signal="toggled" from="BgPantai/PanelSetting/FullScreenLabel/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="value_changed" from="BgPantai/PanelSetting/BrightnessLabel/BrightnessSlider" to="." method="_on_brightness_slider_value_changed"]

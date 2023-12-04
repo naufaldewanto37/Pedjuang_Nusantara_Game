@@ -45,6 +45,7 @@ const FRICTION = 10.0
 const ACCELERATION = 2000.0
 
 func _physics_process(delta):
+	$CanvasLayer/Ammo.value = ammo
 	is_jump = false
 	is_lookup = false
 	has_double_jumped = false

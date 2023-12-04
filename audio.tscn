@@ -1,0 +1,198 @@
+[gd_scene load_steps=8 format=3 uid="uid://duf3ry5jrdyu"]
+
+[ext_resource type="Script" path="res://setting.gd" id="1_m2ijm"]
+[ext_resource type="Texture2D" uid="uid://82avrm5tlbsx" path="res://Pedjuang Nusantara Assets/background/bg_pantai.png" id="2_wqmj1"]
+[ext_resource type="Texture2D" uid="uid://gss6snhbxnq" path="res://Pedjuang Nusantara Assets/background/bg_riflebambu.png" id="3_6uxsw"]
+[ext_resource type="Script" path="res://HSlider.gd" id="3_s5xa6"]
+[ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="4_687ie"]
+[ext_resource type="AudioStream" uid="uid://bealr3ah8kvyo" path="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3" id="5_idkrp"]
+
+[sub_resource type="GDScript" id="GDScript_u5fpl"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+"
+
+[node name="Audio" type="Node2D"]
+script = ExtResource("1_m2ijm")
+
+[node name="BgPantai" type="Sprite2D" parent="."]
+position = Vector2(640, 359.769)
+scale = Vector2(0.665625, 0.667095)
+texture = ExtResource("2_wqmj1")
+metadata/c = Color(0.305882, 0.627451, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BgPantai"]
+custom_minimum_size = Vector2(0, 20)
+offset_left = -959.0
+offset_top = -200.0
+offset_right = -863.0
+offset_bottom = -29.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="NewGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+flat = true
+script = SubResource("GDScript_u5fpl")
+
+[node name="LoadGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Load Game"
+flat = true
+metadata/z = Color(0.633042, 0.353796, 0.0672246, 1)
+
+[node name="Settings" type="Button" parent="BgPantai/VBoxContainer"]
+self_modulate = Color(1, 0.458824, 0.152941, 1)
+layout_mode = 2
+text = "Settings"
+flat = true
+
+[node name="Credits" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+flat = true
+
+[node name="ExitGame" type="Button" parent="BgPantai/VBoxContainer"]
+layout_mode = 2
+text = "Exit Game"
+flat = true
+
+[node name="PanelSetting" type="Panel" parent="BgPantai"]
+offset_left = -447.733
+offset_top = -287.646
+offset_right = 769.267
+offset_bottom = 384.354
+
+[node name="General" type="Button" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 82.6626
+offset_top = 61.6381
+offset_right = 268.663
+offset_bottom = 124.638
+theme_override_font_sizes/font_size = 40
+text = "GENERAL"
+flat = true
+
+[node name="Audio" type="Button" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 975.057
+offset_top = 63.1371
+offset_right = 1111.06
+offset_bottom = 126.137
+theme_override_colors/font_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_focus_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/font_outline_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_focus_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0.027451, 0.533333, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "AUDIO"
+flat = true
+
+[node name="Master" type="Label" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 114.212
+offset_top = 178.563
+offset_right = 224.212
+offset_bottom = 226.563
+theme_override_font_sizes/font_size = 32
+text = "Master
+"
+
+[node name="HSlider" type="HSlider" parent="BgPantai/PanelSetting/Master"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 742.16
+offset_top = 17.9884
+offset_right = 1014.16
+offset_bottom = 33.9884
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_s5xa6")
+bus_name = "Master"
+
+[node name="Backsound" type="Label" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 117.217
+offset_top = 304.482
+offset_right = 227.217
+offset_bottom = 352.482
+theme_override_font_sizes/font_size = 32
+text = "Music"
+
+[node name="HSlider" type="HSlider" parent="BgPantai/PanelSetting/Backsound"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 742.16
+offset_top = 17.9884
+offset_right = 1014.16
+offset_bottom = 33.9884
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_s5xa6")
+bus_name = "Backsound"
+
+[node name="Sfx" type="Label" parent="BgPantai/PanelSetting"]
+layout_mode = 0
+offset_left = 115.714
+offset_top = 440.894
+offset_right = 225.714
+offset_bottom = 488.894
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="BgPantai/PanelSetting/Sfx"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 742.16
+offset_top = 17.9884
+offset_right = 1014.16
+offset_bottom = 33.9884
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_s5xa6")
+bus_name = "SFX"
+
+[node name="BgRiflebambu" type="Sprite2D" parent="."]
+position = Vector2(1076, 435)
+scale = Vector2(0.502792, 0.542939)
+texture = ExtResource("3_6uxsw")
+
+[node name="BgTitle" type="Sprite2D" parent="."]
+position = Vector2(197, 108)
+scale = Vector2(0.684932, 0.799252)
+texture = ExtResource("4_687ie")
+
+[node name="Backsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_idkrp")
+autoplay = true
+bus = &"Backsound"
+
+[connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed" flags=18]
+[connection signal="pressed" from="BgPantai/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed" flags=18]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed" flags=18]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed" flags=18]
+[connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed" flags=18]
+[connection signal="value_changed" from="BgPantai/PanelSetting/Master/HSlider" to="BgPantai/PanelSetting/Master/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="BgPantai/PanelSetting/Backsound/HSlider" to="BgPantai/PanelSetting/Backsound/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="BgPantai/PanelSetting/Sfx/HSlider" to="BgPantai/PanelSetting/Sfx/HSlider" method="_on_value_changed"]

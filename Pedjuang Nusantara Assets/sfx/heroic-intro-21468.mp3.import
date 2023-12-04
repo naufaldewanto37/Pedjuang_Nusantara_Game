@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bealr3ah8kvyo"
+path="res://.godot/imported/heroic-intro-21468.mp3-f007bc2cbe6236a47cfc74b422146568.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/heroic-intro-21468.mp3"
+dest_files=["res://.godot/imported/heroic-intro-21468.mp3-f007bc2cbe6236a47cfc74b422146568.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -42,3 +42,7 @@ func _on_fullscreen_toggled(button_pressed):
 func _on_brightness_slider_value_changed(value):
 	GlobalWorldEnvironment.environment.adjustment_brightness = value
 	print(value)
+
+
+func _on_audio_pressed():
+	get_tree().change_scene_to_file("res://audio.tscn")

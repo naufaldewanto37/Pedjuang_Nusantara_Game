@@ -142,5 +142,6 @@ position = Vector2(1876, 664)
 
 [node name="Backsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_ahhg5")
+bus = &"Backsound"
 
 [connection signal="body_entered" from="Finish" to="." method="_on_area_2d_body_entered"]

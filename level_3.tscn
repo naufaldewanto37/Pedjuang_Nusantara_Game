@@ -1373,5 +1373,6 @@ position = Vector2(583, 688)
 [node name="Backsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_0fdu4")
 autoplay = true
+bus = &"Backsound"
 
 [node name="Pause" parent="." instance=ExtResource("12_87pdj")]

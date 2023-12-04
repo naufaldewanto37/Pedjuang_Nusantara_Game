@@ -248,9 +248,11 @@ script = ExtResource("1_n718e")
 
 [node name="Death" type="AudioStreamPlayer2D" parent="Soldier"]
 stream = ExtResource("2_1c1dk")
+bus = &"SFX"
 
 [node name="Gun" type="AudioStreamPlayer2D" parent="Soldier"]
 stream = ExtResource("3_76auq")
+bus = &"SFX"
 
 [node name="SoldierSprite2D" type="Sprite2D" parent="Soldier" groups=["Enemy"]]
 position = Vector2(1.5, -11.5)

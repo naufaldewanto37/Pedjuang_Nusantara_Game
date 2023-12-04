@@ -561,10 +561,12 @@ script = ExtResource("1_a76ck")
 [node name="Death" type="AudioStreamPlayer2D" parent="Boss"]
 stream = ExtResource("3_7sv3u")
 volume_db = 24.0
+bus = &"SFX"
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="Boss"]
 stream = ExtResource("3_a6dt2")
 volume_db = 12.0
+bus = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss" groups=["Boss"]]
 position = Vector2(-0.134771, 0.514293)
