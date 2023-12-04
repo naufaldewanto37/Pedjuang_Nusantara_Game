@@ -56,6 +56,7 @@ func flip():
 	
 func shoot_at_satria():
 	if !boss_death:
+		$Shoot.play()
 		var bullet_instance = BulletScene.instantiate()
 		bullet_instance.direction = bullet_direction  # Menetapkan arah gerak peluru
 		get_parent().add_child(bullet_instance)
@@ -74,7 +75,7 @@ func die():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "wrecked":
 		boss_death = true
-		#get_tree().change_scene_to_file("res://main_menu.tscn")
+		$Death.play()
 	
 	if anim_name == "prepare_shoot":
 		animBoss.play("shoot")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://10hespmskmxe"]
+[gd_scene load_steps=18 format=3 uid="uid://10hespmskmxe"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_mdsrs"]
 [ext_resource type="Texture2D" uid="uid://caapmew6eiixf" path="res://Pedjuang Nusantara Assets/tiles/tilemap.png" id="1_r3awd"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c7a5qvfs35ffx" path="res://Character.tscn" id="3_tqw24"]
 [ext_resource type="PackedScene" uid="uid://ca7f6t5iympxb" path="res://enemy.tscn" id="4_47it4"]
 [ext_resource type="Texture2D" uid="uid://lfsta7u1b4u5" path="res://Pedjuang Nusantara Assets/tiles/Platformer - desert/Tileset/00Atlas.png" id="9_yasqf"]
+[ext_resource type="AudioStream" uid="uid://c131amly7vqli" path="res://Pedjuang Nusantara Assets/sfx/sandy-beach-calm-waves-water-nature-sounds-8052.mp3" id="11_8kofn"]
+[ext_resource type="PackedScene" uid="uid://bey7hi46urx13" path="res://pause.tscn" id="12_n3vl3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a24f"]
 size = Vector2(40.75, 340.125)
@@ -2667,8 +2669,11 @@ position = Vector2(1114, 0)
 [node name="Enemy6" parent="Enemy" instance=ExtResource("4_47it4")]
 position = Vector2(1924, -226)
 
+[node name="Enemy9" parent="Enemy" instance=ExtResource("4_47it4")]
+position = Vector2(2055, -30)
+
 [node name="Enemy7" parent="Enemy" instance=ExtResource("4_47it4")]
-position = Vector2(2313, -288)
+position = Vector2(2314, -190)
 
 [node name="Enemy8" parent="Enemy" instance=ExtResource("4_47it4")]
 position = Vector2(2590, -2)
@@ -2697,10 +2702,17 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Finished Area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finished Area"]
 position = Vector2(3450, 556.75)
 shape = SubResource("RectangleShape2D_8ebwp")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Backsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_8kofn")
+volume_db = 12.0
+autoplay = true
+
+[node name="Pause" parent="." instance=ExtResource("12_n3vl3")]
+
+[connection signal="body_entered" from="Finished Area" to="." method="_on_area_2d_body_entered"]

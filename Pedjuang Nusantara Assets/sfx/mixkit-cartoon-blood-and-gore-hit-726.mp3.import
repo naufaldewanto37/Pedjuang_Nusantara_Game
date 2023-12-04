@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beg72m364hwwx"
+path="res://.godot/imported/mixkit-cartoon-blood-and-gore-hit-726.mp3-205e75d2b0d30cfdedf4c13800b245ac.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/mixkit-cartoon-blood-and-gore-hit-726.mp3"
+dest_files=["res://.godot/imported/mixkit-cartoon-blood-and-gore-hit-726.mp3-205e75d2b0d30cfdedf4c13800b245ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

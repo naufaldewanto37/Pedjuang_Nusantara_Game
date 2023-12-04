@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6unfd5i0gisr"
+path="res://.godot/imported/strong-desert-wind-155416.mp3-96b3789f465ee1e919686453af91a979.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/strong-desert-wind-155416.mp3"
+dest_files=["res://.godot/imported/strong-desert-wind-155416.mp3-96b3789f465ee1e919686453af91a979.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

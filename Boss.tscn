@@ -1,7 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://cd27bp5e4qwfk"]
+[gd_scene load_steps=56 format=3 uid="uid://cd27bp5e4qwfk"]
 
 [ext_resource type="Script" path="res://Boss.gd" id="1_a76ck"]
 [ext_resource type="Texture2D" uid="uid://fmkpln5w1pvf" path="res://Pedjuang Nusantara Assets/Boss/736b1309-1cbe-49f8-a6df-2c9a48eb54b9.png" id="1_i8f88"]
+[ext_resource type="AudioStream" uid="uid://c7ly0j2jggvw4" path="res://Pedjuang Nusantara Assets/sfx/mixkit-fire-explosion-1343.mp3" id="3_7sv3u"]
+[ext_resource type="AudioStream" uid="uid://b2tci86gp75la" path="res://Pedjuang Nusantara Assets/sfx/tank firing.mp3" id="3_a6dt2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfct8"]
 size = Vector2(71.9684, 57.258)
@@ -556,13 +558,21 @@ collision_layer = 9
 collision_mask = 2
 script = ExtResource("1_a76ck")
 
+[node name="Death" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("3_7sv3u")
+volume_db = 24.0
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("3_a6dt2")
+volume_db = 12.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss" groups=["Boss"]]
 position = Vector2(-0.134771, 0.514293)
 shape = SubResource("RectangleShape2D_rfct8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" groups=["Boss"]]
 sprite_frames = SubResource("SpriteFrames_vju01")
-animation = &"Prepare Shoot"
+animation = &"Run"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss" groups=["Boss"]]

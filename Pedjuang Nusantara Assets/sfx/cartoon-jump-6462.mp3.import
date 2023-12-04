@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vdgoovuyn8x7"
+path="res://.godot/imported/cartoon-jump-6462.mp3-a22e66530416158945c891bc540f59f5.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/cartoon-jump-6462.mp3"
+dest_files=["res://.godot/imported/cartoon-jump-6462.mp3-a22e66530416158945c891bc540f59f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

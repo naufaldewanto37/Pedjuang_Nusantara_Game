@@ -3,6 +3,9 @@ extends Node2D
 @onready var pause_Menu = $Pause/PauseMenu
 var paused = false
 
+func _ready():
+	$Backsound.play()
+
 func _input(event):
 	if event.is_action_pressed("pause"):
 		pauseMenu()

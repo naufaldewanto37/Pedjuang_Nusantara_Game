@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwixmc71h2bgq"
+path="res://.godot/imported/birds-singing-calm-river-nature-ambient-sound-127411.mp3-3647dfbf4946905fe6d407aaa738f041.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/birds-singing-calm-river-nature-ambient-sound-127411.mp3"
+dest_files=["res://.godot/imported/birds-singing-calm-river-nature-ambient-sound-127411.mp3-3647dfbf4946905fe6d407aaa738f041.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

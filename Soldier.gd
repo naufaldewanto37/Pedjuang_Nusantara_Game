@@ -131,6 +131,7 @@ func take_damage(damage):
 		die()
 		
 func die():
+	$Death.play()
 	soldier.play("death")
 
 func _on_animation_soldier_animation_finished(anim_name):
@@ -139,6 +140,7 @@ func _on_animation_soldier_animation_finished(anim_name):
 		queue_free()
 
 func shoot_at_satria():
+	$Gun.play()
 	var bullet_instance = BulletScene.instantiate()
 	bullet_instance.direction = bullet_direction  # Menetapkan arah gerak peluru
 	get_parent().add_child(bullet_instance)

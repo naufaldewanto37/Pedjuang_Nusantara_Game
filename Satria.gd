@@ -5,7 +5,7 @@ class_name satria
 @export var speed : float = 100
 @export var JUMP_VELOCITY : float = -500.0
 @export var double_jump_velocity : float = -300
-@export var max_health : int = 100
+@export var max_health : int = 50
 @onready var current_health: int = max_health
 const CROUCH_SPEED = 100.0
 const GRAVITY = 1000
@@ -79,6 +79,7 @@ func _physics_process(delta):
 				area_crouching.disabled = true
 				is_jump = true
 				velocity.y = JUMP_VELOCITY
+				$Jump.play()
 				Satria.play("jump")
 			elif not has_double_jumped:
 				# double jump in the air
@@ -124,6 +125,7 @@ func _physics_process(delta):
 		if !has_gun and !has_pistol:
 			is_attacking = true
 			attack_timer = ATTACK_COOLDOWN
+			$BambuHit.play()
 			Satria.play("attack")
 			bambu.disabled = false
 			if is_attacking and not bambu.disabled:
@@ -135,6 +137,7 @@ func _physics_process(delta):
 			if not is_on_floor():
 				is_attacking = true
 				attack_timer = ATTACK_COOLDOWN
+				$BambuHit.play()
 				Satria.play("attack")  # Assuming you have a different animation for jump attack
 		if has_gun:
 			if !is_move:
@@ -175,6 +178,7 @@ func _physics_process(delta):
 		if !has_gun and !has_pistol:
 			is_attacking = true
 			attack_timer = ATTACK_COOLDOWN
+			$BambuHit.play()
 			Satria.play("crouch_attack")
 			bambu.disabled = false
 			if is_attacking and not bambu.disabled:
@@ -419,25 +423,23 @@ func take_damage(damage):
 	current_health -= damage
 	$CanvasLayer/HealthBar.value -= damage
 	if current_health <= 0 and !death:
-		
 		die()
 
 
 func die():
 	death = true
-
 	velocity.x = 0
 	velocity.y = 0
+	$Death.play()
 	Satria.play("death")
 
 func _on_animation_satria_animation_finished(anim_name):
 	if anim_name == "death":
-		queue_free()  # Atau handle game over logic
-		var world_instance = MenuScene.instantiate()
-		get_parent().add_child(world_instance)
-		#get_tree().change_scene_to_file("res://main_menu.tscn")
+		queue_free()
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 
 func shoot_bullet():
+	$GunShot.play()
 	ammo -= 1
 	var bullet_direction
 	if satriaSprite.flip_h:

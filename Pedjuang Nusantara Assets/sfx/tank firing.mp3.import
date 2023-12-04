@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2tci86gp75la"
+path="res://.godot/imported/tank firing.mp3-3a268be56aefe30c19c3c3859e4d9fde.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/tank firing.mp3"
+dest_files=["res://.godot/imported/tank firing.mp3-3a268be56aefe30c19c3c3859e4d9fde.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

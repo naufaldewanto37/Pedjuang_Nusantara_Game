@@ -1,0 +1,2001 @@
+[gd_scene load_steps=79 format=3 uid="uid://c43kgxg8hr7vj"]
+
+[ext_resource type="Texture2D" uid="uid://dycqih51ff54x" path="res://Pedjuang Nusantara Assets/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="1_4ql2w"]
+[ext_resource type="Script" path="res://cutscene_3.gd" id="1_eko77"]
+[ext_resource type="Script" path="res://CutsceneCharacter.gd" id="1_puljj"]
+[ext_resource type="Shape2D" uid="uid://cbar1vwcyc5yf" path="res://Resource/Character_crouch.tres" id="2_dejpm"]
+[ext_resource type="Texture2D" uid="uid://db2rijt1ivmff" path="res://Pedjuang Nusantara Assets/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-mountains.png" id="2_hhq1h"]
+[ext_resource type="Texture2D" uid="uid://t847ev1bwrq" path="res://Pedjuang Nusantara Assets/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-trees.png" id="3_53rka"]
+[ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="3_artmd"]
+[ext_resource type="TileSet" uid="uid://bw881ghsddnqh" path="res://Resource/level_3.tres" id="4_njce8"]
+[ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="4_scphl"]
+[ext_resource type="Texture2D" uid="uid://il76i7vklkaf" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchWalk.png" id="5_aru4r"]
+[ext_resource type="Texture2D" uid="uid://d1um0ocgj6vje" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchAttack.png" id="6_6raah"]
+[ext_resource type="Texture2D" uid="uid://dx6gbkgxp2ifv" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_CrouchAttackRiffle.png" id="7_vj8y1"]
+[ext_resource type="Texture2D" uid="uid://s3qpsncq8rh1" path="res://Pedjuang Nusantara Assets/Satria/Pistol/_CrouchAttackPistol.png" id="8_3h4lc"]
+[ext_resource type="Texture2D" uid="uid://diu03xpgd2j51" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_CrouchWalkGun.png" id="9_3ux78"]
+[ext_resource type="Texture2D" uid="uid://cjmmvli2hunoa" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Death.png" id="10_jb6i0"]
+[ext_resource type="Texture2D" uid="uid://ckm4fhlhlp0gd" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Fall.png" id="11_qpc84"]
+[ext_resource type="Texture2D" uid="uid://coobtpmvekk8u" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_FallGun.png" id="12_qxco8"]
+[ext_resource type="Texture2D" uid="uid://cklswcgs0owvv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__idleMC__.png" id="13_tjua0"]
+[ext_resource type="Texture2D" uid="uid://bpfca4t3neg47" path="res://Pedjuang Nusantara Assets/Satria/Riffle/__idleMC_riffle__.png" id="14_auhq3"]
+[ext_resource type="Texture2D" uid="uid://dod1wi18i3dta" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__idleMC_pistol__.png" id="15_yrqpq"]
+[ext_resource type="Texture2D" uid="uid://bejlgy78vc4av" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Jump.png" id="16_yux6q"]
+[ext_resource type="Texture2D" uid="uid://blq75b4b3t0l2" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_JumpGun.png" id="17_ds286"]
+[ext_resource type="Texture2D" uid="uid://dt7jlutrym7ns" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__lookUp__.png" id="18_dayvm"]
+[ext_resource type="Texture2D" uid="uid://8ocwlvgiv7ax" path="res://Pedjuang Nusantara Assets/Satria/Bambu/__attackUP__.png" id="19_xjqw8"]
+[ext_resource type="Texture2D" uid="uid://c6xyvgi5fxj66" path="res://Pedjuang Nusantara Assets/Satria/Riffle/__lookUpRiffle__.png" id="20_3k00w"]
+[ext_resource type="Texture2D" uid="uid://dy4178sy85no0" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__lookUpPistol__.png" id="21_dxkmf"]
+[ext_resource type="Texture2D" uid="uid://dmpj2sheql1nw" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_Run.png" id="22_v4v3k"]
+[ext_resource type="Texture2D" uid="uid://byssufmmavv35" path="res://Pedjuang Nusantara Assets/Satria/Riffle/_RunGunRiffle.png" id="23_goaqc"]
+[ext_resource type="Texture2D" uid="uid://cyyp55m16whh8" path="res://Pedjuang Nusantara Assets/Satria/Pistol/_RunPistol.png" id="24_nv4vl"]
+[ext_resource type="Texture2D" uid="uid://dpaa7sm8555wk" path="res://Pedjuang Nusantara Assets/Waluyo/__idleWaluyo__.png" id="29_5plii"]
+[ext_resource type="Script" path="res://WaluyoCutscene.gd" id="29_okwyp"]
+[ext_resource type="Texture2D" uid="uid://b1fi1g52cbobf" path="res://Pedjuang Nusantara Assets/Waluyo/_RunWaluyo.png" id="30_8dc58"]
+[ext_resource type="Texture2D" uid="uid://cdmvyfcjewsj3" path="res://Pedjuang Nusantara Assets/parallax_mountain_pack/little House.png" id="31_a4n56"]
+
+[sub_resource type="Animation" id="Animation_rgoqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Satria:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 602)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Waluyo:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 606)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Text Chat:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Text Chat:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Text Chat2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Text Chat2:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Text Chat2:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Apa yang terjadi pada desa?"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Text Chat:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Saat kamu pergi desa kita dijajah oleh seseorang"]
+}
+
+[sub_resource type="Animation" id="Animation_nbsc8"]
+resource_name = "cutscene"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Setelah Sampai tempat tinggalnya, satria terheran karena desa tempat tinggalnya hancur berantakan.
+Saat Satria mengecek keadaan datanglah kerabatnya Waluyo, Dia ada lah orang yang selamat dari kejadian ini,
+ dan menceritakan semua yang terjadi selama Satria pergi."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.615686)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Label:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Satria:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6, 7.5, 24, 25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(35, 602), Vector2(200, 602), Vector2(200, 602), Vector2(600, 602)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Waluyo:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489, 606), Vector2(300, 606)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Waluyo")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(6, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": ["run"],
+"method": &"play_anim"
+}, {
+"args": ["idle"],
+"method": &"play_anim"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Satria")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6, 7.5, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"_ready"
+}, {
+"args": ["run"],
+"method": &"play_anim"
+}, {
+"args": ["idle"],
+"method": &"play_anim"
+}, {
+"args": ["run"],
+"method": &"play_anim"
+}]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Text Chat:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 7.5, 9, 11.1, 12.5, 13.1, 14.3, 15.5, 16.5, 17.8, 19.3, 20.3, 21.7, 22.1, 23.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Text Chat:visible_ratio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(7.5, 8, 11.1, 11.6, 12.5, 13.1, 13.6, 14.3, 15.5, 16, 16.5, 17.8, 18.8, 19.3, 20.3, 21, 21.7, 22.1, 22.8, 23.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Text Chat2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 8.5, 11.1, 14.3, 15.5, 16.5, 17.8, 19.3, 20.3, 23.5, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Text Chat2:visible_ratio")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(8.5, 8.9, 9.4, 9.8, 10.4, 11.1, 14.3, 14.8, 15.5, 16.5, 17, 17.8, 19.3, 19.8, 20.3, 23.5, 23.9, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Text Chat2:text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(8.5, 9.8, 14.3, 16.5, 19.3, 23.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Waluyo?", "Apa yang terjadi pada desa?", "Dimana tempat itu? aku akan pergi kesana", "Baiklah aku pergi dahulu.
+Menyelamatkan para warga", "Terimakasih atas infonya!!!", "......"]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Text Chat:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(7.5, 11.1, 13.1, 15.5, 17.8, 20.3, 22.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Satria!??", "Saat kamu pergi desa kita dijajah oleh seseorang", "Kerabat dan Warga Di desa sedang ditawan di suatu tempat", "Kamu bisa terus menelusuri jalan dan
+ sampai ketempat mereka membangun perlindungan", "Hati-Hati Satria, Mereka Mempunyai Pemimpin 
+yang kuat dan kejam", "Sebelum itu....", "Bisakah aku meminjam Seratus"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_67osx"]
+_data = {
+"RESET": SubResource("Animation_rgoqj"),
+"cutscene": SubResource("Animation_nbsc8")
+}
+
+[sub_resource type="Animation" id="Animation_msf8q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_si7ow"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_8kuha"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"run"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yqhu3"]
+_data = {
+"RESET": SubResource("Animation_msf8q"),
+"idle": SubResource("Animation_si7ow"),
+"run": SubResource("Animation_8kuha")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4bpd"]
+atlas = ExtResource("29_5plii")
+region = Rect2(0, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uchsd"]
+atlas = ExtResource("29_5plii")
+region = Rect2(120, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xsw0"]
+atlas = ExtResource("29_5plii")
+region = Rect2(240, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dlfi"]
+atlas = ExtResource("29_5plii")
+region = Rect2(360, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5pw2"]
+atlas = ExtResource("29_5plii")
+region = Rect2(480, 0, 120, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nft6"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28o5i"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjmce"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26kaf"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glgca"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibveh"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir0nf"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(720, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31hja"]
+atlas = ExtResource("30_8dc58")
+region = Rect2(840, 0, 120, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5qqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4bpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uchsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xsw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dlfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5pw2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nft6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28o5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjmce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26kaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glgca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibveh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir0nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31hja")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nox23"]
+
+[sub_resource type="Animation" id="Animation_64i0g"]
+resource_name = "attack"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_artmd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_luux7"]
+resource_name = "crouch"
+length = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_scphl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_tiqld"]
+resource_name = "crouchWalk"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_aru4r")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+
+[sub_resource type="Animation" id="Animation_b8esc"]
+resource_name = "crouch_attack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_6raah")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jl326"]
+resource_name = "crouch_attack_gun"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_vj8y1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_vb26a"]
+resource_name = "crouch_attack_pistol"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_3h4lc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_6oe0q"]
+resource_name = "crouch_walk_gun"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_3ux78")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_bhplf"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_jb6i0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_woidj"]
+resource_name = "fall"
+length = 0.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_qpc84")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_jr1iy"]
+resource_name = "fall_gun"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_qxco8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 2, 2]
+}
+
+[sub_resource type="Animation" id="Animation_eoa27"]
+resource_name = "idle"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_tjua0")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+
+[sub_resource type="Animation" id="Animation_6x7kx"]
+resource_name = "idle_gun"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_auhq3")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_xrhx7"]
+resource_name = "idle_pistol"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_yrqpq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_te4tq"]
+resource_name = "jump"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_yux6q")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_umy5s"]
+resource_name = "jump_gun"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_ds286")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_nh11g"]
+resource_name = "lookup"
+length = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("18_dayvm")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_pgh4x"]
+resource_name = "lookup_attack"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_xjqw8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_bvovf"]
+resource_name = "lookup_gun"
+length = 0.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("20_3k00w")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uumyg"]
+resource_name = "lookup_pistol"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_dxkmf")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_sgwoh"]
+resource_name = "run"
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_v4v3k")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSatria:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8]
+}
+
+[sub_resource type="Animation" id="Animation_33ma1"]
+resource_name = "run_gun"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("23_goaqc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_sutmf"]
+resource_name = "run_pistol"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SatriaSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("24_nv4vl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SatriaSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SatriaSprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SatriaSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_launb"]
+_data = {
+"attack": SubResource("Animation_64i0g"),
+"crouch": SubResource("Animation_luux7"),
+"crouchWalk": SubResource("Animation_tiqld"),
+"crouch_attack": SubResource("Animation_b8esc"),
+"crouch_attack_gun": SubResource("Animation_jl326"),
+"crouch_attack_pistol": SubResource("Animation_vb26a"),
+"crouch_walk_gun": SubResource("Animation_6oe0q"),
+"death": SubResource("Animation_bhplf"),
+"fall": SubResource("Animation_woidj"),
+"fall_gun": SubResource("Animation_jr1iy"),
+"idle": SubResource("Animation_eoa27"),
+"idle_gun": SubResource("Animation_6x7kx"),
+"idle_pistol": SubResource("Animation_xrhx7"),
+"jump": SubResource("Animation_te4tq"),
+"jump_gun": SubResource("Animation_umy5s"),
+"lookup": SubResource("Animation_nh11g"),
+"lookup_attack": SubResource("Animation_pgh4x"),
+"lookup_gun": SubResource("Animation_bvovf"),
+"lookup_pistol": SubResource("Animation_uumyg"),
+"run": SubResource("Animation_sgwoh"),
+"run_gun": SubResource("Animation_33ma1"),
+"run_pistol": SubResource("Animation_sutmf")
+}
+
+[node name="Cutscene 3" type="Node"]
+script = ExtResource("1_eko77")
+
+[node name="LittleHouse" type="Sprite2D" parent="."]
+position = Vector2(410, 547)
+texture = ExtResource("31_a4n56")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Parallax-mountain-bg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(574, 367)
+scale = Vector2(5.25919, 4.69375)
+texture = ExtResource("1_4ql2w")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Parallax-mountain-mountains" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1568, 435)
+scale = Vector2(6.30699, 5.45625)
+texture = ExtResource("2_hhq1h")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Parallax-mountain-trees" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(1593, 327)
+scale = Vector2(6.33824, 5.40625)
+texture = ExtResource("3_53rka")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1282.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 0.615686)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 1.0
+offset_top = 195.0
+offset_right = 1282.0
+offset_bottom = 524.0
+text = "Setelah Sampai tempat tinggalnya, satria terheran karena desa tempat tinggalnya hancur berantakan.
+Saat Satria mengecek keadaan datanglah kerabatnya Waluyo, Dia ada lah orang yang selamat dari kejadian ini,
+ dan menceritakan semua yang terjadi selama Satria pergi."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "cutscene"
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_67osx")
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("4_njce8")
+format = 2
+layer_0/name = "Ground"
+layer_0/tile_data = PackedInt32Array(2621431, 131072, 0, 2621432, 131072, 0, 2621433, 131072, 0, 2621434, 131072, 0, 2621435, 131072, 0, 2621436, 131072, 0, 2621437, 131072, 0, 2621438, 131072, 0, 2621439, 131072, 0, 2555904, 131072, 0, 2555905, 131072, 0, 2555906, 131072, 0, 2555907, 131072, 0, 2555908, 131072, 0, 2555909, 131072, 0, 2555910, 131072, 0, 2555911, 131072, 0, 2555912, 131072, 0, 2555913, 131072, 0, 2555914, 131072, 0, 2555915, 131072, 0, 2555916, 131072, 0, 2555917, 131072, 0, 2555918, 131072, 0, 2555919, 131072, 0, 2555920, 131072, 0, 2555921, 131072, 0, 2555922, 131072, 0, 2555923, 131072, 0, 2555924, 131072, 0, 2555925, 131072, 0, 2555926, 131072, 0, 2555927, 131072, 0, 2555928, 131072, 0, 2555929, 131072, 0, 2555930, 131072, 0, 2555931, 131072, 0, 2555932, 131072, 0, 2555933, 131072, 0, 2555934, 131072, 0, 2555935, 131072, 0, 2555936, 131072, 0, 2555937, 131072, 0, 2555938, 131072, 0, 2555939, 131072, 0, 2555940, 131072, 0, 2555941, 131072, 0, 2555942, 131072, 0, 2555943, 131072, 0, 2555944, 131072, 0, 2555945, 131072, 0, 2555946, 131072, 0, 2555947, 131072, 0, 2555948, 131072, 0, 2555949, 131072, 0, 2555950, 131072, 0, 2555951, 131072, 0, 2555952, 131072, 0, 2555953, 131072, 0, 2555954, 131072, 0, 2555955, 131072, 0, 2555956, 131072, 0, 2555957, 131072, 0, 2555958, 131072, 0, 2555959, 131072, 0, 2555960, 131072, 0, 2555961, 131072, 0, 2555962, 131072, 0, 2555963, 131072, 0, 2555964, 131072, 0, 2555965, 131072, 0, 2555966, 131072, 0, 2555967, 131072, 0, 2555968, 131072, 0, 2555969, 131072, 0, 2555970, 131072, 0, 2555971, 131072, 0, 2555972, 131072, 0, 2555973, 131072, 0, 2555974, 131072, 0, 2555975, 131072, 0, 2555976, 131072, 0, 2555977, 131072, 0, 2555978, 131072, 0, 2555979, 131072, 0, 2555980, 131072, 0, 2555981, 131072, 0, 2555982, 131072, 0, 2555983, 131072, 0, 2555984, 131072, 0, 2555985, 131072, 0, 2555986, 131072, 0, 2555987, 131072, 0, 2555988, 131072, 0, 2555989, 131072, 0, 2555990, 131072, 0, 2555991, 131072, 0, 2555992, 131072, 0, 2555993, 131072, 0, 2555994, 131072, 0, 2555995, 131072, 0, 2555996, 131072, 0, 2555997, 131072, 0, 2621425, 131072, 0, 2621426, 131072, 0, 2621427, 131072, 0, 2621428, 131072, 0, 2621429, 131072, 0, 2621430, 131072, 0, 2621424, 65536, 0, 2686960, 327680, 0, 2752496, 327680, 0, 2818032, 327680, 0, 2883568, 327680, 0, 2949104, 327680, 0, 3014640, 327680, 0, 3080176, 327680, 0, 3145712, 327680, 0, 3211248, 327680, 0, 3276784, 327680, 0, 3342320, 327680, 0, 3407856, 327680, 0, 3473392, 327680, 0, 3538928, 327680, 0, 3604464, 327680, 0, 3670000, 327680, 0, 3735536, 327680, 0, 2686961, 327680, 0, 2752497, 327680, 0, 2818033, 327680, 0, 2883569, 327680, 0, 2949105, 327680, 0, 3014641, 327680, 0, 3080177, 327680, 0, 3145713, 327680, 0, 3211249, 327680, 0, 3276785, 327680, 0, 3342321, 327680, 0, 3407857, 327680, 0, 3473393, 327680, 0, 3538929, 327680, 0, 3604465, 327680, 0, 3670001, 327680, 0, 3735537, 327680, 0, 2686962, 327680, 0, 2752498, 327680, 0, 2818034, 327680, 0, 2883570, 327680, 0, 2949106, 327680, 0, 3014642, 327680, 0, 3080178, 327680, 0, 3145714, 327680, 0, 3211250, 327680, 0, 3276786, 327680, 0, 3342322, 327680, 0, 3407858, 327680, 0, 3473394, 327680, 0, 3538930, 327680, 0, 3604466, 327680, 0, 3670002, 327680, 0, 3735538, 327680, 0, 2686963, 327680, 0, 2752499, 327680, 0, 2818035, 327680, 0, 2883571, 327680, 0, 2949107, 327680, 0, 3014643, 327680, 0, 3080179, 327680, 0, 3145715, 327680, 0, 3211251, 327680, 0, 3276787, 327680, 0, 3342323, 327680, 0, 3407859, 327680, 0, 3473395, 327680, 0, 3538931, 327680, 0, 3604467, 327680, 0, 3670003, 327680, 0, 3735539, 327680, 0, 2686964, 327680, 0, 2752500, 327680, 0, 2818036, 327680, 0, 2883572, 327680, 0, 2949108, 327680, 0, 3014644, 327680, 0, 3080180, 327680, 0, 3145716, 327680, 0, 3211252, 327680, 0, 3276788, 327680, 0, 3342324, 327680, 0, 3407860, 327680, 0, 3473396, 327680, 0, 3538932, 327680, 0, 3604468, 327680, 0, 3670004, 327680, 0, 3735540, 327680, 0, 2686965, 327680, 0, 2752501, 327680, 0, 2818037, 327680, 0, 2883573, 327680, 0, 2949109, 327680, 0, 3014645, 327680, 0, 3080181, 327680, 0, 3145717, 327680, 0, 3211253, 327680, 0, 3276789, 327680, 0, 3342325, 327680, 0, 3407861, 327680, 0, 3473397, 327680, 0, 3538933, 327680, 0, 3604469, 327680, 0, 3670005, 327680, 0, 3735541, 327680, 0, 2686966, 327680, 0, 2752502, 327680, 0, 2818038, 327680, 0, 2883574, 327680, 0, 2949110, 327680, 0, 3014646, 327680, 0, 3080182, 327680, 0, 3145718, 327680, 0, 3211254, 327680, 0, 3276790, 327680, 0, 3342326, 327680, 0, 3407862, 327680, 0, 3473398, 327680, 0, 3538934, 327680, 0, 3604470, 327680, 0, 3670006, 327680, 0, 3735542, 327680, 0, 2686967, 327680, 0, 2752503, 327680, 0, 2818039, 327680, 0, 2883575, 327680, 0, 2949111, 327680, 0, 3014647, 327680, 0, 3080183, 327680, 0, 3145719, 327680, 0, 3211255, 327680, 0, 3276791, 327680, 0, 3342327, 327680, 0, 3407863, 327680, 0, 3473399, 327680, 0, 3538935, 327680, 0, 3604471, 327680, 0, 3670007, 327680, 0, 3735543, 327680, 0, 2686968, 327680, 0, 2752504, 327680, 0, 2818040, 327680, 0, 2883576, 327680, 0, 2949112, 327680, 0, 3014648, 327680, 0, 3080184, 327680, 0, 3145720, 327680, 0, 3211256, 327680, 0, 3276792, 327680, 0, 3342328, 327680, 0, 3407864, 327680, 0, 3473400, 327680, 0, 3538936, 327680, 0, 3604472, 327680, 0, 3670008, 327680, 0, 3735544, 327680, 0, 2686969, 327680, 0, 2752505, 327680, 0, 2818041, 327680, 0, 2883577, 327680, 0, 2949113, 327680, 0, 3014649, 327680, 0, 3080185, 327680, 0, 3145721, 327680, 0, 3211257, 327680, 0, 3276793, 327680, 0, 3342329, 327680, 0, 3407865, 327680, 0, 3473401, 327680, 0, 3538937, 327680, 0, 3604473, 327680, 0, 3670009, 327680, 0, 3735545, 327680, 0, 2686970, 327680, 0, 2752506, 327680, 0, 2818042, 327680, 0, 2883578, 327680, 0, 2949114, 327680, 0, 3014650, 327680, 0, 3080186, 327680, 0, 3145722, 327680, 0, 3211258, 327680, 0, 3276794, 327680, 0, 3342330, 327680, 0, 3407866, 327680, 0, 3473402, 327680, 0, 3538938, 327680, 0, 3604474, 327680, 0, 3670010, 327680, 0, 3735546, 327680, 0, 2686971, 327680, 0, 2752507, 327680, 0, 2818043, 327680, 0, 2883579, 327680, 0, 2949115, 327680, 0, 3014651, 327680, 0, 3080187, 327680, 0, 3145723, 327680, 0, 3211259, 327680, 0, 3276795, 327680, 0, 3342331, 327680, 0, 3407867, 327680, 0, 3473403, 327680, 0, 3538939, 327680, 0, 3604475, 327680, 0, 3670011, 327680, 0, 3735547, 327680, 0, 2686972, 327680, 0, 2752508, 327680, 0, 2818044, 327680, 0, 2883580, 327680, 0, 2949116, 327680, 0, 3014652, 327680, 0, 3080188, 327680, 0, 3145724, 327680, 0, 3211260, 327680, 0, 3276796, 327680, 0, 3342332, 327680, 0, 3407868, 327680, 0, 3473404, 327680, 0, 3538940, 327680, 0, 3604476, 327680, 0, 3670012, 327680, 0, 3735548, 327680, 0, 2686973, 327680, 0, 2752509, 327680, 0, 2818045, 327680, 0, 2883581, 327680, 0, 2949117, 327680, 0, 3014653, 327680, 0, 3080189, 327680, 0, 3145725, 327680, 0, 3211261, 327680, 0, 3276797, 327680, 0, 3342333, 327680, 0, 3407869, 327680, 0, 3473405, 327680, 0, 3538941, 327680, 0, 3604477, 327680, 0, 3670013, 327680, 0, 3735549, 327680, 0, 2686974, 327680, 0, 2752510, 327680, 0, 2818046, 327680, 0, 2883582, 327680, 0, 2949118, 327680, 0, 3014654, 327680, 0, 3080190, 327680, 0, 3145726, 327680, 0, 3211262, 327680, 0, 3276798, 327680, 0, 3342334, 327680, 0, 3407870, 327680, 0, 3473406, 327680, 0, 3538942, 327680, 0, 3604478, 327680, 0, 3670014, 327680, 0, 3735550, 327680, 0, 2686975, 327680, 0, 2752511, 327680, 0, 2818047, 327680, 0, 2883583, 327680, 0, 2949119, 327680, 0, 3014655, 327680, 0, 3080191, 327680, 0, 3145727, 327680, 0, 3211263, 327680, 0, 3276799, 327680, 0, 3342335, 327680, 0, 3407871, 327680, 0, 3473407, 327680, 0, 3538943, 327680, 0, 3604479, 327680, 0, 3670015, 327680, 0, 3735551, 327680, 0, 2621440, 327680, 0, 2686976, 327680, 0, 2752512, 327680, 0, 2818048, 327680, 0, 2883584, 327680, 0, 2949120, 327680, 0, 3014656, 327680, 0, 3080192, 327680, 0, 3145728, 327680, 0, 3211264, 327680, 0, 3276800, 327680, 0, 3342336, 327680, 0, 3407872, 327680, 0, 3473408, 327680, 0, 3538944, 327680, 0, 3604480, 327680, 0, 3670016, 327680, 0, 2621441, 327680, 0, 2686977, 327680, 0, 2752513, 327680, 0, 2818049, 327680, 0, 2883585, 327680, 0, 2949121, 327680, 0, 3014657, 327680, 0, 3080193, 327680, 0, 3145729, 327680, 0, 3211265, 327680, 0, 3276801, 327680, 0, 3342337, 327680, 0, 3407873, 327680, 0, 3473409, 327680, 0, 3538945, 327680, 0, 3604481, 327680, 0, 3670017, 327680, 0, 2621442, 327680, 0, 2686978, 327680, 0, 2752514, 327680, 0, 2818050, 327680, 0, 2883586, 327680, 0, 2949122, 327680, 0, 3014658, 327680, 0, 3080194, 327680, 0, 3145730, 327680, 0, 3211266, 327680, 0, 3276802, 327680, 0, 3342338, 327680, 0, 3407874, 327680, 0, 3473410, 327680, 0, 3538946, 327680, 0, 3604482, 327680, 0, 3670018, 327680, 0, 2621443, 327680, 0, 2686979, 327680, 0, 2752515, 327680, 0, 2818051, 327680, 0, 2883587, 327680, 0, 2949123, 327680, 0, 3014659, 327680, 0, 3080195, 327680, 0, 3145731, 327680, 0, 3211267, 327680, 0, 3276803, 327680, 0, 3342339, 327680, 0, 3407875, 327680, 0, 3473411, 327680, 0, 3538947, 327680, 0, 3604483, 327680, 0, 3670019, 327680, 0, 2621444, 327680, 0, 2686980, 327680, 0, 2752516, 327680, 0, 2818052, 327680, 0, 2883588, 327680, 0, 2949124, 327680, 0, 3014660, 327680, 0, 3080196, 327680, 0, 3145732, 327680, 0, 3211268, 327680, 0, 3276804, 327680, 0, 3342340, 327680, 0, 3407876, 327680, 0, 3473412, 327680, 0, 3538948, 327680, 0, 3604484, 327680, 0, 3670020, 327680, 0, 2621445, 327680, 0, 2686981, 327680, 0, 2752517, 327680, 0, 2818053, 327680, 0, 2883589, 327680, 0, 2949125, 327680, 0, 3014661, 327680, 0, 3080197, 327680, 0, 3145733, 327680, 0, 3211269, 327680, 0, 3276805, 327680, 0, 3342341, 327680, 0, 3407877, 327680, 0, 3473413, 327680, 0, 3538949, 327680, 0, 3604485, 327680, 0, 3670021, 327680, 0, 2621446, 327680, 0, 2686982, 327680, 0, 2752518, 327680, 0, 2818054, 327680, 0, 2883590, 327680, 0, 2949126, 327680, 0, 3014662, 327680, 0, 3080198, 327680, 0, 3145734, 327680, 0, 3211270, 327680, 0, 3276806, 327680, 0, 3342342, 327680, 0, 3407878, 327680, 0, 3473414, 327680, 0, 3538950, 327680, 0, 3604486, 327680, 0, 3670022, 327680, 0, 2621447, 327680, 0, 2686983, 327680, 0, 2752519, 327680, 0, 2818055, 327680, 0, 2883591, 327680, 0, 2949127, 327680, 0, 3014663, 327680, 0, 3080199, 327680, 0, 3145735, 327680, 0, 3211271, 327680, 0, 3276807, 327680, 0, 3342343, 327680, 0, 3407879, 327680, 0, 3473415, 327680, 0, 3538951, 327680, 0, 3604487, 327680, 0, 3670023, 327680, 0, 2621448, 327680, 0, 2686984, 327680, 0, 2752520, 327680, 0, 2818056, 327680, 0, 2883592, 327680, 0, 2949128, 327680, 0, 3014664, 327680, 0, 3080200, 327680, 0, 3145736, 327680, 0, 3211272, 327680, 0, 3276808, 327680, 0, 3342344, 327680, 0, 3407880, 327680, 0, 3473416, 327680, 0, 3538952, 327680, 0, 3604488, 327680, 0, 3670024, 327680, 0, 2621449, 327680, 0, 2686985, 327680, 0, 2752521, 327680, 0, 2818057, 327680, 0, 2883593, 327680, 0, 2949129, 327680, 0, 3014665, 327680, 0, 3080201, 327680, 0, 3145737, 327680, 0, 3211273, 327680, 0, 3276809, 327680, 0, 3342345, 327680, 0, 3407881, 327680, 0, 3473417, 327680, 0, 3538953, 327680, 0, 3604489, 327680, 0, 3670025, 327680, 0, 2621450, 327680, 0, 2686986, 327680, 0, 2752522, 327680, 0, 2818058, 327680, 0, 2883594, 327680, 0, 2949130, 327680, 0, 3014666, 327680, 0, 3080202, 327680, 0, 3145738, 327680, 0, 3211274, 327680, 0, 3276810, 327680, 0, 3342346, 327680, 0, 3407882, 327680, 0, 3473418, 327680, 0, 3538954, 327680, 0, 3604490, 327680, 0, 3670026, 327680, 0, 2621451, 327680, 0, 2686987, 327680, 0, 2752523, 327680, 0, 2818059, 327680, 0, 2883595, 327680, 0, 2949131, 327680, 0, 3014667, 327680, 0, 3080203, 327680, 0, 3145739, 327680, 0, 3211275, 327680, 0, 3276811, 327680, 0, 3342347, 327680, 0, 3407883, 327680, 0, 3473419, 327680, 0, 3538955, 327680, 0, 3604491, 327680, 0, 3670027, 327680, 0, 2621452, 327680, 0, 2686988, 327680, 0, 2752524, 327680, 0, 2818060, 327680, 0, 2883596, 327680, 0, 2949132, 327680, 0, 3014668, 327680, 0, 3080204, 327680, 0, 3145740, 327680, 0, 3211276, 327680, 0, 3276812, 327680, 0, 3342348, 327680, 0, 3407884, 327680, 0, 3473420, 327680, 0, 3538956, 327680, 0, 3604492, 327680, 0, 3670028, 327680, 0, 2621453, 327680, 0, 2686989, 327680, 0, 2752525, 327680, 0, 2818061, 327680, 0, 2883597, 327680, 0, 2949133, 327680, 0, 3014669, 327680, 0, 3080205, 327680, 0, 3145741, 327680, 0, 3211277, 327680, 0, 3276813, 327680, 0, 3342349, 327680, 0, 3407885, 327680, 0, 3473421, 327680, 0, 3538957, 327680, 0, 3604493, 327680, 0, 3670029, 327680, 0, 2621454, 327680, 0, 2686990, 327680, 0, 2752526, 327680, 0, 2818062, 327680, 0, 2883598, 327680, 0, 2949134, 327680, 0, 3014670, 327680, 0, 3080206, 327680, 0, 3145742, 327680, 0, 3211278, 327680, 0, 3276814, 327680, 0, 3342350, 327680, 0, 3407886, 327680, 0, 3473422, 327680, 0, 3538958, 327680, 0, 3604494, 327680, 0, 3670030, 327680, 0, 2621455, 327680, 0, 2686991, 327680, 0, 2752527, 327680, 0, 2818063, 327680, 0, 2883599, 327680, 0, 2949135, 327680, 0, 3014671, 327680, 0, 3080207, 327680, 0, 3145743, 327680, 0, 3211279, 327680, 0, 3276815, 327680, 0, 3342351, 327680, 0, 3407887, 327680, 0, 3473423, 327680, 0, 3538959, 327680, 0, 3604495, 327680, 0, 3670031, 327680, 0, 2621456, 327680, 0, 2686992, 327680, 0, 2752528, 327680, 0, 2818064, 327680, 0, 2883600, 327680, 0, 2949136, 327680, 0, 3014672, 327680, 0, 3080208, 327680, 0, 3145744, 327680, 0, 3211280, 327680, 0, 3276816, 327680, 0, 3342352, 327680, 0, 3407888, 327680, 0, 3473424, 327680, 0, 3538960, 327680, 0, 3604496, 327680, 0, 3670032, 327680, 0, 2621457, 327680, 0, 2686993, 327680, 0, 2752529, 327680, 0, 2818065, 327680, 0, 2883601, 327680, 0, 2949137, 327680, 0, 3014673, 327680, 0, 3080209, 327680, 0, 3145745, 327680, 0, 3211281, 327680, 0, 3276817, 327680, 0, 3342353, 327680, 0, 3407889, 327680, 0, 3473425, 327680, 0, 3538961, 327680, 0, 3604497, 327680, 0, 3670033, 327680, 0, 2621458, 327680, 0, 2686994, 327680, 0, 2752530, 327680, 0, 2818066, 327680, 0, 2883602, 327680, 0, 2949138, 327680, 0, 3014674, 327680, 0, 3080210, 327680, 0, 3145746, 327680, 0, 3211282, 327680, 0, 3276818, 327680, 0, 3342354, 327680, 0, 3407890, 327680, 0, 3473426, 327680, 0, 3538962, 327680, 0, 3604498, 327680, 0, 3670034, 327680, 0, 2621459, 327680, 0, 2686995, 327680, 0, 2752531, 327680, 0, 2818067, 327680, 0, 2883603, 327680, 0, 2949139, 327680, 0, 3014675, 327680, 0, 3080211, 327680, 0, 3145747, 327680, 0, 3211283, 327680, 0, 3276819, 327680, 0, 3342355, 327680, 0, 3407891, 327680, 0, 3473427, 327680, 0, 3538963, 327680, 0, 3604499, 327680, 0, 3670035, 327680, 0, 2621460, 327680, 0, 2686996, 327680, 0, 2752532, 327680, 0, 2818068, 327680, 0, 2883604, 327680, 0, 2949140, 327680, 0, 3014676, 327680, 0, 3080212, 327680, 0, 3145748, 327680, 0, 3211284, 327680, 0, 3276820, 327680, 0, 3342356, 327680, 0, 3407892, 327680, 0, 3473428, 327680, 0, 3538964, 327680, 0, 3604500, 327680, 0, 3670036, 327680, 0, 2621461, 327680, 0, 2686997, 327680, 0, 2752533, 327680, 0, 2818069, 327680, 0, 2883605, 327680, 0, 2949141, 327680, 0, 3014677, 327680, 0, 3080213, 327680, 0, 3145749, 327680, 0, 3211285, 327680, 0, 3276821, 327680, 0, 3342357, 327680, 0, 3407893, 327680, 0, 3473429, 327680, 0, 3538965, 327680, 0, 3604501, 327680, 0, 3670037, 327680, 0, 2621462, 327680, 0, 2686998, 327680, 0, 2752534, 327680, 0, 2818070, 327680, 0, 2883606, 327680, 0, 2949142, 327680, 0, 3014678, 327680, 0, 3080214, 327680, 0, 3145750, 327680, 0, 3211286, 327680, 0, 3276822, 327680, 0, 3342358, 327680, 0, 3407894, 327680, 0, 3473430, 327680, 0, 3538966, 327680, 0, 3604502, 327680, 0, 3670038, 327680, 0, 2621463, 327680, 0, 2686999, 327680, 0, 2752535, 327680, 0, 2818071, 327680, 0, 2883607, 327680, 0, 2949143, 327680, 0, 3014679, 327680, 0, 3080215, 327680, 0, 3145751, 327680, 0, 3211287, 327680, 0, 3276823, 327680, 0, 3342359, 327680, 0, 3407895, 327680, 0, 3473431, 327680, 0, 3538967, 327680, 0, 3604503, 327680, 0, 3670039, 327680, 0, 2621464, 327680, 0, 2687000, 327680, 0, 2752536, 327680, 0, 2818072, 327680, 0, 2883608, 327680, 0, 2949144, 327680, 0, 3014680, 327680, 0, 3080216, 327680, 0, 3145752, 327680, 0, 3211288, 327680, 0, 3276824, 327680, 0, 3342360, 327680, 0, 3407896, 327680, 0, 3473432, 327680, 0, 3538968, 327680, 0, 3604504, 327680, 0, 3670040, 327680, 0, 2621465, 327680, 0, 2687001, 327680, 0, 2752537, 327680, 0, 2818073, 327680, 0, 2883609, 327680, 0, 2949145, 327680, 0, 3014681, 327680, 0, 3080217, 327680, 0, 3145753, 327680, 0, 3211289, 327680, 0, 3276825, 327680, 0, 3342361, 327680, 0, 3407897, 327680, 0, 3473433, 327680, 0, 3538969, 327680, 0, 3604505, 327680, 0, 3670041, 327680, 0, 2621466, 327680, 0, 2687002, 327680, 0, 2752538, 327680, 0, 2818074, 327680, 0, 2883610, 327680, 0, 2949146, 327680, 0, 3014682, 327680, 0, 3080218, 327680, 0, 3145754, 327680, 0, 3211290, 327680, 0, 3276826, 327680, 0, 3342362, 327680, 0, 3407898, 327680, 0, 3473434, 327680, 0, 3538970, 327680, 0, 3604506, 327680, 0, 3670042, 327680, 0, 2621467, 327680, 0, 2687003, 327680, 0, 2752539, 327680, 0, 2818075, 327680, 0, 2883611, 327680, 0, 2949147, 327680, 0, 3014683, 327680, 0, 3080219, 327680, 0, 3145755, 327680, 0, 3211291, 327680, 0, 3276827, 327680, 0, 3342363, 327680, 0, 3407899, 327680, 0, 3473435, 327680, 0, 3538971, 327680, 0, 3604507, 327680, 0, 3670043, 327680, 0, 2621468, 327680, 0, 2687004, 327680, 0, 2752540, 327680, 0, 2818076, 327680, 0, 2883612, 327680, 0, 2949148, 327680, 0, 3014684, 327680, 0, 3080220, 327680, 0, 3145756, 327680, 0, 3211292, 327680, 0, 3276828, 327680, 0, 3342364, 327680, 0, 3407900, 327680, 0, 3473436, 327680, 0, 3538972, 327680, 0, 3604508, 327680, 0, 3670044, 327680, 0, 2621469, 327680, 0, 2687005, 327680, 0, 2752541, 327680, 0, 2818077, 327680, 0, 2883613, 327680, 0, 2949149, 327680, 0, 3014685, 327680, 0, 3080221, 327680, 0, 3145757, 327680, 0, 3211293, 327680, 0, 3276829, 327680, 0, 3342365, 327680, 0, 3407901, 327680, 0, 3473437, 327680, 0, 3538973, 327680, 0, 3604509, 327680, 0, 3670045, 327680, 0, 2621470, 327680, 0, 2687006, 327680, 0, 2752542, 327680, 0, 2818078, 327680, 0, 2883614, 327680, 0, 2949150, 327680, 0, 3014686, 327680, 0, 3080222, 327680, 0, 3145758, 327680, 0, 3211294, 327680, 0, 3276830, 327680, 0, 3342366, 327680, 0, 3407902, 327680, 0, 3473438, 327680, 0, 3538974, 327680, 0, 3604510, 327680, 0, 3670046, 327680, 0, 2621471, 327680, 0, 2687007, 327680, 0, 2752543, 327680, 0, 2818079, 327680, 0, 2883615, 327680, 0, 2949151, 327680, 0, 3014687, 327680, 0, 3080223, 327680, 0, 3145759, 327680, 0, 3211295, 327680, 0, 3276831, 327680, 0, 3342367, 327680, 0, 3407903, 327680, 0, 3473439, 327680, 0, 3538975, 327680, 0, 3604511, 327680, 0, 3670047, 327680, 0, 2621472, 327680, 0, 2687008, 327680, 0, 2752544, 327680, 0, 2818080, 327680, 0, 2883616, 327680, 0, 2949152, 327680, 0, 3014688, 327680, 0, 3080224, 327680, 0, 3145760, 327680, 0, 3211296, 327680, 0, 3276832, 327680, 0, 3342368, 327680, 0, 3407904, 327680, 0, 3473440, 327680, 0, 3538976, 327680, 0, 3604512, 327680, 0, 3670048, 327680, 0, 2621473, 327680, 0, 2687009, 327680, 0, 2752545, 327680, 0, 2818081, 327680, 0, 2883617, 327680, 0, 2949153, 327680, 0, 3014689, 327680, 0, 3080225, 327680, 0, 3145761, 327680, 0, 3211297, 327680, 0, 3276833, 327680, 0, 3342369, 327680, 0, 3407905, 327680, 0, 3473441, 327680, 0, 3538977, 327680, 0, 3604513, 327680, 0, 3670049, 327680, 0, 2621474, 327680, 0, 2687010, 327680, 0, 2752546, 327680, 0, 2818082, 327680, 0, 2883618, 327680, 0, 2949154, 327680, 0, 3014690, 327680, 0, 3080226, 327680, 0, 3145762, 327680, 0, 3211298, 327680, 0, 3276834, 327680, 0, 3342370, 327680, 0, 3407906, 327680, 0, 3473442, 327680, 0, 3538978, 327680, 0, 3604514, 327680, 0, 3670050, 327680, 0, 2621475, 327680, 0, 2687011, 327680, 0, 2752547, 327680, 0, 2818083, 327680, 0, 2883619, 327680, 0, 2949155, 327680, 0, 3014691, 327680, 0, 3080227, 327680, 0, 3145763, 327680, 0, 3211299, 327680, 0, 3276835, 327680, 0, 3342371, 327680, 0, 3407907, 327680, 0, 3473443, 327680, 0, 3538979, 327680, 0, 3604515, 327680, 0, 3670051, 327680, 0, 2621476, 327680, 0, 2687012, 327680, 0, 2752548, 327680, 0, 2818084, 327680, 0, 2883620, 327680, 0, 2949156, 327680, 0, 3014692, 327680, 0, 3080228, 327680, 0, 3145764, 327680, 0, 3211300, 327680, 0, 3276836, 327680, 0, 3342372, 327680, 0, 3407908, 327680, 0, 3473444, 327680, 0, 3538980, 327680, 0, 3604516, 327680, 0, 3670052, 327680, 0, 2621477, 327680, 0, 2687013, 327680, 0, 2752549, 327680, 0, 2818085, 327680, 0, 2883621, 327680, 0, 2949157, 327680, 0, 3014693, 327680, 0, 3080229, 327680, 0, 3145765, 327680, 0, 3211301, 327680, 0, 3276837, 327680, 0, 3342373, 327680, 0, 3407909, 327680, 0, 3473445, 327680, 0, 3538981, 327680, 0, 3604517, 327680, 0, 3670053, 327680, 0, 2621478, 327680, 0, 2687014, 327680, 0, 2752550, 327680, 0, 2818086, 327680, 0, 2883622, 327680, 0, 2949158, 327680, 0, 3014694, 327680, 0, 3080230, 327680, 0, 3145766, 327680, 0, 3211302, 327680, 0, 3276838, 327680, 0, 3342374, 327680, 0, 3407910, 327680, 0, 3473446, 327680, 0, 3538982, 327680, 0, 3604518, 327680, 0, 3670054, 327680, 0, 2621479, 327680, 0, 2687015, 327680, 0, 2752551, 327680, 0, 2818087, 327680, 0, 2883623, 327680, 0, 2949159, 327680, 0, 3014695, 327680, 0, 3080231, 327680, 0, 3145767, 327680, 0, 3211303, 327680, 0, 3276839, 327680, 0, 3342375, 327680, 0, 3407911, 327680, 0, 3473447, 327680, 0, 3538983, 327680, 0, 3604519, 327680, 0, 3670055, 327680, 0, 2621480, 327680, 0, 2687016, 327680, 0, 2752552, 327680, 0, 2818088, 327680, 0, 2883624, 327680, 0, 2949160, 327680, 0, 3014696, 327680, 0, 3080232, 327680, 0, 3145768, 327680, 0, 3211304, 327680, 0, 3276840, 327680, 0, 3342376, 327680, 0, 3407912, 327680, 0, 3473448, 327680, 0, 3538984, 327680, 0, 3604520, 327680, 0, 3670056, 327680, 0, 2621481, 327680, 0, 2687017, 327680, 0, 2752553, 327680, 0, 2818089, 327680, 0, 2883625, 327680, 0, 2949161, 327680, 0, 3014697, 327680, 0, 3080233, 327680, 0, 3145769, 327680, 0, 3211305, 327680, 0, 3276841, 327680, 0, 3342377, 327680, 0, 3407913, 327680, 0, 3473449, 327680, 0, 3538985, 327680, 0, 3604521, 327680, 0, 3670057, 327680, 0, 2621482, 327680, 0, 2687018, 327680, 0, 2752554, 327680, 0, 2818090, 327680, 0, 2883626, 327680, 0, 2949162, 327680, 0, 3014698, 327680, 0, 3080234, 327680, 0, 3145770, 327680, 0, 3211306, 327680, 0, 3276842, 327680, 0, 3342378, 327680, 0, 3407914, 327680, 0, 3473450, 327680, 0, 3538986, 327680, 0, 3604522, 327680, 0, 3670058, 327680, 0, 2621483, 327680, 0, 2687019, 327680, 0, 2752555, 327680, 0, 2818091, 327680, 0, 2883627, 327680, 0, 2949163, 327680, 0, 3014699, 327680, 0, 3080235, 327680, 0, 3145771, 327680, 0, 3211307, 327680, 0, 3276843, 327680, 0, 3342379, 327680, 0, 3407915, 327680, 0, 3473451, 327680, 0, 3538987, 327680, 0, 3604523, 327680, 0, 3670059, 327680, 0, 2621484, 327680, 0, 2687020, 327680, 0, 2752556, 327680, 0, 2818092, 327680, 0, 2883628, 327680, 0, 2949164, 327680, 0, 3014700, 327680, 0, 3080236, 327680, 0, 3145772, 327680, 0, 3211308, 327680, 0, 3276844, 327680, 0, 3342380, 327680, 0, 3407916, 327680, 0, 3473452, 327680, 0, 3538988, 327680, 0, 3604524, 327680, 0, 3670060, 327680, 0, 2621485, 327680, 0, 2687021, 327680, 0, 2752557, 327680, 0, 2818093, 327680, 0, 2883629, 327680, 0, 2949165, 327680, 0, 3014701, 327680, 0, 3080237, 327680, 0, 3145773, 327680, 0, 3211309, 327680, 0, 3276845, 327680, 0, 3342381, 327680, 0, 3407917, 327680, 0, 3473453, 327680, 0, 3538989, 327680, 0, 3604525, 327680, 0, 3670061, 327680, 0, 2621486, 327680, 0, 2687022, 327680, 0, 2752558, 327680, 0, 2818094, 327680, 0, 2883630, 327680, 0, 2949166, 327680, 0, 3014702, 327680, 0, 3080238, 327680, 0, 3145774, 327680, 0, 3211310, 327680, 0, 3276846, 327680, 0, 3342382, 327680, 0, 3407918, 327680, 0, 3473454, 327680, 0, 3538990, 327680, 0, 3604526, 327680, 0, 3670062, 327680, 0, 2621487, 327680, 0, 2687023, 327680, 0, 2752559, 327680, 0, 2818095, 327680, 0, 2883631, 327680, 0, 2949167, 327680, 0, 3014703, 327680, 0, 3080239, 327680, 0, 3145775, 327680, 0, 3211311, 327680, 0, 3276847, 327680, 0, 3342383, 327680, 0, 3407919, 327680, 0, 3473455, 327680, 0, 3538991, 327680, 0, 3604527, 327680, 0, 3670063, 327680, 0, 2621488, 327680, 0, 2687024, 327680, 0, 2752560, 327680, 0, 2818096, 327680, 0, 2883632, 327680, 0, 2949168, 327680, 0, 3014704, 327680, 0, 3080240, 327680, 0, 3145776, 327680, 0, 3211312, 327680, 0, 3276848, 327680, 0, 3342384, 327680, 0, 3407920, 327680, 0, 3473456, 327680, 0, 3538992, 327680, 0, 3604528, 327680, 0, 3670064, 327680, 0, 2621489, 327680, 0, 2687025, 327680, 0, 2752561, 327680, 0, 2818097, 327680, 0, 2883633, 327680, 0, 2949169, 327680, 0, 3014705, 327680, 0, 3080241, 327680, 0, 3145777, 327680, 0, 3211313, 327680, 0, 3276849, 327680, 0, 3342385, 327680, 0, 3407921, 327680, 0, 3473457, 327680, 0, 3538993, 327680, 0, 3604529, 327680, 0, 3670065, 327680, 0, 2621490, 327680, 0, 2687026, 327680, 0, 2752562, 327680, 0, 2818098, 327680, 0, 2883634, 327680, 0, 2949170, 327680, 0, 3014706, 327680, 0, 3080242, 327680, 0, 3145778, 327680, 0, 3211314, 327680, 0, 3276850, 327680, 0, 3342386, 327680, 0, 3407922, 327680, 0, 3473458, 327680, 0, 3538994, 327680, 0, 3604530, 327680, 0, 3670066, 327680, 0, 2621491, 327680, 0, 2687027, 327680, 0, 2752563, 327680, 0, 2818099, 327680, 0, 2883635, 327680, 0, 2949171, 327680, 0, 3014707, 327680, 0, 3080243, 327680, 0, 3145779, 327680, 0, 3211315, 327680, 0, 3276851, 327680, 0, 3342387, 327680, 0, 3407923, 327680, 0, 3473459, 327680, 0, 3538995, 327680, 0, 3604531, 327680, 0, 3670067, 327680, 0, 2621492, 327680, 0, 2687028, 327680, 0, 2752564, 327680, 0, 2818100, 327680, 0, 2883636, 327680, 0, 2949172, 327680, 0, 3014708, 327680, 0, 3080244, 327680, 0, 3145780, 327680, 0, 3211316, 327680, 0, 3276852, 327680, 0, 3342388, 327680, 0, 3407924, 327680, 0, 3473460, 327680, 0, 3538996, 327680, 0, 3604532, 327680, 0, 3670068, 327680, 0, 2621493, 327680, 0, 2687029, 327680, 0, 2752565, 327680, 0, 2818101, 327680, 0, 2883637, 327680, 0, 2949173, 327680, 0, 3014709, 327680, 0, 3080245, 327680, 0, 3145781, 327680, 0, 3211317, 327680, 0, 3276853, 327680, 0, 3342389, 327680, 0, 3407925, 327680, 0, 3473461, 327680, 0, 3538997, 327680, 0, 3604533, 327680, 0, 3670069, 327680, 0, 2621494, 327680, 0, 2687030, 327680, 0, 2752566, 327680, 0, 2818102, 327680, 0, 2883638, 327680, 0, 2949174, 327680, 0, 3014710, 327680, 0, 3080246, 327680, 0, 3145782, 327680, 0, 3211318, 327680, 0, 3276854, 327680, 0, 3342390, 327680, 0, 3407926, 327680, 0, 3473462, 327680, 0, 3538998, 327680, 0, 3604534, 327680, 0, 3670070, 327680, 0, 2621495, 327680, 0, 2687031, 327680, 0, 2752567, 327680, 0, 2818103, 327680, 0, 2883639, 327680, 0, 2949175, 327680, 0, 3014711, 327680, 0, 3080247, 327680, 0, 3145783, 327680, 0, 3211319, 327680, 0, 3276855, 327680, 0, 3342391, 327680, 0, 3407927, 327680, 0, 3473463, 327680, 0, 3538999, 327680, 0, 3604535, 327680, 0, 3670071, 327680, 0, 2621496, 327680, 0, 2687032, 327680, 0, 2752568, 327680, 0, 2818104, 327680, 0, 2883640, 327680, 0, 2949176, 327680, 0, 3014712, 327680, 0, 3080248, 327680, 0, 3145784, 327680, 0, 3211320, 327680, 0, 3276856, 327680, 0, 3342392, 327680, 0, 3407928, 327680, 0, 3473464, 327680, 0, 3539000, 327680, 0, 3604536, 327680, 0, 3670072, 327680, 0, 2621497, 327680, 0, 2687033, 327680, 0, 2752569, 327680, 0, 2818105, 327680, 0, 2883641, 327680, 0, 2949177, 327680, 0, 3014713, 327680, 0, 3080249, 327680, 0, 3145785, 327680, 0, 3211321, 327680, 0, 3276857, 327680, 0, 3342393, 327680, 0, 3407929, 327680, 0, 3473465, 327680, 0, 3539001, 327680, 0, 3604537, 327680, 0, 3670073, 327680, 0, 2621498, 327680, 0, 2687034, 327680, 0, 2752570, 327680, 0, 2818106, 327680, 0, 2883642, 327680, 0, 2949178, 327680, 0, 3014714, 327680, 0, 3080250, 327680, 0, 3145786, 327680, 0, 3211322, 327680, 0, 3276858, 327680, 0, 3342394, 327680, 0, 3407930, 327680, 0, 3473466, 327680, 0, 3539002, 327680, 0, 3604538, 327680, 0, 3670074, 327680, 0, 2621499, 327680, 0, 2687035, 327680, 0, 2752571, 327680, 0, 2818107, 327680, 0, 2883643, 327680, 0, 2949179, 327680, 0, 3014715, 327680, 0, 3080251, 327680, 0, 3145787, 327680, 0, 3211323, 327680, 0, 3276859, 327680, 0, 3342395, 327680, 0, 3407931, 327680, 0, 3473467, 327680, 0, 3539003, 327680, 0, 3604539, 327680, 0, 3670075, 327680, 0, 2621500, 327680, 0, 2687036, 327680, 0, 2752572, 327680, 0, 2818108, 327680, 0, 2883644, 327680, 0, 2949180, 327680, 0, 3014716, 327680, 0, 3080252, 327680, 0, 3145788, 327680, 0, 3211324, 327680, 0, 3276860, 327680, 0, 3342396, 327680, 0, 3407932, 327680, 0, 3473468, 327680, 0, 3539004, 327680, 0, 3604540, 327680, 0, 3670076, 327680, 0, 2621501, 327680, 0, 2687037, 327680, 0, 2752573, 327680, 0, 2818109, 327680, 0, 2883645, 327680, 0, 2949181, 327680, 0, 3014717, 327680, 0, 3080253, 327680, 0, 3145789, 327680, 0, 3211325, 327680, 0, 3276861, 327680, 0, 3342397, 327680, 0, 3407933, 327680, 0, 3473469, 327680, 0, 3539005, 327680, 0, 3604541, 327680, 0, 3670077, 327680, 0, 2621502, 327680, 0, 2687038, 327680, 0, 2752574, 327680, 0, 2818110, 327680, 0, 2883646, 327680, 0, 2949182, 327680, 0, 3014718, 327680, 0, 3080254, 327680, 0, 3145790, 327680, 0, 3211326, 327680, 0, 3276862, 327680, 0, 3342398, 327680, 0, 3407934, 327680, 0, 3473470, 327680, 0, 3539006, 327680, 0, 3604542, 327680, 0, 3670078, 327680, 0, 2621503, 327680, 0, 2687039, 327680, 0, 2752575, 327680, 0, 2818111, 327680, 0, 2883647, 327680, 0, 2949183, 327680, 0, 3014719, 327680, 0, 3080255, 327680, 0, 3145791, 327680, 0, 3211327, 327680, 0, 3276863, 327680, 0, 3342399, 327680, 0, 3407935, 327680, 0, 3473471, 327680, 0, 3539007, 327680, 0, 3604543, 327680, 0, 3670079, 327680, 0, 2621504, 327680, 0, 2687040, 327680, 0, 2752576, 327680, 0, 2818112, 327680, 0, 2883648, 327680, 0, 2949184, 327680, 0, 3014720, 327680, 0, 3080256, 327680, 0, 3145792, 327680, 0, 3211328, 327680, 0, 3276864, 327680, 0, 3342400, 327680, 0, 3407936, 327680, 0, 3473472, 327680, 0, 3539008, 327680, 0, 3604544, 327680, 0, 3670080, 327680, 0, 2621505, 327680, 0, 2687041, 327680, 0, 2752577, 327680, 0, 2818113, 327680, 0, 2883649, 327680, 0, 2949185, 327680, 0, 3014721, 327680, 0, 3080257, 327680, 0, 3145793, 327680, 0, 3211329, 327680, 0, 3276865, 327680, 0, 3342401, 327680, 0, 3407937, 327680, 0, 3473473, 327680, 0, 3539009, 327680, 0, 3604545, 327680, 0, 3670081, 327680, 0, 2621506, 327680, 0, 2687042, 327680, 0, 2752578, 327680, 0, 2818114, 327680, 0, 2883650, 327680, 0, 2949186, 327680, 0, 3014722, 327680, 0, 3080258, 327680, 0, 3145794, 327680, 0, 3211330, 327680, 0, 3276866, 327680, 0, 3342402, 327680, 0, 3407938, 327680, 0, 3473474, 327680, 0, 3539010, 327680, 0, 3604546, 327680, 0, 3670082, 327680, 0, 2621507, 327680, 0, 2687043, 327680, 0, 2752579, 327680, 0, 2818115, 327680, 0, 2883651, 327680, 0, 2949187, 327680, 0, 3014723, 327680, 0, 3080259, 327680, 0, 3145795, 327680, 0, 3211331, 327680, 0, 3276867, 327680, 0, 3342403, 327680, 0, 3407939, 327680, 0, 3473475, 327680, 0, 3539011, 327680, 0, 3604547, 327680, 0, 3670083, 327680, 0, 2621508, 327680, 0, 2687044, 327680, 0, 2752580, 327680, 0, 2818116, 327680, 0, 2883652, 327680, 0, 2949188, 327680, 0, 3014724, 327680, 0, 3080260, 327680, 0, 3145796, 327680, 0, 3211332, 327680, 0, 3276868, 327680, 0, 3342404, 327680, 0, 3407940, 327680, 0, 3473476, 327680, 0, 3539012, 327680, 0, 3604548, 327680, 0, 3670084, 327680, 0, 2621509, 327680, 0, 2687045, 327680, 0, 2752581, 327680, 0, 2818117, 327680, 0, 2883653, 327680, 0, 2949189, 327680, 0, 3014725, 327680, 0, 3080261, 327680, 0, 3145797, 327680, 0, 3211333, 327680, 0, 3276869, 327680, 0, 3342405, 327680, 0, 3407941, 327680, 0, 3473477, 327680, 0, 3539013, 327680, 0, 3604549, 327680, 0, 3670085, 327680, 0, 2621510, 327680, 0, 2687046, 327680, 0, 2752582, 327680, 0, 2818118, 327680, 0, 2883654, 327680, 0, 2949190, 327680, 0, 3014726, 327680, 0, 3080262, 327680, 0, 3145798, 327680, 0, 3211334, 327680, 0, 3276870, 327680, 0, 3342406, 327680, 0, 3407942, 327680, 0, 3473478, 327680, 0, 3539014, 327680, 0, 3604550, 327680, 0, 3670086, 327680, 0, 2621511, 327680, 0, 2687047, 327680, 0, 2752583, 327680, 0, 2818119, 327680, 0, 2883655, 327680, 0, 2949191, 327680, 0, 3014727, 327680, 0, 3080263, 327680, 0, 3145799, 327680, 0, 3211335, 327680, 0, 3276871, 327680, 0, 3342407, 327680, 0, 3407943, 327680, 0, 3473479, 327680, 0, 3539015, 327680, 0, 3604551, 327680, 0, 3670087, 327680, 0, 2621512, 327680, 0, 2687048, 327680, 0, 2752584, 327680, 0, 2818120, 327680, 0, 2883656, 327680, 0, 2949192, 327680, 0, 3014728, 327680, 0, 3080264, 327680, 0, 3145800, 327680, 0, 3211336, 327680, 0, 3276872, 327680, 0, 3342408, 327680, 0, 3407944, 327680, 0, 3473480, 327680, 0, 3539016, 327680, 0, 3604552, 327680, 0, 3670088, 327680, 0, 2621513, 327680, 0, 2687049, 327680, 0, 2752585, 327680, 0, 2818121, 327680, 0, 2883657, 327680, 0, 2949193, 327680, 0, 3014729, 327680, 0, 3080265, 327680, 0, 3145801, 327680, 0, 3211337, 327680, 0, 3276873, 327680, 0, 3342409, 327680, 0, 3407945, 327680, 0, 3473481, 327680, 0, 3539017, 327680, 0, 3604553, 327680, 0, 3670089, 327680, 0, 2621514, 327680, 0, 2687050, 327680, 0, 2752586, 327680, 0, 2818122, 327680, 0, 2883658, 327680, 0, 2949194, 327680, 0, 3014730, 327680, 0, 3080266, 327680, 0, 3145802, 327680, 0, 3211338, 327680, 0, 3276874, 327680, 0, 3342410, 327680, 0, 3407946, 327680, 0, 3473482, 327680, 0, 3539018, 327680, 0, 3604554, 327680, 0, 3670090, 327680, 0, 2621515, 327680, 0, 2687051, 327680, 0, 2752587, 327680, 0, 2818123, 327680, 0, 2883659, 327680, 0, 2949195, 327680, 0, 3014731, 327680, 0, 3080267, 327680, 0, 3145803, 327680, 0, 3211339, 327680, 0, 3276875, 327680, 0, 3342411, 327680, 0, 3407947, 327680, 0, 3473483, 327680, 0, 3539019, 327680, 0, 3604555, 327680, 0, 3670091, 327680, 0, 2621516, 327680, 0, 2687052, 327680, 0, 2752588, 327680, 0, 2818124, 327680, 0, 2883660, 327680, 0, 2949196, 327680, 0, 3014732, 327680, 0, 3080268, 327680, 0, 3145804, 327680, 0, 3211340, 327680, 0, 3276876, 327680, 0, 3342412, 327680, 0, 3407948, 327680, 0, 3473484, 327680, 0, 3539020, 327680, 0, 3604556, 327680, 0, 3670092, 327680, 0, 2621517, 327680, 0, 2687053, 327680, 0, 2752589, 327680, 0, 2818125, 327680, 0, 2883661, 327680, 0, 2949197, 327680, 0, 3014733, 327680, 0, 3080269, 327680, 0, 3145805, 327680, 0, 3211341, 327680, 0, 3276877, 327680, 0, 3342413, 327680, 0, 3407949, 327680, 0, 3473485, 327680, 0, 3539021, 327680, 0, 3604557, 327680, 0, 3670093, 327680, 0, 2621518, 327680, 0, 2687054, 327680, 0, 2752590, 327680, 0, 2818126, 327680, 0, 2883662, 327680, 0, 2949198, 327680, 0, 3014734, 327680, 0, 3080270, 327680, 0, 3145806, 327680, 0, 3211342, 327680, 0, 3276878, 327680, 0, 3342414, 327680, 0, 3407950, 327680, 0, 3473486, 327680, 0, 3539022, 327680, 0, 3604558, 327680, 0, 3670094, 327680, 0, 2621519, 327680, 0, 2687055, 327680, 0, 2752591, 327680, 0, 2818127, 327680, 0, 2883663, 327680, 0, 2949199, 327680, 0, 3014735, 327680, 0, 3080271, 327680, 0, 3145807, 327680, 0, 3211343, 327680, 0, 3276879, 327680, 0, 3342415, 327680, 0, 3407951, 327680, 0, 3473487, 327680, 0, 3539023, 327680, 0, 3604559, 327680, 0, 3670095, 327680, 0, 2621520, 327680, 0, 2687056, 327680, 0, 2752592, 327680, 0, 2818128, 327680, 0, 2883664, 327680, 0, 2949200, 327680, 0, 3014736, 327680, 0, 3080272, 327680, 0, 3145808, 327680, 0, 3211344, 327680, 0, 3276880, 327680, 0, 3342416, 327680, 0, 3407952, 327680, 0, 3473488, 327680, 0, 3539024, 327680, 0, 3604560, 327680, 0, 3670096, 327680, 0, 2621521, 327680, 0, 2687057, 327680, 0, 2752593, 327680, 0, 2818129, 327680, 0, 2883665, 327680, 0, 2949201, 327680, 0, 3014737, 327680, 0, 3080273, 327680, 0, 3145809, 327680, 0, 3211345, 327680, 0, 3276881, 327680, 0, 3342417, 327680, 0, 3407953, 327680, 0, 3473489, 327680, 0, 3539025, 327680, 0, 3604561, 327680, 0, 3670097, 327680, 0, 2621522, 327680, 0, 2687058, 327680, 0, 2752594, 327680, 0, 2818130, 327680, 0, 2883666, 327680, 0, 2949202, 327680, 0, 3014738, 327680, 0, 3080274, 327680, 0, 3145810, 327680, 0, 3211346, 327680, 0, 3276882, 327680, 0, 3342418, 327680, 0, 3407954, 327680, 0, 3473490, 327680, 0, 3539026, 327680, 0, 3604562, 327680, 0, 3670098, 327680, 0, 2621523, 327680, 0, 2687059, 327680, 0, 2752595, 327680, 0, 2818131, 327680, 0, 2883667, 327680, 0, 2949203, 327680, 0, 3014739, 327680, 0, 3080275, 327680, 0, 3145811, 327680, 0, 3211347, 327680, 0, 3276883, 327680, 0, 3342419, 327680, 0, 3407955, 327680, 0, 3473491, 327680, 0, 3539027, 327680, 0, 3604563, 327680, 0, 3670099, 327680, 0, 2621524, 327680, 0, 2687060, 327680, 0, 2752596, 327680, 0, 2818132, 327680, 0, 2883668, 327680, 0, 2949204, 327680, 0, 3014740, 327680, 0, 3080276, 327680, 0, 3145812, 327680, 0, 3211348, 327680, 0, 3276884, 327680, 0, 3342420, 327680, 0, 3407956, 327680, 0, 3473492, 327680, 0, 3539028, 327680, 0, 3604564, 327680, 0, 3670100, 327680, 0, 2621525, 327680, 0, 2687061, 327680, 0, 2752597, 327680, 0, 2818133, 327680, 0, 2883669, 327680, 0, 2949205, 327680, 0, 3014741, 327680, 0, 3080277, 327680, 0, 3145813, 327680, 0, 3211349, 327680, 0, 3276885, 327680, 0, 3342421, 327680, 0, 3407957, 327680, 0, 3473493, 327680, 0, 3539029, 327680, 0, 3604565, 327680, 0, 3670101, 327680, 0, 2621526, 327680, 0, 2687062, 327680, 0, 2752598, 327680, 0, 2818134, 327680, 0, 2883670, 327680, 0, 2949206, 327680, 0, 3014742, 327680, 0, 3080278, 327680, 0, 3145814, 327680, 0, 3211350, 327680, 0, 3276886, 327680, 0, 3342422, 327680, 0, 3407958, 327680, 0, 3473494, 327680, 0, 3539030, 327680, 0, 3604566, 327680, 0, 3670102, 327680, 0, 2621527, 327680, 0, 2687063, 327680, 0, 2752599, 327680, 0, 2818135, 327680, 0, 2883671, 327680, 0, 2949207, 327680, 0, 3014743, 327680, 0, 3080279, 327680, 0, 3145815, 327680, 0, 3211351, 327680, 0, 3276887, 327680, 0, 3342423, 327680, 0, 3407959, 327680, 0, 3473495, 327680, 0, 3539031, 327680, 0, 3604567, 327680, 0, 3670103, 327680, 0, 2621528, 327680, 0, 2687064, 327680, 0, 2752600, 327680, 0, 2818136, 327680, 0, 2883672, 327680, 0, 2949208, 327680, 0, 3014744, 327680, 0, 3080280, 327680, 0, 3145816, 327680, 0, 3211352, 327680, 0, 3276888, 327680, 0, 3342424, 327680, 0, 3407960, 327680, 0, 3473496, 327680, 0, 3539032, 327680, 0, 3604568, 327680, 0, 3670104, 327680, 0, 2621529, 327680, 0, 2687065, 327680, 0, 2752601, 327680, 0, 2818137, 327680, 0, 2883673, 327680, 0, 2949209, 327680, 0, 3014745, 327680, 0, 3080281, 327680, 0, 3145817, 327680, 0, 3211353, 327680, 0, 3276889, 327680, 0, 3342425, 327680, 0, 3407961, 327680, 0, 3473497, 327680, 0, 3539033, 327680, 0, 3604569, 327680, 0, 3670105, 327680, 0, 2621530, 327680, 0, 2687066, 327680, 0, 2752602, 327680, 0, 2818138, 327680, 0, 2883674, 327680, 0, 2949210, 327680, 0, 3014746, 327680, 0, 3080282, 327680, 0, 3145818, 327680, 0, 3211354, 327680, 0, 3276890, 327680, 0, 3342426, 327680, 0, 3407962, 327680, 0, 3473498, 327680, 0, 3539034, 327680, 0, 3604570, 327680, 0, 3670106, 327680, 0, 2621531, 327680, 0, 2687067, 327680, 0, 2752603, 327680, 0, 2818139, 327680, 0, 2883675, 327680, 0, 2949211, 327680, 0, 3014747, 327680, 0, 3080283, 327680, 0, 3145819, 327680, 0, 3211355, 327680, 0, 3276891, 327680, 0, 3342427, 327680, 0, 3407963, 327680, 0, 3473499, 327680, 0, 3539035, 327680, 0, 3604571, 327680, 0, 3670107, 327680, 0, 2621532, 327680, 0, 2687068, 327680, 0, 2752604, 327680, 0, 2818140, 327680, 0, 2883676, 327680, 0, 2949212, 327680, 0, 3014748, 327680, 0, 3080284, 327680, 0, 3145820, 327680, 0, 3211356, 327680, 0, 3276892, 327680, 0, 3342428, 327680, 0, 3407964, 327680, 0, 3473500, 327680, 0, 3539036, 327680, 0, 3604572, 327680, 0, 3670108, 327680, 0, 2621533, 327680, 0, 2687069, 327680, 0, 2752605, 327680, 0, 2818141, 327680, 0, 2883677, 327680, 0, 2949213, 327680, 0, 3014749, 327680, 0, 3080285, 327680, 0, 3145821, 327680, 0, 3211357, 327680, 0, 3276893, 327680, 0, 3342429, 327680, 0, 3407965, 327680, 0, 3473501, 327680, 0, 3539037, 327680, 0, 3604573, 327680, 0, 3670109, 327680, 0, 2621414, 131072, 0, 2621415, 131072, 0, 2621416, 131072, 0, 2621417, 131072, 0, 2621418, 131072, 0, 2621419, 131072, 0, 2621420, 131072, 0, 2621421, 131072, 0, 2621422, 131072, 0, 2621423, 131072, 0, 2621413, 65536, 0, 2686949, 327680, 0, 2752485, 327680, 0, 2818021, 327680, 0, 2883557, 327680, 0, 2949093, 327680, 0, 3014629, 327680, 0, 3080165, 327680, 0, 3145701, 327680, 0, 3211237, 327680, 0, 3276773, 327680, 0, 3342309, 327680, 0, 3407845, 327680, 0, 3473381, 327680, 0, 3538917, 327680, 0, 3604453, 327680, 0, 3669989, 327680, 0, 3735525, 327680, 0, 2686950, 327680, 0, 2752486, 327680, 0, 2818022, 327680, 0, 2883558, 327680, 0, 2949094, 327680, 0, 3014630, 327680, 0, 3080166, 327680, 0, 3145702, 327680, 0, 3211238, 327680, 0, 3276774, 327680, 0, 3342310, 327680, 0, 3407846, 327680, 0, 3473382, 327680, 0, 3538918, 327680, 0, 3604454, 327680, 0, 3669990, 327680, 0, 3735526, 327680, 0, 2686951, 327680, 0, 2752487, 327680, 0, 2818023, 327680, 0, 2883559, 327680, 0, 2949095, 327680, 0, 3014631, 327680, 0, 3080167, 327680, 0, 3145703, 327680, 0, 3211239, 327680, 0, 3276775, 327680, 0, 3342311, 327680, 0, 3407847, 327680, 0, 3473383, 327680, 0, 3538919, 327680, 0, 3604455, 327680, 0, 3669991, 327680, 0, 3735527, 327680, 0, 2686952, 327680, 0, 2752488, 327680, 0, 2818024, 327680, 0, 2883560, 327680, 0, 2949096, 327680, 0, 3014632, 327680, 0, 3080168, 327680, 0, 3145704, 327680, 0, 3211240, 327680, 0, 3276776, 327680, 0, 3342312, 327680, 0, 3407848, 327680, 0, 3473384, 327680, 0, 3538920, 327680, 0, 3604456, 327680, 0, 3669992, 327680, 0, 3735528, 327680, 0, 2686953, 327680, 0, 2752489, 327680, 0, 2818025, 327680, 0, 2883561, 327680, 0, 2949097, 327680, 0, 3014633, 327680, 0, 3080169, 327680, 0, 3145705, 327680, 0, 3211241, 327680, 0, 3276777, 327680, 0, 3342313, 327680, 0, 3407849, 327680, 0, 3473385, 327680, 0, 3538921, 327680, 0, 3604457, 327680, 0, 3669993, 327680, 0, 3735529, 327680, 0, 2686954, 327680, 0, 2752490, 327680, 0, 2818026, 327680, 0, 2883562, 327680, 0, 2949098, 327680, 0, 3014634, 327680, 0, 3080170, 327680, 0, 3145706, 327680, 0, 3211242, 327680, 0, 3276778, 327680, 0, 3342314, 327680, 0, 3407850, 327680, 0, 3473386, 327680, 0, 3538922, 327680, 0, 3604458, 327680, 0, 3669994, 327680, 0, 3735530, 327680, 0, 2686955, 327680, 0, 2752491, 327680, 0, 2818027, 327680, 0, 2883563, 327680, 0, 2949099, 327680, 0, 3014635, 327680, 0, 3080171, 327680, 0, 3145707, 327680, 0, 3211243, 327680, 0, 3276779, 327680, 0, 3342315, 327680, 0, 3407851, 327680, 0, 3473387, 327680, 0, 3538923, 327680, 0, 3604459, 327680, 0, 3669995, 327680, 0, 3735531, 327680, 0, 2686956, 327680, 0, 2752492, 327680, 0, 2818028, 327680, 0, 2883564, 327680, 0, 2949100, 327680, 0, 3014636, 327680, 0, 3080172, 327680, 0, 3145708, 327680, 0, 3211244, 327680, 0, 3276780, 327680, 0, 3342316, 327680, 0, 3407852, 327680, 0, 3473388, 327680, 0, 3538924, 327680, 0, 3604460, 327680, 0, 3669996, 327680, 0, 3735532, 327680, 0, 2686957, 327680, 0, 2752493, 327680, 0, 2818029, 327680, 0, 2883565, 327680, 0, 2949101, 327680, 0, 3014637, 327680, 0, 3080173, 327680, 0, 3145709, 327680, 0, 3211245, 327680, 0, 3276781, 327680, 0, 3342317, 327680, 0, 3407853, 327680, 0, 3473389, 327680, 0, 3538925, 327680, 0, 3604461, 327680, 0, 3669997, 327680, 0, 3735533, 327680, 0, 2686958, 327680, 0, 2752494, 327680, 0, 2818030, 327680, 0, 2883566, 327680, 0, 2949102, 327680, 0, 3014638, 327680, 0, 3080174, 327680, 0, 3145710, 327680, 0, 3211246, 327680, 0, 3276782, 327680, 0, 3342318, 327680, 0, 3407854, 327680, 0, 3473390, 327680, 0, 3538926, 327680, 0, 3604462, 327680, 0, 3669998, 327680, 0, 3735534, 327680, 0, 2686959, 327680, 0, 2752495, 327680, 0, 2818031, 327680, 0, 2883567, 327680, 0, 2949103, 327680, 0, 3014639, 327680, 0, 3080175, 327680, 0, 3145711, 327680, 0, 3211247, 327680, 0, 3276783, 327680, 0, 3342319, 327680, 0, 3407855, 327680, 0, 3473391, 327680, 0, 3538927, 327680, 0, 3604463, 327680, 0, 3669999, 327680, 0, 3735535, 327680, 0, 2359303, 2, 0, 2359341, 2, 0)
+
+[node name="Waluyo" type="CharacterBody2D" parent="." groups=["satria"]]
+position = Vector2(300, 606)
+scale = Vector2(0.310414, 0.292701)
+collision_mask = 3
+script = ExtResource("29_okwyp")
+
+[node name="WaluyoStandingShape2D" type="CollisionShape2D" parent="Waluyo" groups=["satria"]]
+position = Vector2(-1.14532, -1.23793)
+shape = ExtResource("2_dejpm")
+
+[node name="WaluyoAnimation" type="AnimationPlayer" parent="Waluyo"]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_yqhu3")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Waluyo"]
+position = Vector2(-16.1075, -75.1624)
+scale = Vector2(3.33366, 3.08706)
+sprite_frames = SubResource("SpriteFrames_t5qqg")
+animation = &"idle"
+frame = 1
+flip_h = true
+
+[node name="Text Chat" type="Label" parent="."]
+offset_left = 246.0
+offset_top = 548.0
+offset_right = 678.0
+offset_bottom = 600.0
+scale = Vector2(0.249726, 0.755419)
+text = "Satria!??"
+label_settings = SubResource("LabelSettings_nox23")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text Chat2" type="Label" parent="."]
+visible = false
+offset_left = 164.0
+offset_top = 545.0
+offset_right = 518.0
+offset_bottom = 597.0
+scale = Vector2(0.249726, 0.755419)
+text = "Waluyo?"
+label_settings = SubResource("LabelSettings_nox23")
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Satria" type="CharacterBody2D" parent="." groups=["satria"]]
+position = Vector2(200, 602)
+scale = Vector2(0.310414, 0.292701)
+collision_mask = 3
+script = ExtResource("1_puljj")
+
+[node name="SatriaStandingShape2D" type="CollisionShape2D" parent="Satria" groups=["satria"]]
+position = Vector2(-1.14532, -1.23793)
+shape = ExtResource("2_dejpm")
+
+[node name="SatriaSprite" type="Sprite2D" parent="Satria" groups=["satria"]]
+texture_filter = 1
+position = Vector2(5.85467, -67.2379)
+scale = Vector2(1.70833, 3.1875)
+texture = ExtResource("3_artmd")
+hframes = 4
+frame = 3
+
+[node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
+speed_scale = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_launb")
+}
+
+[node name="Camera2D" type="Camera2D" parent="Satria" groups=["satria"]]
+position = Vector2(334.855, -31.238)
+scale = Vector2(1.28617, 1.46236)
+zoom = Vector2(2, 2)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

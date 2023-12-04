@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c7a5qvfs35ffx"]
+[gd_scene load_steps=57 format=3 uid="uid://c7a5qvfs35ffx"]
 
 [ext_resource type="Texture2D" uid="uid://bj5740dydm8gv" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_attack__.png" id="1_fbx35"]
 [ext_resource type="Texture2D" uid="uid://dsfefqp5o8t4i" path="res://Pedjuang Nusantara Assets/Satria/Bambu/_CrouchFull.png" id="2_jb3uh"]
@@ -26,6 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://dod1wi18i3dta" path="res://Pedjuang Nusantara Assets/Satria/Pistol/__idleMC_pistol__.png" id="24_swpra"]
 [ext_resource type="Texture2D" uid="uid://b24fpmunjgdmp" path="res://Pedjuang Nusantara Assets/GUI/greenbar (3).png" id="25_f3e2v"]
 [ext_resource type="Texture2D" uid="uid://bs51b6hxgwd5h" path="res://Pedjuang Nusantara Assets/GUI/greenbar (2).png" id="26_wup6b"]
+[ext_resource type="AudioStream" uid="uid://d3xqhk7yi6cxg" path="res://Pedjuang Nusantara Assets/sfx/mixkit-game-gun-shot-1662.mp3" id="27_8i02d"]
+[ext_resource type="AudioStream" uid="uid://d3pxguwmk5xd2" path="res://Pedjuang Nusantara Assets/sfx/mixkit-man-in-pain-2197.mp3" id="28_q12s7"]
+[ext_resource type="AudioStream" uid="uid://cmb64ar5ql222" path="res://Pedjuang Nusantara Assets/sfx/mixkit-cartoon-punch-2149.mp3" id="29_w5ss4"]
+[ext_resource type="AudioStream" uid="uid://vdgoovuyn8x7" path="res://Pedjuang Nusantara Assets/sfx/cartoon-jump-6462.mp3" id="30_8ub1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
 size = Vector2(46, 90)
@@ -1335,8 +1339,8 @@ shape = SubResource("RectangleShape2D_m3iuc")
 texture_filter = 1
 position = Vector2(5.85467, -67.2379)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("1_fbx35")
-hframes = 4
+texture = ExtResource("8_0e2lc")
+hframes = 3
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
 speed_scale = 0.5
@@ -1395,10 +1399,23 @@ offset_top = -184.0
 offset_right = 917.0
 offset_bottom = -39.0
 scale = Vector2(4, 4)
-value = 100.0
+max_value = 50.0
+value = 50.0
 texture_under = ExtResource("25_f3e2v")
 texture_progress = ExtResource("26_wup6b")
 texture_progress_offset = Vector2(0, 15)
+
+[node name="GunShot" type="AudioStreamPlayer2D" parent="Satria"]
+stream = ExtResource("27_8i02d")
+
+[node name="Death" type="AudioStreamPlayer2D" parent="Satria"]
+stream = ExtResource("28_q12s7")
+
+[node name="BambuHit" type="AudioStreamPlayer2D" parent="Satria"]
+stream = ExtResource("29_w5ss4")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="Satria"]
+stream = ExtResource("30_8ub1h")
 
 [connection signal="animation_finished" from="Satria/AnimationSatria" to="Satria" method="_on_animation_satria_animation_finished"]
 [connection signal="body_entered" from="Satria/Bambu" to="Satria" method="_on_bambu_body_entered"]
