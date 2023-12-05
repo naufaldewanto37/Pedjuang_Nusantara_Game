@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mxggxqx4pegd"
+path="res://.godot/imported/epicaly-113907.mp3-e28232e8fcae45ec0ceb8d554a8ef124.mp3str"
+
+[deps]
+
+source_file="res://Pedjuang Nusantara Assets/sfx/epicaly-113907.mp3"
+dest_files=["res://.godot/imported/epicaly-113907.mp3-e28232e8fcae45ec0ceb8d554a8ef124.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

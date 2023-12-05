@@ -194,6 +194,7 @@ bus = &"Backsound"
 [connection signal="pressed" from="BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/Choose Stage" to="." method="_on_choose_stage_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
 [connection signal="pressed" from="BgPantai/PanelSetting/Level1/BtnLvl1" to="." method="_on_btn_lvl_1_pressed"]
 [connection signal="pressed" from="BgPantai/PanelSetting/Level2/BtnLvl2" to="." method="_on_btn_lvl_2_pressed"]

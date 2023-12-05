@@ -1,0 +1,263 @@
+[gd_scene load_steps=11 format=3 uid="uid://8syvy3e5i1d"]
+
+[ext_resource type="Script" path="res://credit_scene.gd" id="1_hwjbq"]
+[ext_resource type="Texture2D" uid="uid://cpssiejmdfavl" path="res://Pedjuang Nusantara Assets/GUI/level1.png" id="1_ress8"]
+[ext_resource type="Texture2D" uid="uid://byteiv1cxkx88" path="res://Pedjuang Nusantara Assets/GUI/level2.png" id="2_lhyjs"]
+[ext_resource type="Texture2D" uid="uid://b5e4apqx62yox" path="res://Pedjuang Nusantara Assets/GUI/level3.png" id="3_x3isl"]
+[ext_resource type="Texture2D" uid="uid://0ssptyh4myk" path="res://Pedjuang Nusantara Assets/GUI/level4.png" id="4_qg6ln"]
+[ext_resource type="Texture2D" uid="uid://dqo6pvgiqdsq" path="res://Pedjuang Nusantara Assets/background/bg_title.png" id="5_tiyni"]
+[ext_resource type="AudioStream" uid="uid://mxggxqx4pegd" path="res://Pedjuang Nusantara Assets/sfx/epicaly-113907.mp3" id="6_hoe4k"]
+
+[sub_resource type="Animation" id="Animation_dqii0"]
+resource_name = "Creditscene"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Text Cerita:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 730), Vector2(2, -1500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_wvdry"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Text Cerita:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -1500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yhtbf"]
+_data = {
+"Creditscene": SubResource("Animation_dqii0"),
+"RESET": SubResource("Animation_wvdry")
+}
+
+[node name="Credit Scene" type="Node"]
+script = ExtResource("1_hwjbq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1280.0
+offset_bottom = 718.0
+texture = ExtResource("1_ress8")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1280.0
+offset_bottom = 718.0
+texture = ExtResource("2_lhyjs")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 1280.0
+offset_bottom = 719.0
+texture = ExtResource("3_x3isl")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+visible = false
+offset_top = 1.0
+offset_right = 1281.0
+offset_bottom = 718.0
+texture = ExtResource("4_qg6ln")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+offset_top = 1.0
+offset_right = 1281.0
+offset_bottom = 718.0
+texture = ExtResource("5_tiyni")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1282.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 0.615686)
+
+[node name="Text Cerita" type="Label" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = -1500.0
+offset_right = 1284.0
+offset_bottom = 12.0
+theme_override_font_sizes/font_size = 28
+text = "GAME CREATED BY
+IPSP
+Jossy Raya Gopasda Saragih  -  120140073 -  Director
+Naufal Rotif Dewanto - 120140107 - Artis
+Michael Pascalis Simanjuntak -  120140137 - Programmer
+Oloan Soaloon Napitupulu -  120140097 -  Sound Engineer
+
+Thanks To:
+Game Asset
+Riffle & pistol Asset by arcadeisland
+Fantasy Knight by aamatniekss
+Kenney Game Assets by Kenney
+Junggle Asset by Jesse M
+Parallax Mountain by Luis Zuno
+Soldier by Craftpix
+Desert Tiles by Oisougabo
+Tank by Gussprint
+Health Bar by adwitr
+ammo by fightswithbears
+Hearth by TEMOK
+
+SFX
+Bambu Hit by Mixkit
+Tank Destroyed by Mixkit
+Man in Pain by Mixkit
+GunShoot by Mixkit
+Riffle by Pixabay
+Backsound Menu by SergeQuadrado
+Backsound Stage 1 by JuliusH
+Backsound Stage 2 by SoundsForYou
+Backsound Stage 3 by GregorQuendel
+Backsound Stage 4 Hsaart
+Backsound Boss by Pixabay
+Jump By Pixabay
+Tank Firing by Creative Commons 0
+Epicaly by LiteSaturation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Creditscene"
+libraries = {
+"": SubResource("AnimationLibrary_yhtbf")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_hoe4k")
+autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

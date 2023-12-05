@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgv25hjbg2yxp"]
+
+[ext_resource type="Script" path="res://after_boss.gd" id="1_k61ll"]
+
+[sub_resource type="Animation" id="Animation_dl2h6"]
+resource_name = "afterboss"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Text Cerita:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Text Cerita:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Text Cerita2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_l8kl0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Text Cerita:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Text Cerita:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Text Cerita2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38xaj"]
+_data = {
+"RESET": SubResource("Animation_l8kl0"),
+"afterboss": SubResource("Animation_dl2h6")
+}
+
+[node name="After Boss" type="Node"]
+script = ExtResource("1_k61ll")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1282.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text Cerita" type="Label" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 1284.0
+offset_bottom = 716.0
+theme_override_font_sizes/font_size = 28
+text = "Setelah Satria Mengalahkan Sang Pemimpin para penjajah...
+Para Penjajah lainnya melarikan diri, dan satria membebaskan para warga yang ditahan....
+Hidup desa di pulau seribu cerita kembali menjadi tawa dan bahagia...
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text Cerita2" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 1080.0
+offset_top = 653.0
+offset_right = 1284.0
+offset_bottom = 716.0
+theme_override_font_sizes/font_size = 28
+text = "The End...."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "afterboss"
+libraries = {
+"": SubResource("AnimationLibrary_38xaj")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

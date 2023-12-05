@@ -46,6 +46,9 @@ const FRICTION = 10.0
 const ACCELERATION = 2000.0
 
 func _physics_process(delta):
+	if death:
+		return
+		
 	$CanvasLayer/Ammo.value = ammo
 	is_jump = false
 	is_lookup = false
@@ -72,7 +75,7 @@ func _physics_process(delta):
 			
 		
 	# Handle Jump
-	if Input.is_action_just_pressed("ui_accept") and not is_crouching and not is_attacking and above_head_is_empty():
+	if Input.is_action_just_pressed("ui_accept") and not is_crouching and not is_attacking and above_head_is_empty() and !death:
 		if !has_gun and !has_pistol:
 			if is_on_floor():
 				crouch_cshape.disabled = true

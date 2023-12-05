@@ -80,4 +80,5 @@ bus = &"Backsound"
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Choose Stage" to="." method="_on_choose_stage_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/BgPantai/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

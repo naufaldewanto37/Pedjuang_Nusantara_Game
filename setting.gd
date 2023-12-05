@@ -13,7 +13,7 @@ func _on_settings_pressed():
 
 
 func _on_credits_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://credit_scene.tscn")
 
 
 func _on_fullscreen_toggled(button_pressed):

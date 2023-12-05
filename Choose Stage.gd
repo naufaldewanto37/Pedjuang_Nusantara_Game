@@ -28,3 +28,7 @@ func _on_btn_lvl_3_pressed():
 
 func _on_btn_lvl_4_pressed():
 	get_tree().change_scene_to_file("res://cutscene_4.tscn")
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://credit_scene.tscn")

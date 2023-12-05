@@ -20,3 +20,7 @@ func _on_settings_pressed():
 
 func _on_choose_stage_pressed():
 	get_tree().change_scene_to_file("res://choose_stage.tscn")
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://credit_scene.tscn")
