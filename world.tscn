@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://10hespmskmxe"]
+[gd_scene load_steps=19 format=3 uid="uid://10hespmskmxe"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_mdsrs"]
 [ext_resource type="Texture2D" uid="uid://caapmew6eiixf" path="res://Pedjuang Nusantara Assets/tiles/tilemap.png" id="1_r3awd"]
@@ -37,6 +37,7 @@ texture_region_size = Vector2i(23, 23)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.4905, -11.3137, 9.36916, -11.3137, 9.6069, 9.44941, -11.3137, 9.54594)
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
@@ -2374,20 +2375,23 @@ texture = ExtResource("9_yasqf")
 6:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_lnhvp"]
-physics_layer_0/collision_layer = 79
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_5rdqh")
 sources/1 = SubResource("TileSetAtlasSource_quobm")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ebwp"]
 size = Vector2(88, 171.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hphtt"]
+size = Vector2(20, 54)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_mdsrs")
 
 [node name="lvl1" type="Sprite2D" parent="."]
-position = Vector2(1590, -126)
-scale = Vector2(3.01284, 2.44786)
+position = Vector2(2067.19, -126)
+scale = Vector2(3.76729, 2.44786)
 texture = ExtResource("2_y8kpa")
 metadata/c = Color(0.305882, 0.627451, 0, 1)
 
@@ -2716,4 +2720,88 @@ bus = &"Backsound"
 
 [node name="Pause" parent="." instance=ExtResource("12_n3vl3")]
 
+[node name="Instruct 1" type="Area2D" parent="."]
+
+[node name="Label" type="Label" parent="Instruct 1"]
+visible = false
+offset_left = 11.0
+offset_top = 556.0
+offset_right = 159.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Untuk bergerak menggunakan 
+Arrow Key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Instruct 1"]
+position = Vector2(83, 614)
+shape = SubResource("RectangleShape2D_hphtt")
+
+[node name="Instruct 2" type="Area2D" parent="."]
+position = Vector2(56, 3)
+
+[node name="Label" type="Label" parent="Instruct 2"]
+visible = false
+offset_left = 11.0
+offset_top = 556.0
+offset_right = 159.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Menyerang Menggunakan Key \"J\"."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Instruct 2"]
+position = Vector2(83, 614)
+shape = SubResource("RectangleShape2D_hphtt")
+
+[node name="Instruct 3" type="Area2D" parent="."]
+position = Vector2(80, 3)
+
+[node name="Label" type="Label" parent="Instruct 3"]
+visible = false
+offset_left = 11.0
+offset_top = 556.0
+offset_right = 159.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Mengambil Barang melakukan Crouch(Down Arrow Key)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Instruct 3"]
+position = Vector2(83, 614)
+shape = SubResource("RectangleShape2D_hphtt")
+
+[node name="Instruct 4" type="Area2D" parent="."]
+position = Vector2(140, 3)
+
+[node name="Label" type="Label" parent="Instruct 4"]
+visible = false
+offset_left = 11.0
+offset_top = 556.0
+offset_right = 159.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Untuk Meloncat tekan \"SpaceBar\" dan menekan lagi untuk double jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Instruct 4"]
+position = Vector2(83, 614)
+shape = SubResource("RectangleShape2D_hphtt")
+
 [connection signal="body_entered" from="Finished Area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Instruct 1" to="." method="_on_instruct_1_body_entered"]
+[connection signal="body_exited" from="Instruct 1" to="." method="_on_instruct_1_body_exited"]
+[connection signal="body_entered" from="Instruct 2" to="." method="_on_instruct_2_body_entered"]
+[connection signal="body_exited" from="Instruct 2" to="." method="_on_instruct_2_body_exited"]
+[connection signal="body_entered" from="Instruct 3" to="." method="_on_instruct_3_body_entered"]
+[connection signal="body_exited" from="Instruct 3" to="." method="_on_instruct_3_body_exited"]
+[connection signal="body_entered" from="Instruct 4" to="." method="_on_instruct_4_body_entered"]
+[connection signal="body_exited" from="Instruct 4" to="." method="_on_instruct_4_body_exited"]

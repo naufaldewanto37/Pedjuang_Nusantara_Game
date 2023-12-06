@@ -54,7 +54,7 @@ func _physics_process(delta):
 		move_and_slide()
 	
 func _on_attack_soldier_body_entered(body):
-	if body.is_in_group("satria") and !is_death:
+	if body.is_in_group("satria") and !is_death and !body.just_stood_up:
 		soldier.play("attack")
 		SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 		seeing_satria = true
@@ -76,7 +76,7 @@ func _on_attack_soldier_body_exited(body):
 			update_bullet_direction()
 			
 func _on_vision_soldier_body_entered(body):
-	if body.is_in_group("satria") or body.is_in_group("Satria") and !is_death:
+	if body.is_in_group("satria") and !is_death:
 		if body.is_crouching:
 			soldier.play("idle")
 			SPEED = 0
@@ -103,7 +103,7 @@ func _on_vision_soldier_body_exited(body):
 				SPEED = abs(initial_speed) * -1
 				bullet_direction = -1
 		elif seeing_satria:
-			if body.is_in_group("satria") and body.is_on_floor():
+			if body.is_in_group("satria") and body.is_on_floor() and !body.just_stood_up:
 				soldier.play("attack")
 				SPEED = 0  # Menghentikan prajurit ketika melihat Satria
 				seeing_satria = true
@@ -128,6 +128,7 @@ func flip():
 func take_damage(damage):
 	health -= damage
 	if health <= 0:
+		is_death = true
 		die()
 		
 func die():
@@ -136,7 +137,6 @@ func die():
 
 func _on_animation_soldier_animation_finished(anim_name):
 	if anim_name == "death":
-		is_death = true
 		queue_free()
 
 func shoot_at_satria():

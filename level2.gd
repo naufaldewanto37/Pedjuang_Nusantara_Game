@@ -6,7 +6,7 @@ func _ready():
 
 func _on_finished_area_body_entered(body):
 	if body.is_in_group("satria"):
-		get_tree().change_scene_to_file("res://level_3.tscn")
+		get_tree().change_scene_to_file("res://cutscene_3.tscn")
 		
 
 func _input(event):

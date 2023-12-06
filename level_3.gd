@@ -19,3 +19,8 @@ func pauseMenu():
 		Engine.time_scale = 0
 	
 	paused = !paused
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("satria"):
+		get_tree().change_scene_to_file("res://cutscene_4.tscn")
