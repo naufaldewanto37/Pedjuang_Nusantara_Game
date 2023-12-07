@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dl4gerv5odc66" path="res://Pedjuang Nusantara Assets/Soldier_2/bullet.png" id="1_xbptg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6n6kx"]
-radius = 36.8355
+radius = 10.1523
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Bullet"]]
 collision_layer = 32

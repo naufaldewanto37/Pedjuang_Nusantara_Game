@@ -52,7 +52,8 @@ func _physics_process(delta):
 	$CanvasLayer/Ammo.value = ammo
 	is_jump = false
 	is_lookup = false
-	has_double_jumped = false
+	if is_on_floor():
+		has_double_jumped = false
 	bambu.disabled = true
 	# Reset crouching state
 	is_crouching = false
@@ -235,7 +236,7 @@ func _physics_process(delta):
 	# Only handle other movements if not attacking
 	if not is_attacking and !death:
 		var direction = Input.get_axis("ui_left", "ui_right")
-		if direction:
+		if direction and !is_crouching:
 			is_move = true
 			velocity.x = direction * move_speed
 			if direction < 0:
@@ -451,13 +452,13 @@ func _on_animation_satria_animation_finished(anim_name):
 
 func shoot_bullet():
 	$GunShot.play()
-	ammo -= 1
 	var bullet_direction
 	if satriaSprite.flip_h:
 		bullet_direction = -1  # Arah ke kiri
 	else:
 		bullet_direction = 1  # Arah ke kanan
 	if has_gun:
+		ammo -= 3
 		if !is_crouching and !is_lookup:
 			for n in 3:
 				var bullet_instance = BulletSatriaScene.instantiate()
@@ -483,6 +484,7 @@ func shoot_bullet():
 				bullet_instance.position.y = position.y - 25 -(n * 10)  # Mengatur posisi awal y peluru
 				bullet_instance.position.x = position.x
 	elif has_pistol:
+		ammo -= 1
 		if !is_crouching and !is_lookup:
 			var bullet_instance = BulletSatriaScene.instantiate()
 			bullet_instance.direction = bullet_direction

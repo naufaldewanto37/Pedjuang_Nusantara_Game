@@ -7,7 +7,7 @@
 size = Vector2(84.6813, 28)
 
 [node name="RIFLE" type="Node2D"]
-scale = Vector2(0.206598, 0.23706)
+scale = Vector2(0.341119, 0.375944)
 script = ExtResource("1_e2j1p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

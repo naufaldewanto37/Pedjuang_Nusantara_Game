@@ -1618,6 +1618,14 @@ libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
 
+[node name="Button" type="Button" parent="Satria"]
+offset_left = 1778.27
+offset_top = -772.119
+offset_right = 1917.27
+offset_bottom = -680.119
+theme_override_font_sizes/font_size = 40
+text = "SKIP"
+
 [node name="Text Chat2" type="Label" parent="."]
 visible = false
 offset_left = -6.00001
@@ -1636,6 +1644,7 @@ vertical_alignment = 1
 visible = false
 offset_right = 1282.0
 offset_bottom = 722.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.615686)
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -1650,3 +1659,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Satria/Button" to="." method="_on_button_pressed"]

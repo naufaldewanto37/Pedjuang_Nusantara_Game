@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://i8mmbi6ne8v2"]
+[gd_scene load_steps=14 format=3 uid="uid://i8mmbi6ne8v2"]
 
 [ext_resource type="Texture2D" uid="uid://dix70e8ww88h3" path="res://Pedjuang Nusantara Assets/background/BG-sky.png" id="1_tekj4"]
 [ext_resource type="Script" path="res://level_4.gd" id="1_w1f7h"]
@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://2rooa4fuoon" path="res://Resource/level_4.tres" id="6_ksyrt"]
 [ext_resource type="PackedScene" uid="uid://c7a5qvfs35ffx" path="res://Character.tscn" id="6_tbyac"]
 [ext_resource type="PackedScene" uid="uid://ca7f6t5iympxb" path="res://enemy.tscn" id="9_ar2g1"]
+[ext_resource type="PackedScene" uid="uid://gvrdn6q2bt3u" path="res://heart.tscn" id="11_4tq0d"]
 [ext_resource type="PackedScene" uid="uid://cx8hvieenkm4i" path="res://loot_box.tscn" id="11_hneuo"]
 [ext_resource type="PackedScene" uid="uid://bey7hi46urx13" path="res://pause.tscn" id="13_r5kuv"]
 [ext_resource type="AudioStream" uid="uid://c6unfd5i0gisr" path="res://Pedjuang Nusantara Assets/sfx/strong-desert-wind-155416.mp3" id="14_ahhg5"]
@@ -135,7 +136,7 @@ position = Vector2(581, 704)
 position = Vector2(1249, 822)
 
 [node name="box2" parent="BoxGroup" instance=ExtResource("11_hneuo")]
-position = Vector2(138, 708)
+position = Vector2(138, 711)
 
 [node name="box3" parent="BoxGroup" instance=ExtResource("11_hneuo")]
 position = Vector2(1876, 664)
@@ -143,5 +144,13 @@ position = Vector2(1876, 664)
 [node name="Backsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_ahhg5")
 bus = &"Backsound"
+
+[node name="Hearth" type="Node2D" parent="."]
+
+[node name="Hearth" parent="Hearth" instance=ExtResource("11_4tq0d")]
+position = Vector2(1281, 827)
+
+[node name="Hearth2" parent="Hearth" instance=ExtResource("11_4tq0d")]
+position = Vector2(3060, 713)
 
 [connection signal="body_entered" from="Finish" to="." method="_on_area_2d_body_entered"]

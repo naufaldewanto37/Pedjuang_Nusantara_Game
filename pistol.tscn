@@ -7,6 +7,7 @@
 size = Vector2(13.3508, 9.3185)
 
 [node name="Pistol" type="Node2D"]
+scale = Vector2(1.63534, 1.60368)
 script = ExtResource("1_xdrsh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

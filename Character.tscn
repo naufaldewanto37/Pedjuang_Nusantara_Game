@@ -34,7 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://vdgoovuyn8x7" path="res://Pedjuang Nusantara Assets/sfx/cartoon-jump-6462.mp3" id="30_8ub1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iuc"]
-size = Vector2(46, 90)
+size = Vector2(46, 56.1658)
 
 [sub_resource type="Animation" id="Animation_64i0g"]
 resource_name = "attack"
@@ -1334,15 +1334,16 @@ position = Vector2(-1.14532, -1.23793)
 shape = ExtResource("19_f8aip")
 
 [node name="SatriaCrouchingShape2D2" type="CollisionShape2D" parent="Satria" groups=["satria"]]
-position = Vector2(-1.14532, 14.7621)
+position = Vector2(-1.14532, 31.6792)
 shape = SubResource("RectangleShape2D_m3iuc")
 
 [node name="SatriaSprite" type="Sprite2D" parent="Satria" groups=["satria"]]
 texture_filter = 1
 position = Vector2(5.85467, -67.2379)
 scale = Vector2(1.70833, 3.1875)
-texture = ExtResource("8_0e2lc")
+texture = ExtResource("2_jb3uh")
 hframes = 3
+frame = 1
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
 speed_scale = 0.5
@@ -1386,11 +1387,12 @@ position = Vector2(-1.14532, -1.23793)
 shape = ExtResource("19_f8aip")
 
 [node name="HurtboxCrouching" type="Area2D" parent="Satria"]
+position = Vector2(0, 3.59627)
 collision_layer = 0
 collision_mask = 32
 
 [node name="SatriaCrouchingShape2D2" type="CollisionShape2D" parent="Satria/HurtboxCrouching" groups=["satria"]]
-position = Vector2(-1.14532, 14.7621)
+position = Vector2(0, 28.7702)
 shape = SubResource("RectangleShape2D_m3iuc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Satria"]

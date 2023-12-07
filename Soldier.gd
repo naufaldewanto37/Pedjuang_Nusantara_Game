@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name enemy
 
-var health = 30
+var health = 10
 var initial_speed = -15  # Menyimpan kecepatan awal
 var SPEED = -15
 const JUMP_VELOCITY = -400.0
@@ -65,6 +65,8 @@ func _on_attack_soldier_body_entered(body):
 
 func _on_attack_soldier_body_exited(body):
 	if body.is_in_group("satria") and !is_death:
+		if !raycast1.is_colliding() && is_on_floor():
+			flip()
 		soldier.play("run")
 		attacking = false
 		seeing_satria = false
@@ -81,7 +83,7 @@ func _on_vision_soldier_body_entered(body):
 			soldier.play("idle")
 			SPEED = 0
 			seeing_satria = false
-		else:
+		elif raycast1.is_colliding() and is_on_floor():
 			soldier.play("run")
 			if !facing_right:
 				SPEED = -abs(initial_speed)  # Bergerak ke kiri
@@ -90,9 +92,13 @@ func _on_vision_soldier_body_entered(body):
 				SPEED = abs(initial_speed)  # Bergerak ke kanan
 				update_bullet_direction()
 			seeing_satria = true
+		else:
+			flip()
 
 func _on_vision_soldier_body_exited(body):
 	if !is_death:
+		if !raycast1.is_colliding() && is_on_floor():
+			flip()
 		soldier.play("run")
 		if !seeing_satria:
 			seeing_satria = false

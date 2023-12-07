@@ -1893,6 +1893,7 @@ texture = ExtResource("3_53rka")
 visible = false
 offset_right = 1282.0
 offset_bottom = 722.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.615686)
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -1985,7 +1986,6 @@ position = Vector2(5.85467, -67.2379)
 scale = Vector2(1.70833, 3.1875)
 texture = ExtResource("3_artmd")
 hframes = 4
-frame = 3
 
 [node name="AnimationSatria" type="AnimationPlayer" parent="Satria" groups=["satria"]]
 speed_scale = 0.5
@@ -1998,4 +1998,13 @@ position = Vector2(334.855, -31.238)
 scale = Vector2(1.28617, 1.46236)
 zoom = Vector2(2, 2)
 
+[node name="Button" type="Button" parent="Satria/Camera2D"]
+offset_left = 621.313
+offset_top = -392.157
+offset_right = 760.313
+offset_bottom = -300.157
+theme_override_font_sizes/font_size = 40
+text = "SKIP"
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Satria/Camera2D/Button" to="." method="_on_button_pressed"]

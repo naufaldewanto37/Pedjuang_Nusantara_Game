@@ -4,7 +4,6 @@ extends CharacterBody2D
 
 var riffle = preload("res://Riffle.tscn")
 var pistol = preload("res://pistol.tscn")
-var heart = preload("res://heart.tscn")
 var health = 1
 
 func _ready():
@@ -19,12 +18,10 @@ func take_damage(damage):
 func _on_animation_player_animation_finished(anim_name):
 		if anim_name == "destroy_box":
 			var drop_instance
-			if randf() > 0.6:  # 50% kemungkinan untuk masing-masing senjata
+			if randf() > 0.5:  # 50% kemungkinan untuk masing-masing senjata
 				drop_instance = riffle.instantiate()
-			elif randf() > 0.33:
-				drop_instance = pistol.instantiate()
 			else:
-				drop_instance = heart.instantiate()
+				drop_instance = pistol.instantiate()
 
 			get_parent().add_child(drop_instance)
 			queue_free()

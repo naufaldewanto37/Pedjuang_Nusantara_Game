@@ -2282,6 +2282,14 @@ libraries = {
 "": SubResource("AnimationLibrary_launb")
 }
 
+[node name="Button" type="Button" parent="Satria"]
+offset_left = 1746.06
+offset_top = -751.62
+offset_right = 1885.06
+offset_bottom = -659.62
+theme_override_font_sizes/font_size = 40
+text = "SKIP"
+
 [node name="Camera2D" type="Camera2D" parent="." groups=["satria"]]
 position = Vector2(320, 553)
 scale = Vector2(0.399245, 0.428034)
@@ -2292,6 +2300,7 @@ zoom = Vector2(2, 2)
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 1282.0
 offset_bottom = 722.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.615686)
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -2382,6 +2391,7 @@ collision_mask = 145
 position = Vector2(-0.269544, 0.514293)
 shape = SubResource("RectangleShape2D_gn5nj")
 
+[connection signal="pressed" from="Satria/Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Boss/AnimationPlayer" to="Boss" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="Boss/AreaBoss" to="Boss" method="_on_area_boss_body_entered"]
