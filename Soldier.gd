@@ -65,8 +65,6 @@ func _on_attack_soldier_body_entered(body):
 
 func _on_attack_soldier_body_exited(body):
 	if body.is_in_group("satria") and !is_death:
-		if !raycast1.is_colliding() && is_on_floor():
-			flip()
 		soldier.play("run")
 		attacking = false
 		seeing_satria = false
@@ -83,7 +81,7 @@ func _on_vision_soldier_body_entered(body):
 			soldier.play("idle")
 			SPEED = 0
 			seeing_satria = false
-		elif raycast1.is_colliding() and is_on_floor():
+		else:
 			soldier.play("run")
 			if !facing_right:
 				SPEED = -abs(initial_speed)  # Bergerak ke kiri
@@ -92,27 +90,18 @@ func _on_vision_soldier_body_entered(body):
 				SPEED = abs(initial_speed)  # Bergerak ke kanan
 				update_bullet_direction()
 			seeing_satria = true
-		else:
-			flip()
 
 func _on_vision_soldier_body_exited(body):
 	if !is_death:
-		if !raycast1.is_colliding() && is_on_floor():
-			flip()
 		soldier.play("run")
 		if !seeing_satria:
-			seeing_satria = false
 			if facing_right:
 				SPEED = abs(initial_speed)
 				bullet_direction = 1
 			else:
 				SPEED = abs(initial_speed) * -1
 				bullet_direction = -1
-		elif seeing_satria:
-			if body.is_in_group("satria") and body.is_on_floor() and !body.just_stood_up:
-				soldier.play("attack")
-				SPEED = 0  # Menghentikan prajurit ketika melihat Satria
-				seeing_satria = true
+		seeing_satria = false
 			
 func update_bullet_direction():
 	if facing_right == true:

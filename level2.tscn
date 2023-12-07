@@ -110,43 +110,43 @@ shape = SubResource("RectangleShape2D_0qh67")
 [node name="EnemyGroup" type="Node2D" parent="."]
 
 [node name="Enemy" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(664, 690)
+position = Vector2(663, 678)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy2" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(973, 402)
+position = Vector2(972, 390)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy3" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(1206, 275)
+position = Vector2(1205, 263)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy4" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(2257, 690)
+position = Vector2(2256, 678)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy5" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(2780, 694)
+position = Vector2(2779, 682)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy6" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(3318, 692)
+position = Vector2(3317, 680)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy7" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(3591, 686)
+position = Vector2(3590, 674)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy8" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(1584, 688)
+position = Vector2(1583, 676)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy9" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(777, 480)
+position = Vector2(776, 468)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Enemy10" parent="EnemyGroup" instance=ExtResource("3_l2wxl")]
-position = Vector2(1019, 692)
+position = Vector2(1018, 680)
 scale = Vector2(1.71424, 1.59787)
 
 [node name="Loot" type="Node2D" parent="."]

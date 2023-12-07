@@ -278,6 +278,7 @@ shape = SubResource("RectangleShape2D_loxw8")
 [node name="RayCast2D" type="RayCast2D" parent="Soldier"]
 position = Vector2(-11.5, 2.50003)
 target_position = Vector2(0, 17)
+collision_mask = 2
 
 [node name="VisionSoldier" type="Area2D" parent="Soldier"]
 
