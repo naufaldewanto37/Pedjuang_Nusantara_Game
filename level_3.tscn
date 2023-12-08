@@ -2502,4 +2502,7 @@ position = Vector2(1545, 567)
 [node name="Hearth2" parent="." instance=ExtResource("18_vf0j0")]
 position = Vector2(1722, 765)
 
+[node name="Hearth3" parent="." instance=ExtResource("18_vf0j0")]
+position = Vector2(837, 690)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
