@@ -2803,7 +2803,7 @@ shape = SubResource("RectangleShape2D_hphtt")
 position = Vector2(1457, 715)
 
 [node name="Hearth2" parent="Hearth" instance=ExtResource("13_a314c")]
-position = Vector2(2944, 517)
+position = Vector2(2682, 520)
 
 [connection signal="body_entered" from="Finished Area" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Instruct 1" to="." method="_on_instruct_1_body_entered"]

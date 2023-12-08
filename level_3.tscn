@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://t4y0gi71pb4v"]
+[gd_scene load_steps=28 format=3 uid="uid://t4y0gi71pb4v"]
 
 [ext_resource type="Texture2D" uid="uid://dycqih51ff54x" path="res://Pedjuang Nusantara Assets/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="1_gyeex"]
 [ext_resource type="Script" path="res://level_3.gd" id="1_jto3p"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://c8rg7sqtvkj70" path="res://Pedjuang Nusantara Assets/sfx/designed-fire-winds-swoosh-04-116788.mp3" id="10_0fdu4"]
 [ext_resource type="Texture2D" uid="uid://5543quflup6" path="res://Pedjuang Nusantara Assets/sprite/363967fd-1031-424f-a790-969222bfaa5b (1).png" id="10_u4o3g"]
 [ext_resource type="PackedScene" uid="uid://bey7hi46urx13" path="res://pause.tscn" id="12_87pdj"]
+[ext_resource type="PackedScene" uid="uid://gvrdn6q2bt3u" path="res://heart.tscn" id="18_vf0j0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xb2xn"]
 texture = ExtResource("4_4vp73")
@@ -2494,5 +2495,11 @@ position = Vector2(3777, 665)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-397, 6)
 shape = SubResource("RectangleShape2D_tn4lg")
+
+[node name="Hearth" parent="." instance=ExtResource("18_vf0j0")]
+position = Vector2(1545, 567)
+
+[node name="Hearth2" parent="." instance=ExtResource("18_vf0j0")]
+position = Vector2(1722, 765)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
